@@ -4,7 +4,6 @@ import plotly.express as px
 import plotly.graph_objects as go
 import numpy as np
 import re
-import glob
 
 # 1. AKILLI ELEK
 SIEVE = {
@@ -68,22 +67,20 @@ def clean_company_name(name):
         
     return " ".join(name_clean.split()).title()
 
-# 2. VERİ TOPLAYICI
+# 2. VERİ TOPLAYICI (Doğrudan Excel Okuma)
 @st.cache_data
-def load_and_merge_data():
-    all_data = []
-    files = glob.glob("*DefNews*.csv")
-    
-    if not files:
-        return pd.DataFrame()
+def load_and_merge_excel(file_path="DefNews100.xlsx"):
+    try:
+        excel_data = pd.read_excel(file_path, sheet_name=None)
+        all_data = []
         
-    for file in files:
-        try:
-            year_match = re.search(r'(\d{4})', file)
-            if not year_match: continue
+        for sheet_name, df in excel_data.items():
+            # Sayfa adından yılı bul (Örn: "2024" veya "Sayfa 2024")
+            year_match = re.search(r'(\d{4})', str(sheet_name))
+            if not year_match: 
+                continue
             year = int(year_match.group(1))
             
-            df = pd.read_csv(file)
             cols = df.columns.astype(str).str.lower()
             
             company_col = df.columns[cols.str.contains("company")][0] if any(cols.str.contains("company")) else None
@@ -93,7 +90,6 @@ def load_and_merge_data():
             rev_cols = [c for c in df.columns if 'defen' in c.lower() and 'rev' in c.lower() and 'change' not in c.lower()]
             rev_col = rev_cols[0] if rev_cols else None
             
-            # Oran sütununu bul ("from" ve "defen" kelimeleri genelde bu sütundadır)
             pct_cols = [c for c in df.columns if 'from' in c.lower() and 'defen' in c.lower()]
             pct_col = pct_cols[0] if pct_cols else None
             
@@ -125,8 +121,9 @@ def load_and_merge_data():
             temp_df = temp_df.dropna(subset=["Şirket", "Sıralama", "Savunma Cirosu"])
             all_data.append(temp_df)
             
-        except Exception as e:
-            continue
+    except Exception as e:
+        st.error(f"Excel okunurken hata oluştu: {e}")
+        return pd.DataFrame()
 
     if all_data:
         merged_df = pd.concat(all_data, ignore_index=True)
@@ -138,7 +135,7 @@ def load_and_merge_data():
 # 3. KONTROL PANELİ VE GÖRSELLEŞTİRME
 st.title("Tarihsel Performans ve 5 Yıllık Tahmin")
 
-df = load_and_merge_data()
+df = load_and_merge_excel("DefNews100.xlsx")
 
 if not df.empty:
     sirketler = sorted(df["Şirket"].unique())
@@ -198,7 +195,6 @@ if not df.empty:
     # 2. SATIR: SAVUNMA DIŞI (SİVİL) GELİR ORANI
     st.markdown("---")
     
-    # Sadece oran verisi hesaplanabilen yılları filtrele
     oran_verisi = sirket_verisi.dropna(subset=["Savunma Dışı Oran (%)"]).copy()
     
     if not oran_verisi.empty:
@@ -208,11 +204,11 @@ if not df.empty:
             y="Savunma Dışı Oran (%)",
             title="Savunma Dışı (Sivil) Sektörlerden Elde Edilen Gelir Oranı",
             markers=True,
-            color_discrete_sequence=['#ff7f0e'] # Turuncu renk
+            color_discrete_sequence=['#ff7f0e']
         )
         fig_oran.update_layout(
             yaxis_title="Sivil Gelir Oranı (%)",
-            yaxis=dict(range=[0, 100]), # Oran grafiği her zaman 0-100 arasında sabitlenir
+            yaxis=dict(range=[0, 100]),
             hovermode="x unified"
         )
         st.plotly_chart(fig_oran, use_container_width=True)
@@ -220,4 +216,4 @@ if not df.empty:
         st.info("Bu şirket için savunma dışı gelir oranı verisi bulunmuyor veya hesaplanamadı.")
 
 else:
-    st.error("Veri işlenemedi. Lütfen klasörde CSV dosyalarının olduğundan emin olun.")
+    st.error("Veri işlenemedi. Lütfen 'DefNews100.xlsx' dosyasının doğru konumda olduğundan emin olun.")
