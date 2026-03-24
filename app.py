@@ -59,18 +59,13 @@ SIEVE = {
 def clean_company_name(name):
     lower_name = str(name).lower()
     
-    # 1. Önce sözlükteki kök kelimeleri ara
     for keyword, standard_name in SIEVE.items():
         if keyword in lower_name:
             return standard_name
             
-    # 2. Sözlükte yoksa, İSİMDEKİ TÜM RAKAMLARI SİL (HEICO 20 -> HEICO)
     name_clean = re.sub(r'\d+', '', lower_name)
-    
-    # 3. Noktalama işaretlerini boşluğa çevir
     name_clean = re.sub(r'[^\w\s]', ' ', name_clean)
     
-    # 4. Hukuki ve ticari takıları tamamen yok et
     takilar = [
         r'\bcorp\b', r'\bcorporation\b', r'\binc\b', r'\bltd\b', r'\bco\b', 
         r'\bplc\b', r'\ba s\b', r'\bs a\b', r'\bcompany\b', r'\bgroup\b', 
@@ -81,7 +76,7 @@ def clean_company_name(name):
         
     return " ".join(name_clean.split()).title()
 
-# 2. VERİ TOPLAYICI (Doğrudan Excel Okuma)
+# 2. VERİ TOPLAYICI
 @st.cache_data
 def load_and_merge_excel(file_path="DefNews100.xlsx"):
     try:
@@ -118,11 +113,9 @@ def load_and_merge_excel(file_path="DefNews100.xlsx"):
             temp_df["Savunma Cirosu"] = pd.to_numeric(temiz_ciro, errors='coerce')
             temp_df.loc[temp_df["Savunma Cirosu"] > 1000000, "Savunma Cirosu"] /= 1000000
             
-            # SAVUNMA DIŞI (SİVİL) GELİR HESAPLAMASI
             if pct_col:
                 temiz_oran = df[pct_col].astype(str).str.replace('%', '', regex=False)
                 savunma_orani = pd.to_numeric(temiz_oran, errors='coerce')
-                
                 savunma_orani = savunma_orani.apply(lambda x: x * 100 if pd.notnull(x) and x <= 1.0 else x)
                 temp_df["Savunma Dışı Oran (%)"] = 100 - savunma_orani
             else:
@@ -154,13 +147,24 @@ if not df.empty:
     
     st.markdown("---")
     
-    # TAHMİN (FORECASTING)
+    # TAHMİN (FORECASTING) - YENİ AĞIRLIKLI MOTOR
     tahmin_yapildi = False
     if len(sirket_verisi) > 2:
-        z = np.polyfit(sirket_verisi["Yıl"], sirket_verisi["Savunma Cirosu"], 1)
+        yillar = sirket_verisi["Yıl"].values
+        cirolar = sirket_verisi["Savunma Cirosu"].values
+        son_yil = int(np.max(yillar))
+        
+        # Son ciro verisini güvenli bir şekilde al
+        son_ciro_row = sirket_verisi[sirket_verisi["Yıl"] == son_yil]
+        son_ciro = son_ciro_row["Savunma Cirosu"].values[0] if not son_ciro_row.empty else cirolar[-1]
+        
+        # Ağırlık Matematigi: Son yıllardaki zıplamaları yakalamak için yakın zamana daha yüksek ağırlık (puan) veriyoruz.
+        # (Yıl - Son Yıl) bölü 4 formülü, geçmişe doğru etkisini üstel (exponential) olarak azaltır.
+        agirliklar = np.exp((yillar - son_yil) / 4.0)
+        
+        # Yeni ağırlıklı regresyon modeli
+        z = np.polyfit(yillar, cirolar, 1, w=agirliklar)
         p = np.poly1d(z)
-        son_yil = int(sirket_verisi["Yıl"].max())
-        son_ciro = sirket_verisi[sirket_verisi["Yıl"] == son_yil]["Savunma Cirosu"].values[0]
         
         gelecek_yillar = np.array([son_yil + i for i in range(1, 6)])
         tahmini_cirolar = p(gelecek_yillar)
@@ -168,15 +172,15 @@ if not df.empty:
         hedef_ciro = tahmini_cirolar[-1]
         tahmin_yapildi = True
 
-        st.subheader("Gelecek 5 Yıl Projeksiyonu")
+        st.subheader("Gelecek 5 Yıl Projeksiyonu (Güncel İvme Ağırlıklı)")
         met1, met2, met3 = st.columns(3)
         met1.metric(label=f"Son Gerçekleşen Ciro ({son_yil})", value=f"${son_ciro:,.0f} M")
         met2.metric(label=f"Tahmini Ciro ({hedef_yil})", value=f"${hedef_ciro:,.0f} M", delta=f"{hedef_ciro - son_ciro:,.0f} M Büyüme")
-        met3.metric(label="Yıllık Ortalama İvme", value=f"${z[0]:,.0f} M / Yıl")
+        met3.metric(label="Mevcut Yıllık İvme Hızı", value=f"${z[0]:,.0f} M / Yıl")
     
     st.markdown("---")
     
-    # 1. SATIR: CİRO VE SIRALAMA
+    # GRAFİKLER
     col1, col2 = st.columns(2)
     with col1:
         fig_ciro = go.Figure()
@@ -187,7 +191,7 @@ if not df.empty:
         if tahmin_yapildi:
             fig_ciro.add_trace(go.Scatter(
                 x=gelecek_yillar, y=tahmini_cirolar,
-                mode='lines+markers', name='5 Yıllık Tahmin Modeli', 
+                mode='lines+markers', name='5 Yıllık Tahmin (Trend)', 
                 line=dict(color='#d62728', dash='dot', width=3)
             ))
         fig_ciro.update_layout(title="Savunma Cirosu Değişimi", yaxis_title="Ciro (Milyon $)", hovermode="x unified")
@@ -202,29 +206,19 @@ if not df.empty:
         fig_siralama.update_traces(line_color='#2ca02c', line_width=3)
         st.plotly_chart(fig_siralama, use_container_width=True)
         
-    # 2. SATIR: SAVUNMA DIŞI (SİVİL) GELİR ORANI
     st.markdown("---")
-    
     oran_verisi = sirket_verisi.dropna(subset=["Savunma Dışı Oran (%)"]).copy()
     
     if not oran_verisi.empty:
         fig_oran = px.area(
-            oran_verisi, 
-            x="Yıl", 
-            y="Savunma Dışı Oran (%)",
+            oran_verisi, x="Yıl", y="Savunma Dışı Oran (%)",
             title="Savunma Dışı (Sivil) Sektörlerden Elde Edilen Gelir Oranı",
-            markers=True,
-            color_discrete_sequence=['#ff7f0e']
+            markers=True, color_discrete_sequence=['#ff7f0e']
         )
-        fig_oran.update_layout(
-            yaxis_title="Sivil Gelir Oranı (%)",
-            yaxis=dict(range=[0, 100]),
-            hovermode="x unified"
-        )
+        fig_oran.update_layout(yaxis_title="Sivil Gelir Oranı (%)", yaxis=dict(range=[0, 100]), hovermode="x unified")
         st.plotly_chart(fig_oran, use_container_width=True)
     else:
         st.info("Bu şirket için savunma dışı gelir oranı verisi bulunmuyor veya hesaplanamadı.")
 
 else:
     st.error("Veri işlenemedi. Lütfen 'DefNews100.xlsx' dosyasının doğru konumda olduğundan emin olun.")
-
