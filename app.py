@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 import numpy as np
 import re
 
-# 1. AKILLI ELEK
+# 1. AKILLI ELEK (Sözlük)
 SIEVE = {
     'aselsan': 'Aselsan',
     'roketsan': 'Roketsan',
@@ -50,18 +50,32 @@ SIEVE = {
     'naval group': 'Naval Group',
     'dcns': 'Naval Group',
     'casic': 'CASIC',
-    'china aerospace': 'CASIC'
+    'china aerospace': 'CASIC',
+    'heico': 'HEICO',
+    'ukroboronprom': 'Ukroboronprom',
+    'indra': 'Indra'
 }
 
 def clean_company_name(name):
     lower_name = str(name).lower()
+    
+    # 1. Önce sözlükteki kök kelimeleri ara
     for keyword, standard_name in SIEVE.items():
         if keyword in lower_name:
             return standard_name
             
-    name_clean = re.sub(r'\(\d+\)', '', lower_name)
+    # 2. Sözlükte yoksa, İSİMDEKİ TÜM RAKAMLARI SİL (HEICO 20 -> HEICO)
+    name_clean = re.sub(r'\d+', '', lower_name)
+    
+    # 3. Noktalama işaretlerini boşluğa çevir
     name_clean = re.sub(r'[^\w\s]', ' ', name_clean)
-    takilar = [r'\bcorp\b', r'\binc\b', r'\bltd\b', r'\bco\b', r'\bplc\b', r'\ba s\b', r'\bs a\b', r'\bcompany\b', r'\bgroup\b']
+    
+    # 4. Hukuki ve ticari takıları tamamen yok et
+    takilar = [
+        r'\bcorp\b', r'\bcorporation\b', r'\binc\b', r'\bltd\b', r'\bco\b', 
+        r'\bplc\b', r'\ba s\b', r'\bs a\b', r'\bcompany\b', r'\bgroup\b', 
+        r'\bholding\b', r'\bholdings\b', r'\bsystems\b', r'\bllc\b', r'\bspa\b'
+    ]
     for taki in takilar:
         name_clean = re.sub(taki, '', name_clean)
         
@@ -75,7 +89,6 @@ def load_and_merge_excel(file_path="DefNews100.xlsx"):
         all_data = []
         
         for sheet_name, df in excel_data.items():
-            # Sayfa adından yılı bul (Örn: "2024" veya "Sayfa 2024")
             year_match = re.search(r'(\d{4})', str(sheet_name))
             if not year_match: 
                 continue
@@ -110,10 +123,7 @@ def load_and_merge_excel(file_path="DefNews100.xlsx"):
                 temiz_oran = df[pct_col].astype(str).str.replace('%', '', regex=False)
                 savunma_orani = pd.to_numeric(temiz_oran, errors='coerce')
                 
-                # Değer 1'den küçükse (Örn: 0.96) bunu yüzdeye (96) çevir.
                 savunma_orani = savunma_orani.apply(lambda x: x * 100 if pd.notnull(x) and x <= 1.0 else x)
-                
-                # 100'den çıkararak Sivil Oranı bul
                 temp_df["Savunma Dışı Oran (%)"] = 100 - savunma_orani
             else:
                 temp_df["Savunma Dışı Oran (%)"] = np.nan
@@ -217,3 +227,4 @@ if not df.empty:
 
 else:
     st.error("Veri işlenemedi. Lütfen 'DefNews100.xlsx' dosyasının doğru konumda olduğundan emin olun.")
+
