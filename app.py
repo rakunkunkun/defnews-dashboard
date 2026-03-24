@@ -5,8 +5,7 @@ import plotly.graph_objects as go
 import numpy as np
 import re
 
-# 1. AKILLI ELEK: Kök kelimelere göre isim birleştirme
-# Soldaki kelime veri setinde geçiyorsa, sağdaki standart isme dönüştürülür.
+# 1. AKILLI ELEK
 SIEVE = {
     'aselsan': 'Aselsan',
     'roketsan': 'Roketsan',
@@ -52,13 +51,10 @@ SIEVE = {
 
 def clean_company_name(name):
     lower_name = str(name).lower()
-    
-    # Önce sözlükteki kök kelimeleri ara
     for keyword, standard_name in SIEVE.items():
         if keyword in lower_name:
             return standard_name
             
-    # Sözlükte yoksa, genel temizlik yap (Rakamları, parantezleri ve şirket takılarını at)
     name_clean = re.sub(r'\(\d+\)', '', lower_name)
     name_clean = re.sub(r'[^\w\s]', ' ', name_clean)
     takilar = [r'\bcorp\b', r'\binc\b', r'\bltd\b', r'\bco\b', r'\bplc\b', r'\ba s\b', r'\bs a\b', r'\bcompany\b', r'\bgroup\b']
@@ -93,10 +89,16 @@ def load_and_merge_excel(file_path="DefNews100.xlsx"):
             temp_df["Yıl"] = [year] * len(df)
             temp_df["Şirket"] = df[company_col].apply(clean_company_name)
             temp_df["Sıralama"] = pd.to_numeric(df[rank_col], errors='coerce')
+            
+            # Ciro temizliği
             temp_df["Savunma Cirosu"] = pd.to_numeric(
                 df[rev_col].astype(str).str.replace(',', '').str.replace(' ', ''), 
                 errors='coerce'
             )
+            
+            # AKILLI BİRİM DÜZELTİCİ (2013 vb. yersiz sıfır girilmiş yılları tespit eder)
+            # Değer 1 milyondan büyükse, milyona bölerek grafiği hizala.
+            temp_df.loc[temp_df["Savunma Cirosu"] > 1000000, "Savunma Cirosu"] /= 1000000
             
             temp_df = temp_df.dropna(subset=["Şirket", "Sıralama", "Savunma Cirosu"])
             all_data.append(temp_df)
@@ -138,7 +140,6 @@ if not df.empty:
         hedef_ciro = tahmini_cirolar[-1]
         tahmin_yapildi = True
 
-        # Rakamsal Özet Paneli
         st.subheader("Gelecek 5 Yıl Projeksiyonu")
         met1, met2, met3 = st.columns(3)
         met1.metric(label=f"Son Gerçekleşen Ciro ({son_yil})", value=f"${son_ciro:,.0f} M")
@@ -150,7 +151,6 @@ if not df.empty:
     col1, col2 = st.columns(2)
     
     with col1:
-        # Ciro ve Tahmin Grafiği
         fig_ciro = go.Figure()
         fig_ciro.add_trace(go.Scatter(
             x=sirket_verisi["Yıl"], y=sirket_verisi["Savunma Cirosu"],
@@ -168,7 +168,6 @@ if not df.empty:
         st.plotly_chart(fig_ciro, use_container_width=True)
 
     with col2:
-        # Sıralama grafiği
         fig_siralama = px.line(
             sirket_verisi, x="Yıl", y="Sıralama", markers=True,
             title="Sıralama Değişimi"
