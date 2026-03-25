@@ -143,7 +143,7 @@
     "Tam İsim": "ASELSAN Elektronik Sanayi ve Ticaret A.Ş.", "Ülke": "Türkiye", "Üst Kurum / Ortaklık": "TSKGV (%74.20), Halka Açık (%25.80)",
     "CEO": "Ahmet Akyol", "Çalışan": "~13.000", "Faaliyet": "Haberleşme, Radar, Elektronik Harp, Elektro-Optik, Komuta Kontrol",
     "En Bilinen Ürünler / Markalar": "KORKUT, Hisar/Siper radar sistemleri, ASELFLIR, ÇAFRAD",
-    "Tarihçe & Birleşmeler": "1975 Kıbrıs Barış Harekatı sonrası kurulmuştur.",
+    "Tarihçe & Birleşmeler": "1975 Kıbrıs Barış Harekatı sonrası kurulmuş ve halihazırda en büyük Türk savunma şirketidir.",
     "Analiz Notu": "Mühendis ağırlıklı kadrosuyla Türkiye'nin tüm askeri platformlarının elektronik, haberleşme ve arayıcı başlık entegrasyonunu sağlamaktadır."
   },
   "TUSAŞ": {
@@ -151,14 +151,14 @@
     "CEO": "Dr. Mehmet Demiroğlu", "Çalışan": "~15.000", "Faaliyet": "Hava Platformları, İHA, Uzay Sistemleri",
     "En Bilinen Ürünler / Markalar": "KAAN, T129 ATAK, ANKA, AKSUNGUR, HÜRJET",
     "Tarihçe & Birleşmeler": "TAI ve TUSAŞ 2005 yılında birleşerek günümüzdeki yapısını almıştır.",
-    "Analiz Notu": "Türkiye'nin en yüksek bütçeli havacılık tasarımlarını (5. nesil savaş uçağı, helikopter) yürütmektedir."
+    "Analiz Notu": "Türkiye'nin yüksek bütçeli havacılık tasarımlarını (5. nesil savaş uçağı, helikopter) yürütmektedir."
   },
   "Roketsan": {
     "Tam İsim": "Roketsan Roket Sanayii ve Ticaret A.Ş.", "Ülke": "Türkiye", "Üst Kurum / Ortaklık": "TSKGV (%55.5), MKE (%15), Aselsan (%15)",
     "CEO": "Murat İkinci", "Çalışan": "~4.000", "Faaliyet": "Füze Sistemleri, Roketler, Hassas Güdümlü Mühimmatlar",
     "En Bilinen Ürünler / Markalar": "MAM-L, HİSAR füzeleri, TAYFUN, SOM, ATMACA",
     "Tarihçe & Birleşmeler": "1988 yılında kuruldu.",
-    "Analiz Notu": "Özellikle silahlı İHA platformlarının ana vurucu gücünü oluşturan mikro mühimmatlarda (MAM serisi) öncüdür."
+    "Analiz Notu": "Özellikle silahlı İHA platformlarının ana vurucu gücünü oluşturan mikro mühimmatların (MAM serisi) üreticisidir."
   },
   "Havelsan": {
     "Tam İsim": "HAVELSAN A.Ş.", "Ülke": "Türkiye", "Üst Kurum / Ortaklık": "TSKGV (%98)",
@@ -178,28 +178,28 @@
     "Tam İsim": "BMC Otomotiv Sanayi ve Ticaret A.Ş.", "Ülke": "Türkiye", "Üst Kurum / Ortaklık": "Tosyalı Holding (%51), Katar Silahlı Kuvvetleri (%49)",
     "CEO": "Tosyalı Holding Yönetimi", "Çalışan": "~3.000", "Faaliyet": "Zırhlı Kara Araçları, Güç Grupları, Ana Muharebe Tankı",
     "En Bilinen Ürünler / Markalar": "KİRPİ, VURAN, ALTAY",
-    "Tarihçe & Birleşmeler": "Tosyalı Holding hisse çoğunluğunu devraldıktan sonra yönetim yapısı yenilenmiştir.",
+    "Tarihçe & Birleşmeler": "Tosyalı Holding ile yönetim yapısı yenilenmiştir.",
     "Analiz Notu": "Mayına karşı korumalı araç (MRAP) üretimi ve Altay tankı seri üretim operasyonlarını yürütmektedir."
   },
   "FNSS": {
-    "Tam İsim": "FNSS Savunma Sistemleri A.Ş.", "Ülke": "Türkiye", "Üst Kurum / Ortaklık": "Nurol Holding (%51), BAE Systems (%49)",
+    "Tam İsim": "FNSS Savunma Sistemleri A.Ş.", "Ülke": "Türkiye", "Üst Kurum / Ortaklık": "Nurol Holding",
     "CEO": "Selim Baybaş", "Çalışan": "~1.000", "Faaliyet": "Zırhlı Muharebe Araçları, Silah Kuleleri",
     "En Bilinen Ürünler / Markalar": "PARS, KAPLAN, ZAHA",
-    "Tarihçe & Birleşmeler": "1989'da kurulan şirket, Türk ve İngiliz ortak girişimidir.",
-    "Analiz Notu": "Ortaklı yapısının avantajıyla özellikle Asya-Pasifik ve Ortadoğu pazarlarına zırhlı araç ihracatı gerçekleştirir."
+    "Tarihçe & Birleşmeler": "1989'da kurulan şirket, Türk ve İngiliz (BAE) ortak girişimi olarak uzun yıllar faaliyet göstermiştir.",
+    "Analiz Notu": "Asya-Pasifik ve Ortadoğu pazarlarına zırhlı araç ihracatı gerçekleştirir."
   },
   "MKE": {
     "Tam İsim": "Makine ve Kimya Endüstrisi A.Ş.", "Ülke": "Türkiye", "Üst Kurum / Ortaklık": "T.C. Millî Savunma Bakanlığı",
     "CEO": "İlhami Keleş", "Çalışan": "~5.500", "Faaliyet": "Silah, Mühimmat, Patlayıcı",
     "En Bilinen Ürünler / Markalar": "MPT-76, BORAN Obüsü, PANTER, Uçak Bombaları",
-    "Tarihçe & Birleşmeler": "2021 yılında A.Ş. statüsüne geçirilerek kamu hantallığından arındırılması hedeflenmiştir.",
+    "Tarihçe & Birleşmeler": "2021 yılında A.Ş. statüsüne geçirilerek ihracat potansiyelinin artırılması hedeflenmiştir.",
     "Analiz Notu": "Türk Silahlı Kuvvetleri'nin ana kalibre mühimmat ve piyade tüfeği tedarikçisidir."
   },
   "ASFAT": {
     "Tam İsim": "Askeri Fabrika ve Tersane İşletme A.Ş.", "Ülke": "Türkiye", "Üst Kurum / Ortaklık": "T.C. Millî Savunma Bakanlığı",
     "CEO": "Prof. Dr. Mustafa İlbaş", "Çalışan": "~500 (Merkez Yönetim)", "Faaliyet": "Askeri Fabrika İşletimi, Gemi İnşa",
     "En Bilinen Ürünler / Markalar": "PN MİLGEM (Pakistan Korveti), Açık Deniz Karakol Gemileri",
-    "Tarihçe & Birleşmeler": "2018'de askeri fabrika ve tersanelerin atıl kapasitesini ticari formata çevirmek için kuruldu.",
+    "Tarihçe & Birleşmeler": "2018'de askeri fabrika ve tersanelerin kapasitesini ticari formata çevirmek için kuruldu.",
     "Analiz Notu": "Askeri tersanelerin (örn: Gölcük) sivil-özel sektör mantığıyla ihracat projeleri yürütmesine aracılık eder."
   },
   "Hanwha": {
