@@ -5,247 +5,67 @@ import plotly.graph_objects as go
 import numpy as np
 import re
 
-# 1. KÖK KELİME MIKNATISI (Kara Delik Eleği)
+# 1. KÖK KELİME MIKNATISI (Genişletilmiş ve Şirket Evliliklerini İçeren Ağ)
 ROOT_MAGNETS = {
-    'lockheed': 'Lockheed Martin',
-    'boeing': 'Boeing',
-    'raytheon': 'RTX',
-    'rtx': 'RTX',
-    'united technologies': 'RTX',
-    'northrop': 'Northrop Grumman',
-    'general dy': 'General Dynamics', 
-    
-    'bae': 'BAE Systems',
-    'british aerospace': 'BAE Systems',
-    
-    'eads': 'Airbus',
-    'airbus': 'Airbus',
-    'european aeronautic': 'Airbus',
-    
-    'finmeccanica': 'Leonardo',
-    'leonardo': 'Leonardo',
-    'agusta': 'Leonardo',
-    
-    'thomson': 'Thales',
-    'thales': 'Thales',
-    
-    'l 3': 'L3Harris',
-    'l3': 'L3Harris',
-    'harris': 'L3Harris',
-    
-    'kongsberg': 'Kongsberg',
-    'saab': 'Saab',
-    'dassault': 'Dassault',
-    
-    'rheinmetall': 'Rheinmetall',
-    'textron': 'Textron',
-    'huntington': 'Huntington Ingalls',
-    'hii': 'Huntington Ingalls',
-    'newport news': 'Huntington Ingalls',
-    
-    'rolls': 'Rolls-Royce',
-    
-    'elbit': 'Elbit Systems',
-    'rafael': 'Rafael',
-    
-    'israel aerospace': 'IAI',
-    'iai': 'IAI',
-    'israel aircraft': 'IAI',
-    'israel military': 'IMI Systems',
-    'imi': 'IMI Systems',
-    
-    'naval group': 'Naval Group',
-    'dcns': 'Naval Group',
-    'dcn': 'Naval Group',
-    'direction des constructions': 'Naval Group',
-    
-    'casic': 'CASIC',
-    'china aerospace science and industry': 'CASIC',
-    
-    'casc': 'CASC',
-    'china aerospace science and technology': 'CASC',
-    
-    'china north': 'NORINCO',
-    'norinco': 'NORINCO',
-    
-    'china south': 'CSGC',
-    'csgc': 'CSGC',
-    
-    'china state': 'CSSC',
-    'cssc': 'CSSC',
-    
-    'cobham': 'Cobham',
-    'curtis': 'Curtiss-Wright',
-    'curtiss': 'Curtiss-Wright',
-    
-    'concern radio': 'KRET',
-    'kret': 'KRET',
-    'rdaio': 'KRET',
-    
-    'denel': 'Denel',
-    'heico': 'HEICO',
-    'ukroboronprom': 'Ukroboronprom',
-    'indra': 'Indra',
-    
-    'mitsubishi': 'Mitsubishi',
-    'kawasaki': 'Kawasaki',
-    'komatsu': 'Komatsu',
-    'fuji': 'Fuji',
-    'hitachi': 'Hitachi',
-    'toshiba': 'Toshiba',
-    'nec': 'NEC',
-    'ishikawajima': 'IHI',
-    'ihi': 'IHI',
-    
-    'booz': 'Booz Allen Hamilton',
-    'computer science': 'CSC',
-    'csc': 'CSC',
-    'csra': 'CSC',
-    'drs': 'DRS Technologies',
-    
-    'almaz': 'Almaz-Antey',
-    'antei': 'Almaz-Antey',
-    'antey': 'Almaz-Antey',
-    
-    'sukhoi': 'Sukhoi',
-    'mig': 'MiG',
-    'irkut': 'Irkut',
-    'salyut': 'Salyut',
-    'izhmash': 'Izhmash',
-    'sevmash': 'Sevmash',
-    'admiralteisk': 'Admiralteiskie Verfi',
-    'severnaya': 'Severnaya Verf',
-    
-    'alliant': 'Orbital ATK',
-    'orbital': 'Orbital ATK',
-    'atk': 'Orbital ATK',
-    
-    'smiths': 'Smiths Group',
-    'babcock': 'Babcock',
-    'backbock': 'Babcock', 
-    
-    'battelle': 'Battelle',
-    'bearingpoint': 'BearingPoint',
-    'bechtel': 'Bechtel',
-    'bharat': 'Bharat Electronics',
-    'cae': 'CAE',
-    'chemring': 'Chemring',
-    'cubic': 'Cubic',
-    'zimmerman': 'Day & Zimmermann',
-    'diehl': 'Diehl',
-    'flir': 'FLIR',
-    'gkn': 'GKN',
-    'jacobs': 'Jacobs',
-    'qinetiq': 'QinetiQ',
-    'sagem': 'SAGEM',
-    'saic': 'SAIC',
-    'science application': 'SAIC',
-    
-    'aerospace equipment': 'Aerospace Equipment',
-    'aerokosmicheskoe': 'Aerospace Equipment',
-    
-    'advanced technical': 'Advanced Technical Products',
-    'advanced technology': 'Advanced Technology International',
-    
-    'allegheny': 'Allegheny Technologies',
-    'teledyne': 'Teledyne',
-    
-    'ball': 'Ball',
-    'caci': 'CACI',
-    
-    'aselsan': 'Aselsan',
-    'roketsan': 'Roketsan',
-    'havelsan': 'Havelsan',
-    'stm': 'STM',
-    'makine ve kimya': 'MKE',
-    'bmc': 'BMC',
-    'askeri fabrika': 'ASFAT',
-    'fnss': 'FNSS',
-    'tusaş': 'TUSAŞ',
-    'tai': 'TUSAŞ',
-    'turkish aerospace': 'TUSAŞ',
-    
-    'krauss': 'KNDS',
-    'nexter': 'KNDS',
-    'giat': 'KNDS',
-    'knds': 'KNDS',
-    
-    'korea aerospace': 'KAI',
-    'korean aerospace': 'KAI',
-    'hanwha': 'Hanwha',
-    'hyundai': 'Hyundai Rotem',
-    'rotem': 'Hyundai Rotem',
-    'lig nex': 'LIG Nex1',
-    
-    'mazagon': 'Mazagon Dock',
-    'hindustan': 'Hindustan Aeronautics',
-    'embraer': 'Embraer',
-    
-    'aar': 'AAR',
-    'aerojet': 'Aerojet Rocketdyne',
-    'am general': 'AM General',
-    'amphenol': 'Amphenol',
-    'armor holding': 'Armor Holdings',
-    'austal': 'Austal',
-    'bwx': 'BWX Technologies',
-    'camber': 'Camber',
-    'celsius': 'Celsius',
-    'dyncorp': 'DynCorp',
-    'edo': 'EDO',
-    'eg g': 'EG&G', 
-    'engility': 'Engility',
-    'force protection': 'Force Protection',
-    'griffon': 'Griffon',
-    'hensoldt': 'Hensoldt',
-    'leidos': 'Leidos',
-    'lumen': 'Lumen Technologies',
-    'maxar': 'Maxar Technologies',
-    'mercury': 'Mercury Systems',
-    'mitsui': 'Mitsui',
-    'nammo': 'Nammo',
-    'palantir': 'Palantir Technologies',
-    'parker': 'Parker Hannifin',
-    'parsons': 'Parsons',
-    'peraton': 'Peraton',
-    'perspecta': 'Perspecta',
-    'primex': 'Primex Technologies',
-    'serco': 'Serco',
-    'sierra nevada': 'Sierra Nevada',
-    'stork': 'Stork',
-    'telesat': 'Telesat',
-    'tenix': 'Tenix',
-    'ultra electronic': 'Ultra Electronics',
-    'veridian': 'Veridian',
-    'vse': 'VSE',
-    'wyle': 'Wyle',
-    
-    'fincantieri': 'Fincantieri',
-    'cantieri': 'Fincantieri',
-    
-    'priborostroyeniya': 'KBP Instrument Design Bureau',
-    'instrument design': 'KBP Instrument Design Bureau',
-    
-    'tactical missile': 'Tactical Missiles Corp',
-    'oboronitelniye': 'Tactical Missiles Corp',
-    
-    'john cockerill': 'John Cockerill',
-    'edge': 'EDGE Group'
+    'lockheed': 'Lockheed Martin', 'boeing': 'Boeing', 'raytheon': 'RTX', 'rtx': 'RTX', 'united technologies': 'RTX',
+    'northrop': 'Northrop Grumman', 'general dy': 'General Dynamics', 'bae': 'BAE Systems', 'british aerospace': 'BAE Systems',
+    'united defense': 'BAE Systems', 'vickers': 'BAE Systems', 'eads': 'Airbus', 'airbus': 'Airbus', 
+    'european aeronautic': 'Airbus', 'finmeccanica': 'Leonardo', 'leonardo': 'Leonardo', 'agusta': 'Leonardo',
+    'thomson': 'Thales', 'thales': 'Thales', 'l 3': 'L3Harris', 'l3': 'L3Harris', 'harris': 'L3Harris',
+    'kongsberg': 'Kongsberg', 'saab': 'Saab', 'dassault': 'Dassault', 'rheinmetall': 'Rheinmetall', 'textron': 'Textron',
+    'huntington': 'Huntington Ingalls', 'hii': 'Huntington Ingalls', 'newport news': 'Huntington Ingalls', 'rolls': 'Rolls-Royce',
+    'elbit': 'Elbit Systems', 'rafael': 'Rafael', 'israel aerospace': 'IAI', 'iai': 'IAI', 'israel aircraft': 'IAI',
+    'israel military': 'IMI Systems', 'imi': 'IMI Systems', 'naval group': 'Naval Group', 'dcns': 'Naval Group',
+    'dcn': 'Naval Group', 'direction des constructions': 'Naval Group', 'casic': 'CASIC', 'casc': 'CASC',
+    'china north': 'NORINCO', 'norinco': 'NORINCO', 'china south': 'CSGC', 'csgc': 'CSGC', 'china state': 'CSSC',
+    'cssc': 'CSSC', 'aviation industry of china': 'AVIC', 'cobham': 'Cobham', 'curtis': 'Curtiss-Wright', 'curtiss': 'Curtiss-Wright',
+    'concern radio': 'KRET', 'kret': 'KRET', 'denel': 'Denel', 'heico': 'HEICO', 'ukroboronprom': 'Ukroboronprom',
+    'ukrainian defense': 'Ukroboronprom', 'indra': 'Indra', 'mitsubishi': 'Mitsubishi', 'kawasaki': 'Kawasaki',
+    'komatsu': 'Komatsu', 'fuji': 'Fuji', 'hitachi': 'Hitachi', 'toshiba': 'Toshiba', 'nec': 'NEC', 'ishikawajima': 'IHI',
+    'ihi': 'IHI', 'booz': 'Booz Allen Hamilton', 'computer science': 'CSC', 'csc': 'CSC', 'csra': 'CSC', 'drs': 'DRS Technologies',
+    'almaz': 'Almaz-Antey', 'antei': 'Almaz-Antey', 'antey': 'Almaz-Antey', 'sukhoi': 'Sukhoi', 'mig': 'MiG', 'irkut': 'Irkut',
+    'salyut': 'Salyut', 'izhmash': 'Izhmash', 'sevmash': 'Sevmash', 'admiralteisk': 'Admiralteiskie Verfi',
+    'severnaya': 'Severnaya Verf', 'alliant': 'Orbital ATK', 'orbital': 'Orbital ATK', 'atk': 'Orbital ATK',
+    'smiths': 'Smiths Group', 'babcock': 'Babcock', 'backbock': 'Babcock', 'battelle': 'Battelle', 'bearingpoint': 'BearingPoint',
+    'kpmg': 'BearingPoint', 'bechtel': 'Bechtel', 'bharat': 'Bharat Electronics', 'cae': 'CAE', 'chemring': 'Chemring',
+    'cubic': 'Cubic', 'zimmerman': 'Day & Zimmermann', 'diehl': 'Diehl', 'flir': 'FLIR', 'gkn': 'GKN', 'jacobs': 'Jacobs',
+    'qinetiq': 'QinetiQ', 'sagem': 'SAGEM', 'saic': 'SAIC', 'science application': 'SAIC', 'aerospace equipment': 'Aerospace Equipment',
+    'aerokosmicheskoe': 'Aerospace Equipment', 'advanced technical': 'Advanced Technical Products',
+    'advanced technology': 'Advanced Technology International', 'allegheny': 'Allegheny Technologies', 'teledyne': 'Teledyne',
+    'ball': 'Ball', 'caci': 'CACI', 'aselsan': 'Aselsan', 'roketsan': 'Roketsan', 'havelsan': 'Havelsan',
+    'hava elektronik': 'Havelsan', 'stm': 'STM', 'makine ve kimya': 'MKE', 'bmc': 'BMC', 'askeri fabrika': 'ASFAT',
+    'fnss': 'FNSS', 'tusaş': 'TUSAŞ', 'tai': 'TUSAŞ', 'turkish aerospace': 'TUSAŞ', 'krauss': 'KNDS', 'nexter': 'KNDS',
+    'giat': 'KNDS', 'knds': 'KNDS', 'korea aerospace': 'KAI', 'korean aerospace': 'KAI', 'hanwha': 'Hanwha',
+    'hyundai': 'Hyundai Rotem', 'rotem': 'Hyundai Rotem', 'lig nex': 'LIG Nex1', 'mazagon': 'Mazagon Dock',
+    'hindustan': 'Hindustan Aeronautics', 'embraer': 'Embraer', 'aar': 'AAR', 'aerojet': 'Aerojet Rocketdyne',
+    'am general': 'AM General', 'amphenol': 'Amphenol', 'armor holding': 'Armor Holdings', 'austal': 'Austal',
+    'bwx': 'BWX Technologies', 'camber': 'Camber', 'celsius': 'Celsius', 'dyncorp': 'DynCorp', 'edo': 'EDO', 'eg g': 'EG&G',
+    'engility': 'Engility', 'force protection': 'Force Protection', 'griffon': 'Griffon', 'hensoldt': 'Hensoldt',
+    'leidos': 'Leidos', 'lumen': 'Lumen Technologies', 'maxar': 'Maxar Technologies', 'mercury': 'Mercury Systems',
+    'mitsui': 'Mitsui', 'nammo': 'Nammo', 'palantir': 'Palantir Technologies', 'parker': 'Parker Hannifin', 'parsons': 'Parsons',
+    'peraton': 'Peraton', 'perspecta': 'Perspecta', 'primex': 'Primex Technologies', 'serco': 'Serco',
+    'sierra nevada': 'Sierra Nevada', 'stork': 'Stork', 'telesat': 'Telesat', 'tenix': 'Tenix', 'ultra electronic': 'Ultra Electronics',
+    'veridian': 'Veridian', 'vse': 'VSE', 'wyle': 'Wyle', 'fincantieri': 'Fincantieri', 'cantieri': 'Fincantieri',
+    'priborostroyeniya': 'KBP Instrument Design Bureau', 'instrument design': 'KBP Instrument Design Bureau',
+    'tactical missile': 'Tactical Missiles Corp', 'oboronitelniye': 'Tactical Missiles Corp', 'john cockerill': 'John Cockerill',
+    'edge': 'EDGE Group', 'elisra': 'Elisra', 'bazan': 'Navantia', 'izar': 'Navantia', 'navantia': 'Navantia',
+    'ge': 'GE Aerospace', 'general electric': 'GE Aerospace', 'oshkosh': 'Oshkosh', 'patria': 'Patria', 'rti': 'RTI',
+    'sra': 'SRA International', 'src': 'SRC', 'st engineering': 'ST Engineering', 'singapore technologies': 'ST Engineering',
+    'vt': 'VT Group', 'vosper thornycroft': 'VT Group', 'united engine': 'United Engine Corp', 'ufa': 'United Engine Corp'
 }
 
-# Kelimeleri uzunluklarına göre diz (Örn: "advanced technical", "advanced"den önce test edilir)
+# Çakışmaları önlemek için kelimeleri uzunluklarına göre diz
 SORTED_MAGNETS = sorted(ROOT_MAGNETS.keys(), key=len, reverse=True)
 
 def clean_company_name(name):
-    # Tüm noktalama işaretlerini, tireleri boşluğa çevir ve küçük harf yap
-    raw_name = str(name).lower()
-    clean_str = re.sub(r'[^a-z0-9\s]', ' ', raw_name)
+    clean_str = re.sub(r'[^a-z0-9\s]', ' ', str(name).lower())
     
-    # Kök mıknatıs kontrolü: Herhangi bir kelimenin içinde geçmesi yeterlidir
-    for magnet in SORTED_MAGNETS:
-        if magnet in clean_str:
-            return ROOT_MAGNETS[magnet]
+    # Tam kelime eşleşmesi (Word Boundary) zorunluluğu
+    for keyword in SORTED_MAGNETS:
+        if re.search(r'\b' + keyword + r'\b', clean_str):
+            return ROOT_MAGNETS[keyword]
             
-    # Eğer özel sözlükte yoksa, rakamları ve hukuki uzantıları temizleyip geri döndür
+    # Özel sözlükte yoksa, genel temizlik yap
     clean_str = re.sub(r'\d+', '', clean_str)
     takilar = [
         r'\bcorp\b', r'\bcorporation\b', r'\binc\b', r'\bltd\b', r'\bco\b', 
@@ -258,9 +78,9 @@ def clean_company_name(name):
         
     return " ".join(clean_str.split()).title()
 
-# 2. VERİ TOPLAYICI
+# 2. VERİ TOPLAYICI (cache_buster="v5" ile önbellek zorla kırılıyor)
 @st.cache_data
-def load_and_merge_excel(file_path="DefNews100.xlsx"):
+def load_and_merge_excel(file_path="DefNews100.xlsx", cache_buster="v5"):
     try:
         excel_data = pd.read_excel(file_path, sheet_name=None)
         all_data = []
@@ -320,7 +140,7 @@ def load_and_merge_excel(file_path="DefNews100.xlsx"):
 # 3. KONTROL PANELİ VE GÖRSELLEŞTİRME
 st.title("Tarihsel Performans ve 5 Yıllık Tahmin")
 
-df = load_and_merge_excel("DefNews100.xlsx")
+df = load_and_merge_excel("DefNews100.xlsx", cache_buster="v5")
 
 if not df.empty:
     sirketler = sorted(df["Şirket"].unique())
