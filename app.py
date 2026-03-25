@@ -5,44 +5,33 @@ import plotly.graph_objects as go
 import numpy as np
 import re
 
-# 1. DERİN ELEK (Kapsamlı ve Öncelikli Sözlük)
-SIEVE = {
-    'aselsan': 'Aselsan',
-    'roketsan': 'Roketsan',
-    'havelsan': 'Havelsan',
-    'stm': 'STM',
-    'makine ve kimya': 'MKE',
-    'bmc': 'BMC',
-    'askeri fabrika': 'ASFAT',
-    'fnss': 'FNSS',
-    'tai': 'TUSAŞ',
-    'tusaş': 'TUSAŞ',
-    'turkish aerospace': 'TUSAŞ',
-    
+# 1. KÖK KELİME MIKNATISI (Kara Delik Eleği)
+ROOT_MAGNETS = {
     'lockheed': 'Lockheed Martin',
     'boeing': 'Boeing',
     'raytheon': 'RTX',
     'rtx': 'RTX',
     'united technologies': 'RTX',
     'northrop': 'Northrop Grumman',
-    'general dynamics': 'General Dynamics',
+    'general dy': 'General Dynamics', 
     
     'bae': 'BAE Systems',
     'british aerospace': 'BAE Systems',
     
     'eads': 'Airbus',
     'airbus': 'Airbus',
+    'european aeronautic': 'Airbus',
     
     'finmeccanica': 'Leonardo',
     'leonardo': 'Leonardo',
+    'agusta': 'Leonardo',
     
     'thomson': 'Thales',
     'thales': 'Thales',
     
-    'l-3': 'L3Harris',
+    'l 3': 'L3Harris',
     'l3': 'L3Harris',
     'harris': 'L3Harris',
-    'l3harris': 'L3Harris',
     
     'kongsberg': 'Kongsberg',
     'saab': 'Saab',
@@ -52,9 +41,9 @@ SIEVE = {
     'textron': 'Textron',
     'huntington': 'Huntington Ingalls',
     'hii': 'Huntington Ingalls',
+    'newport news': 'Huntington Ingalls',
     
-    'rolls-royce': 'Rolls-Royce',
-    'rolls royce': 'Rolls-Royce',
+    'rolls': 'Rolls-Royce',
     
     'elbit': 'Elbit Systems',
     'rafael': 'Rafael',
@@ -63,12 +52,12 @@ SIEVE = {
     'iai': 'IAI',
     'israel aircraft': 'IAI',
     'israel military': 'IMI Systems',
-    'imi systems': 'IMI Systems',
+    'imi': 'IMI Systems',
     
     'naval group': 'Naval Group',
     'dcns': 'Naval Group',
-    'direction des constructions': 'Naval Group',
     'dcn': 'Naval Group',
+    'direction des constructions': 'Naval Group',
     
     'casic': 'CASIC',
     'china aerospace science and industry': 'CASIC',
@@ -86,32 +75,32 @@ SIEVE = {
     'cssc': 'CSSC',
     
     'cobham': 'Cobham',
+    'curtis': 'Curtiss-Wright',
+    'curtiss': 'Curtiss-Wright',
     
     'concern radio': 'KRET',
     'kret': 'KRET',
-    'concern rdaio': 'KRET',
-    
-    'curtis': 'Curtiss-Wright',
-    'curtiss': 'Curtiss-Wright',
+    'rdaio': 'KRET',
     
     'denel': 'Denel',
     'heico': 'HEICO',
     'ukroboronprom': 'Ukroboronprom',
     'indra': 'Indra',
     
-    'mitsubishi heavy': 'Mitsubishi Heavy',
-    'mitsubishi heaby': 'Mitsubishi Heavy',
-    'mitsubishi electric': 'Mitsubishi Electric',
     'mitsubishi': 'Mitsubishi',
+    'kawasaki': 'Kawasaki',
+    'komatsu': 'Komatsu',
+    'fuji': 'Fuji',
+    'hitachi': 'Hitachi',
+    'toshiba': 'Toshiba',
+    'nec': 'NEC',
+    'ishikawajima': 'IHI',
+    'ihi': 'IHI',
     
-    'booz allen': 'Booz Allen Hamilton',
-    'booz-allen': 'Booz Allen Hamilton',
-    
-    'caci': 'CACI',
-    'computer sciences': 'CSC',
+    'booz': 'Booz Allen Hamilton',
+    'computer science': 'CSC',
     'csc': 'CSC',
     'csra': 'CSC',
-    
     'drs': 'DRS Technologies',
     
     'almaz': 'Almaz-Antey',
@@ -121,14 +110,19 @@ SIEVE = {
     'sukhoi': 'Sukhoi',
     'mig': 'MiG',
     'irkut': 'Irkut',
+    'salyut': 'Salyut',
+    'izhmash': 'Izhmash',
+    'sevmash': 'Sevmash',
+    'admiralteisk': 'Admiralteiskie Verfi',
+    'severnaya': 'Severnaya Verf',
     
-    'alliant techsystems': 'Orbital ATK',
+    'alliant': 'Orbital ATK',
     'orbital': 'Orbital ATK',
     'atk': 'Orbital ATK',
     
     'smiths': 'Smiths Group',
     'babcock': 'Babcock',
-    'backbock': 'Babcock',
+    'backbock': 'Babcock', 
     
     'battelle': 'Battelle',
     'bearingpoint': 'BearingPoint',
@@ -137,47 +131,132 @@ SIEVE = {
     'cae': 'CAE',
     'chemring': 'Chemring',
     'cubic': 'Cubic',
-    'day & zimmerman': 'Day & Zimmermann',
-    'day & zimmermann': 'Day & Zimmermann',
+    'zimmerman': 'Day & Zimmermann',
     'diehl': 'Diehl',
     'flir': 'FLIR',
     'gkn': 'GKN',
     'jacobs': 'Jacobs',
-    'kawasaki': 'Kawasaki',
-    'komatsu': 'Komatsu',
-    'nec': 'NEC',
-    'oshkosh': 'Oshkosh',
     'qinetiq': 'QinetiQ',
     'sagem': 'SAGEM',
     'saic': 'SAIC',
-    'science applications': 'SAIC'
+    'science application': 'SAIC',
+    
+    'aerospace equipment': 'Aerospace Equipment',
+    'aerokosmicheskoe': 'Aerospace Equipment',
+    
+    'advanced technical': 'Advanced Technical Products',
+    'advanced technology': 'Advanced Technology International',
+    
+    'allegheny': 'Allegheny Technologies',
+    'teledyne': 'Teledyne',
+    
+    'ball': 'Ball',
+    'caci': 'CACI',
+    
+    'aselsan': 'Aselsan',
+    'roketsan': 'Roketsan',
+    'havelsan': 'Havelsan',
+    'stm': 'STM',
+    'makine ve kimya': 'MKE',
+    'bmc': 'BMC',
+    'askeri fabrika': 'ASFAT',
+    'fnss': 'FNSS',
+    'tusaş': 'TUSAŞ',
+    'tai': 'TUSAŞ',
+    'turkish aerospace': 'TUSAŞ',
+    
+    'krauss': 'KNDS',
+    'nexter': 'KNDS',
+    'giat': 'KNDS',
+    'knds': 'KNDS',
+    
+    'korea aerospace': 'KAI',
+    'korean aerospace': 'KAI',
+    'hanwha': 'Hanwha',
+    'hyundai': 'Hyundai Rotem',
+    'rotem': 'Hyundai Rotem',
+    'lig nex': 'LIG Nex1',
+    
+    'mazagon': 'Mazagon Dock',
+    'hindustan': 'Hindustan Aeronautics',
+    'embraer': 'Embraer',
+    
+    'aar': 'AAR',
+    'aerojet': 'Aerojet Rocketdyne',
+    'am general': 'AM General',
+    'amphenol': 'Amphenol',
+    'armor holding': 'Armor Holdings',
+    'austal': 'Austal',
+    'bwx': 'BWX Technologies',
+    'camber': 'Camber',
+    'celsius': 'Celsius',
+    'dyncorp': 'DynCorp',
+    'edo': 'EDO',
+    'eg g': 'EG&G', 
+    'engility': 'Engility',
+    'force protection': 'Force Protection',
+    'griffon': 'Griffon',
+    'hensoldt': 'Hensoldt',
+    'leidos': 'Leidos',
+    'lumen': 'Lumen Technologies',
+    'maxar': 'Maxar Technologies',
+    'mercury': 'Mercury Systems',
+    'mitsui': 'Mitsui',
+    'nammo': 'Nammo',
+    'palantir': 'Palantir Technologies',
+    'parker': 'Parker Hannifin',
+    'parsons': 'Parsons',
+    'peraton': 'Peraton',
+    'perspecta': 'Perspecta',
+    'primex': 'Primex Technologies',
+    'serco': 'Serco',
+    'sierra nevada': 'Sierra Nevada',
+    'stork': 'Stork',
+    'telesat': 'Telesat',
+    'tenix': 'Tenix',
+    'ultra electronic': 'Ultra Electronics',
+    'veridian': 'Veridian',
+    'vse': 'VSE',
+    'wyle': 'Wyle',
+    
+    'fincantieri': 'Fincantieri',
+    'cantieri': 'Fincantieri',
+    
+    'priborostroyeniya': 'KBP Instrument Design Bureau',
+    'instrument design': 'KBP Instrument Design Bureau',
+    
+    'tactical missile': 'Tactical Missiles Corp',
+    'oboronitelniye': 'Tactical Missiles Corp',
+    
+    'john cockerill': 'John Cockerill',
+    'edge': 'EDGE Group'
 }
 
-# Çakışmaları önlemek için kelimeleri karakter uzunluğuna göre büyükten küçüğe sırala
-SORTED_SIEVE_KEYS = sorted(SIEVE.keys(), key=len, reverse=True)
+# Kelimeleri uzunluklarına göre diz (Örn: "advanced technical", "advanced"den önce test edilir)
+SORTED_MAGNETS = sorted(ROOT_MAGNETS.keys(), key=len, reverse=True)
 
 def clean_company_name(name):
-    lower_name = str(name).lower()
+    # Tüm noktalama işaretlerini, tireleri boşluğa çevir ve küçük harf yap
+    raw_name = str(name).lower()
+    clean_str = re.sub(r'[^a-z0-9\s]', ' ', raw_name)
     
-    # 1. Kelime sınırlarıyla (Word Boundary) hassas arama yap
-    for keyword in SORTED_SIEVE_KEYS:
-        if re.search(r'\b' + re.escape(keyword) + r'\b', lower_name):
-            return SIEVE[keyword]
+    # Kök mıknatıs kontrolü: Herhangi bir kelimenin içinde geçmesi yeterlidir
+    for magnet in SORTED_MAGNETS:
+        if magnet in clean_str:
+            return ROOT_MAGNETS[magnet]
             
-    # 2. Özel eşleşme bulunamazsa genel temizlik yap
-    name_clean = re.sub(r'\d+', '', lower_name)
-    name_clean = re.sub(r'[^\w\s]', ' ', name_clean)
-    
+    # Eğer özel sözlükte yoksa, rakamları ve hukuki uzantıları temizleyip geri döndür
+    clean_str = re.sub(r'\d+', '', clean_str)
     takilar = [
         r'\bcorp\b', r'\bcorporation\b', r'\binc\b', r'\bltd\b', r'\bco\b', 
         r'\bplc\b', r'\ba s\b', r'\bs a\b', r'\bcompany\b', r'\bgroup\b', 
         r'\bholding\b', r'\bholdings\b', r'\bsystems\b', r'\bllc\b', r'\bspa\b',
-        r'\bindustries\b', r'\blimited\b'
+        r'\bindustries\b', r'\blimited\b', r'\binternational\b', r'\binter tio l\b'
     ]
     for taki in takilar:
-        name_clean = re.sub(taki, '', name_clean)
+        clean_str = re.sub(taki, '', clean_str)
         
-    return " ".join(name_clean.split()).title()
+    return " ".join(clean_str.split()).title()
 
 # 2. VERİ TOPLAYICI
 @st.cache_data
@@ -250,7 +329,6 @@ if not df.empty:
     
     st.markdown("---")
     
-    # TAHMİN (FORECASTING) - AĞIRLIKLI MOTOR
     tahmin_yapildi = False
     if len(sirket_verisi) > 2:
         yillar = sirket_verisi["Yıl"].values
@@ -261,7 +339,6 @@ if not df.empty:
         son_ciro = son_ciro_row["Savunma Cirosu"].values[0] if not son_ciro_row.empty else cirolar[-1]
         
         agirliklar = np.exp((yillar - son_yil) / 4.0)
-        
         z = np.polyfit(yillar, cirolar, 1, w=agirliklar)
         p = np.poly1d(z)
         
@@ -279,7 +356,6 @@ if not df.empty:
     
     st.markdown("---")
     
-    # GRAFİKLER
     col1, col2 = st.columns(2)
     with col1:
         fig_ciro = go.Figure()
