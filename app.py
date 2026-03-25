@@ -7,76 +7,111 @@ import re
 import json
 import os
 
-# 1. KÖK KELİME MIKNATISI (Varyasyonlar Çözüldü)
+# 1. KÖK KELİME MIKNATISI (M&A, İsim Değişiklikleri ve Tam Eşleşmeler)
 ROOT_MAGNETS = {
-    'lockheed': 'Lockheed Martin', 'derco': 'Lockheed Martin', 'boeing': 'Boeing', 
-    'rockwell collins': 'RTX', 'rockwell': 'RTX', 'raytheon': 'RTX', 'rtx': 'RTX', 'united technologies': 'RTX', 'hughes': 'RTX',
-    'northrop': 'Northrop Grumman', 'litton': 'Northrop Grumman', 'trw': 'Northrop Grumman',
-    'general dy': 'General Dynamics', 'force protection': 'General Dynamics', 'motorola': 'General Dynamics', 'primex': 'General Dynamics', 'spectrum astro': 'General Dynamics', 
-    'bae': 'BAE Systems', 'british aerospace': 'BAE Systems', 'united defense': 'BAE Systems', 'vickers': 'BAE Systems', 'armor': 'BAE Systems',
-    'eads': 'Airbus', 'airbus': 'Airbus', 'european aeronautic': 'Airbus', 'aerospatiale': 'Airbus', 'daimlerchrysler aerospace': 'Airbus',
+    # Lockheed
+    'lockheed': 'Lockheed Martin', 'derco': 'Lockheed Martin', 'sikorsky': 'Lockheed Martin',
+    
+    # Boeing
+    'boeing': 'Boeing', 'rockwell international': 'Boeing', 'mcdonnell douglas': 'Boeing',
+    
+    # RTX
+    'rockwell collins': 'RTX', 'raytheon': 'RTX', 'rtx': 'RTX', 'united technologies': 'RTX', 'hughes': 'RTX',
+    
+    # Northrop Grumman
+    'northrop': 'Northrop Grumman', 'litton': 'Northrop Grumman', 'trw': 'Northrop Grumman', 'orbital': 'Northrop Grumman', 'atk': 'Northrop Grumman', 'alliant': 'Northrop Grumman',
+    
+    # General Dynamics
+    'general dy': 'General Dynamics', 'force protection': 'General Dynamics', 'motorola': 'General Dynamics', 'primex': 'General Dynamics', 'spectrum astro': 'General Dynamics', 'csra': 'General Dynamics', 'sra': 'General Dynamics', 'sra international': 'General Dynamics', 'computer science': 'General Dynamics', 'csc': 'General Dynamics', 'anteon': 'General Dynamics',
+    
+    # BAE Systems
+    'bae': 'BAE Systems', 'british aerospace': 'BAE Systems', 'united defense': 'BAE Systems', 'vickers': 'BAE Systems', 'armor': 'BAE Systems', 'vt group': 'BAE Systems', 'vosper': 'BAE Systems',
+    
+    # Airbus
+    'eads': 'Airbus', 'airbus': 'Airbus', 'european aeronautic': 'Airbus', 'aerospatiale': 'Airbus', 'daimlerchrysler aerospace': 'Airbus', 'construcciones aeronauticas': 'Airbus',
+    
+    # Leonardo
     'finmeccanica': 'Leonardo', 'leonardo': 'Leonardo', 'agusta': 'Leonardo',
+    
+    # Thales
     'thomson': 'Thales', 'thales': 'Thales', 'racal': 'Thales',
+    
+    # L3Harris
     'itt': 'L3Harris', 'exelis': 'L3Harris', 'l 3': 'L3Harris', 'l3': 'L3Harris', 'harris': 'L3Harris', 'lharris': 'L3Harris', 'l3harris': 'L3Harris',
-    'kongsberg': 'Kongsberg', 'saab': 'Saab', 'celsius': 'Saab', 'dassault': 'Dassault', 'rheinmetall': 'Rheinmetall', 'oerlikon': 'Rheinmetall',
+    
+    # Bilişim & Siber Devi: Peraton & SAIC & CACI
+    'peraton': 'Peraton', 'vencore': 'Peraton', 'perspecta': 'Peraton', 'eds': 'Peraton', 'electronic data': 'Peraton',
+    'saic': 'SAIC', 'science application': 'SAIC', 'engility': 'SAIC',
+    'caci': 'CACI', 'lgs innovations': 'CACI',
+    'leidos': 'Leidos', 
+    
+    # KBR & Jacobs & Howmet
+    'kbr': 'KBR', 'wyle': 'KBR',
+    'jacobs': 'Jacobs', 'sverdrup': 'Jacobs',
+    'alcoa': 'Howmet Aerospace', 'howmet': 'Howmet Aerospace',
+    
+    # Textron
+    'textron': 'Textron', 'united industrial': 'Textron', 'aai': 'Textron',
+    
+    # Huntington Ingalls
     'huntington': 'Huntington Ingalls', 'hii': 'Huntington Ingalls', 'newport news': 'Huntington Ingalls', 
-    'hunting ': 'Hunting', 'hunting\b': 'Hunting',
+    
+    # Avrupa & Diğer
+    'kongsberg': 'Kongsberg', 
+    'saab': 'Saab', 'celsius': 'Saab', 
+    'dassault': 'Dassault', 
+    'rheinmetall': 'Rheinmetall', 'oerlikon': 'Rheinmetall',
     'rolls': 'Rolls-Royce',
+    'naval group': 'Naval Group', 'dcns': 'Naval Group', 'dcn': 'Naval Group', 'direction des constructions': 'Naval Group', 
+    'cobham': 'Cobham', 'caes': 'Cobham', 
+    'curtis': 'Curtiss-Wright', 'curtiss': 'Curtiss-Wright',
+    'teledyne': 'Teledyne', 'allegheny': 'Teledyne', 
+    'denel': 'Denel', 'heico': 'HEICO', 'indra': 'Indra', 
+    'smiths': 'Smiths Group', 'babcock': 'Babcock', 'backbock': 'Babcock', 'battelle': 'Battelle', 
+    'bearingpoint': 'BearingPoint', 'kpmg': 'BearingPoint', 'bechtel': 'Bechtel', 
+    'cae': 'CAE', 'chemring': 'Chemring', 'cubic': 'Cubic', 'mbda': 'MBDA',
+    'zimmermann': 'Day & Zimmermann', 'zimmerman': 'Day & Zimmermann', 'day': 'Day & Zimmermann',
+    'diehl': 'Diehl', 'flir': 'FLIR', 'gkn': 'GKN', 'qinetiq': 'QinetiQ', 
+    'sagem': 'Safran', 'safran': 'Safran', 'sextant': 'Safran',
+    'aerospace equipment': 'Aerospace Equipment', 'aerokosmicheskoe': 'Aerospace Equipment', 
+    'advanced technical': 'Advanced Technical Products', 'advanced technology': 'Advanced Technology International', 
+    'thyssenkrupp': 'ThyssenKrupp', 'ball': 'Ball', 'ruag': 'RUAG',
+    
+    # İsrail
     'el op': 'Elbit Systems', 'elbit': 'Elbit Systems', 'tadiran': 'Elbit Systems', 'elisra': 'Elbit Systems',
     'rafael': 'Rafael', 
     'israel aerospace': 'IAI', 'iai': 'IAI', 'israel aircraft': 'IAI',
     'israel military': 'IMI Systems', 'imi': 'IMI Systems', 
-    'naval group': 'Naval Group', 'dcns': 'Naval Group', 'dcn': 'Naval Group', 'direction des constructions': 'Naval Group', 
+    
+    # Çin Konsolidasyonu
     'casic': 'CASIC', 'china aerospace science and industry': 'CASIC', 
     'casc': 'CASC', 'china aerospace science and technology': 'CASC',
     'china north': 'NORINCO', 'norinco': 'NORINCO', 
     'china south': 'CSGC', 'csgc': 'CSGC', 
     'cssc': 'CSSC', 'china state': 'CSSC', 'csic': 'CSSC', 'china shipbuilding industry': 'CSSC',
-    'aviation industry of china': 'AVIC', 
-    'cobham': 'Cobham', 'caes': 'Cobham', 'curtis': 'Curtiss-Wright', 'curtiss': 'Curtiss-Wright',
+    'aviation industry of china': 'AVIC', 'avic': 'AVIC', 'china national aerotech': 'AVIC',
+    'china electronics technology': 'CETC', 'cetc': 'CETC',
     
-    # Teledyne Serisi
-    'teledyne': 'Teledyne', 'allegheny': 'Teledyne', 
-    
-    # Tactical Missiles (KTRV) ve Rus Uzantıları
-    'tactical missile': 'Tactical Missiles Corporation', 'oboronitelniye': 'Tactical Missiles Corporation', 
-    'concern radio': 'KRET', 'kret': 'KRET', 'rdaio': 'KRET', 
-    
-    'denel': 'Denel', 'heico': 'HEICO', 
-    'ukroboronprom': 'Ukroboronprom', 'ukrainian defense': 'Ukroboronprom', 
-    'indra': 'Indra', 
-    
-    # Japon Firmaları
+    # Japonya
     'mitsubishi': 'Mitsubishi', 'misubishi': 'Mitsubishi', 'mitsui': 'Mitsui', 
-    'itochu': 'Itochu', 'kawasaki': 'Kawasaki', 'komatsu': 'Komatsu', 'fuji': 'Fuji', 'hitachi': 'Hitachi', 'toshiba': 'Toshiba', 
+    'itochu': 'Itochu', 'kawasaki': 'Kawasaki', 'komatsu': 'Komatsu', 'hitachi': 'Hitachi', 'toshiba': 'Toshiba', 
+    'fuji': 'Subaru', 'subaru': 'Subaru',
     'nec': 'NEC', 'ishikawajima': 'IHI', 'ihi': 'IHI', 
     
-    # ABD Bilişim & Hizmet 
-    'booz': 'Booz Allen Hamilton', 'computer science': 'CSC', 'csc': 'CSC', 'csra': 'CSC', 'drs': 'DRS Technologies',
-    'leidos': 'Leidos', 'saic': 'SAIC', 'science application': 'SAIC', 'caci': 'CACI', 'lgs innovations': 'CACI',
-    'perspecta': 'Peraton', 'vencore': 'Peraton', 'peraton': 'Peraton',
-    
-    # Rus Grubu
+    # Rusya / Ukrayna Konsolidasyonu
     'almaz': 'Almaz-Antey', 'antei': 'Almaz-Antey', 'antey': 'Almaz-Antey', 
-    'sukhoi': 'Sukhoi', 'mig': 'MiG', 'irkutsk': 'Irkut', 'irkut': 'Irkut', 'salyut': 'Salyut', 'izhmash': 'Izhmash', 'sevmash': 'Sevmash', 
-    'admiralteis': 'Admiralteiskie Verfi', 'admiralteisk': 'Admiralteiskie Verfi', 'severnaya': 'Severnaya Verf', 
+    'sukhoi': 'United Aircraft Corporation', 'mig': 'United Aircraft Corporation', 'irkutsk': 'United Aircraft Corporation', 'irkut': 'United Aircraft Corporation', 'salyut': 'United Aircraft Corporation', 'izhmash': 'United Aircraft Corporation',
+    'admiralteisk': 'United Shipbuilding Corporation', 'admiralteiske': 'United Shipbuilding Corporation', 'admiralteiskiye': 'United Shipbuilding Corporation', 'severnaya': 'United Shipbuilding Corporation', 'sevmash': 'United Shipbuilding Corporation', 'baltiisky': 'United Shipbuilding Corporation', 
     'russia s helicopter': 'Russian Helicopters', 'russian helicopter': 'Russian Helicopters', 'kazan helicopter': 'Russian Helicopters',
+    'tactical missile': 'Tactical Missiles Corporation', 'oboronitelniye': 'Tactical Missiles Corporation', 
+    'concern radio': 'KRET', 'kret': 'KRET', 'rdaio': 'KRET', 'radioelectronic': 'KRET',
     'united enginebuilding': 'United Engine Corp', 'united engine': 'United Engine Corp', 'ufa': 'United Engine Corp',
     'rosvoorouzhenie': 'Rosoboronexport', 'rosoboronexport': 'Rosoboronexport',
+    'ukroboronprom': 'Ukroboronprom', 'ukrainian defense': 'Ukroboronprom', 
     
-    'textron': 'Textron', 'united industrial': 'Textron', 'aai': 'Textron',
-    'alliant': 'Orbital ATK', 'orbital': 'Orbital ATK', 'atk': 'Orbital ATK',
-    'smiths': 'Smiths Group', 'babcock': 'Babcock', 'backbock': 'Babcock', 'battelle': 'Battelle', 
-    'bearingpoint': 'BearingPoint', 'kpmg': 'BearingPoint', 'bechtel': 'Bechtel', 'bharat': 'Bharat Electronics', 
-    'cae': 'CAE', 'chemring': 'Chemring', 'cubic': 'Cubic', 'mbda': 'MBDA',
-    
-    # Çift Yazım Çözümleri
-    'zimmermann': 'Day & Zimmermann', 'zimmerman': 'Day & Zimmermann', 'day &': 'Day & Zimmermann',
-    'diehl': 'Diehl', 'flir': 'FLIR', 'gkn': 'GKN', 'jacobs': 'Jacobs', 'qinetiq': 'QinetiQ', 'qinetiq privatized': 'QinetiQ',
-    'sagem': 'Safran', 'safran': 'Safran', 'sextant': 'Safran',
-    'aerospace equipment': 'Aerospace Equipment', 'aerokosmicheskoe': 'Aerospace Equipment', 
-    'advanced technical': 'Advanced Technical Products', 'advanced technology': 'Advanced Technology International', 
-    'thyssenkrupp': 'ThyssenKrupp', 'ball': 'Ball', 'ruag': 'RUAG',
+    # Diğer
+    'bharat': 'Bharat Electronics', 
+    'hunting': 'Hunting', 
     
     # Türk Firmaları
     'aselsan': 'Aselsan', 'roketsan': 'Roketsan', 'havelsan': 'Havelsan', 'hava elektronik': 'Havelsan', 
@@ -88,18 +123,18 @@ ROOT_MAGNETS = {
     'hindustan': 'Hindustan Aeronautics', 'embraer': 'Embraer', 'aar': 'AAR', 'aerojet': 'Aerojet Rocketdyne', 
     'am general': 'AM General', 'amphenol': 'Amphenol', 'austal': 'Austal', 
     'bwx': 'BWX Technologies', 'camber': 'Camber', 'dyncorp': 'DynCorp', 'edo': 'EDO', 
-    'eg g': 'EG&G', 'engility': 'Engility', 'griffon': 'Griffon', 'hensoldt': 'Hensoldt', 
+    'eg g': 'EG&G', 'griffon': 'Griffon', 'hensoldt': 'Hensoldt', 
     'lumen': 'Lumen Technologies', 'maxar': 'Maxar Technologies', 'mercury': 'Mercury Systems',
     'nammo': 'Nammo', 'palantir': 'Palantir Technologies', 'parker': 'Parker Hannifin', 'parsons': 'Parsons',
     'serco': 'Serco', 'sierra nevada': 'Sierra Nevada', 'stork': 'Stork', 'telesat': 'Telesat', 'tenix': 'Tenix', 
-    'ultra electronic': 'Ultra Electronics', 'veridian': 'Veridian', 'vse': 'VSE', 'wyle': 'Wyle', 
+    'ultra electronic': 'Ultra Electronics', 'veridian': 'Veridian', 'vse': 'VSE', 
     'fincantieri': 'Fincantieri', 'cantieri': 'Fincantieri', 
-    'priborostroyeniya': 'KBP Instrument Design Bureau', 'instrument design': 'KBP Instrument Design Bureau', 'design bureau of instrument eng tula': 'KBP Instrument Design Bureau',
+    'priborostroyeniya': 'KBP Instrument Design Bureau', 'instrument design': 'KBP Instrument Design Bureau', 
     'john cockerill': 'John Cockerill', 'edge': 'EDGE Group', 'bazan': 'Navantia', 'izar': 'Navantia', 'navantia': 'Navantia', 
     'ge': 'GE Aerospace', 'general electric': 'GE Aerospace', 'oshkosh': 'Oshkosh', 'patria': 'Patria', 'rti': 'RTI', 
-    'sra': 'SRA International', 'src': 'SRC', 'st engineering': 'ST Engineering', 'singapore technologies': 'ST Engineering', 
-    'vt': 'VT Group', 'vosper': 'VT Group'
+    'st engineering': 'ST Engineering', 'singapore technologies': 'ST Engineering'
 }
+
 SORTED_MAGNETS = sorted(ROOT_MAGNETS.keys(), key=len, reverse=True)
 
 # 2. JSON VERİTABANI OKUYUCUSU
@@ -111,11 +146,15 @@ def load_kunye():
 
 # 3. İSİM TEMİZLEYİCİ
 def clean_company_name(name):
+    # Tüm noktalama işaretlerini boşluğa çevir ve küçük harfe dönüştür.
     clean_str = re.sub(r'[^a-z0-9\s]', ' ', str(name).lower())
+    
+    # Mıknatıs Taraması: Uzun kelimelerden başlayarak tam kelime eşleşmesi (\b) yapar
     for keyword in SORTED_MAGNETS:
         if re.search(r'\b' + keyword + r'\b', clean_str):
             return ROOT_MAGNETS[keyword]
             
+    # Eğer eşleşme yoksa rakamları ve yasal uzantıları atarak ismi standartlaştırır
     clean_str = re.sub(r'\d+', '', clean_str)
     takilar = [
         r'\bcorp\b', r'\bcorporation\b', r'\binc\b', r'\bltd\b', r'\bco\b', 
@@ -130,7 +169,7 @@ def clean_company_name(name):
 
 # 4. VERİ TOPLAYICI
 @st.cache_data
-def load_and_merge_excel(file_path="DefNews100.xlsx", cache_buster="v15"):
+def load_and_merge_excel(file_path="DefNews100.xlsx", cache_buster="v16"):
     try:
         excel_data = pd.read_excel(file_path, sheet_name=None)
         all_data = []
@@ -185,7 +224,7 @@ def load_and_merge_excel(file_path="DefNews100.xlsx", cache_buster="v15"):
 # 5. KONTROL PANELİ VE GÖRSELLEŞTİRME
 st.title("Top 100 Savunma Şirketleri Analizi")
 
-df = load_and_merge_excel("DefNews100.xlsx", cache_buster="v15")
+df = load_and_merge_excel("DefNews100.xlsx", cache_buster="v16")
 kunye_veritabani = load_kunye()
 
 if not df.empty:
