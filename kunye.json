@@ -17,21 +17,21 @@
     "Tam İsim": "BAE Systems plc", "Ülke": "İngiltere", "Üst Kurum / Ortaklık": "Halka Açık (LSE: BA)",
     "CEO": "Charles Woodburn", "Çalışan": "~93.000", "Faaliyet": "Savaş Uçakları, Denizaltı, Kara Araçları",
     "En Bilinen Ürünler / Markalar": "Typhoon (ortak), Bradley, Astute sınıfı denizaltılar",
-    "Tarihçe & Birleşmeler": "1999'da British Aerospace ve Marconi birleşti. ABD pazarında United Defense satın alımıyla büyüdü.",
+    "Tarihçe & Birleşmeler": "1999'da British Aerospace ve Marconi birleşti. ABD pazarında United Defense, Armor Holdings ve VT Group satın alımıyla büyüdü.",
     "Analiz Notu": "İngiliz menşeli olmasına rağmen ana gelir akışını Pentagon ihalelerinden elde etmektedir."
   },
   "Northrop Grumman": {
     "Tam İsim": "Northrop Grumman Corporation", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Halka Açık (NYSE: NOC)",
     "CEO": "Kathy J. Warden", "Çalışan": "~101.000", "Faaliyet": "Stratejik Bombardıman, Uzay, Radarlar",
     "En Bilinen Ürünler / Markalar": "B-21 Raider, RQ-4 Global Hawk, AESA radarları",
-    "Tarihçe & Birleşmeler": "1994'te Northrop ve Grumman birleşti. 2018'de Orbital ATK satın alındı.",
+    "Tarihçe & Birleşmeler": "1994'te Northrop ve Grumman birleşti. Litton Industries, TRW ve Orbital ATK (Alliant) şirketlerini yutarak büyüdü.",
     "Analiz Notu": "Özellikle görünmezlik (stealth) teknolojileri, uzay fırlatma ve radar sensörlerinde endüstri standardını belirler."
   },
   "General Dynamics": {
     "Tam İsim": "General Dynamics Corporation", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Halka Açık (NYSE: GD)",
     "CEO": "Phebe N. Novakovic", "Çalışan": "~100.000", "Faaliyet": "Denizaltı, Kara Araçları, Sivil Havacılık",
     "En Bilinen Ürünler / Markalar": "M1 Abrams, Virginia sınıfı denizaltılar, Gulfstream jetleri",
-    "Tarihçe & Birleşmeler": "Geçmişte savaş uçağı (F-16) birimini devredip kara ve deniz platformlarına odaklanmıştır.",
+    "Tarihçe & Birleşmeler": "Savaş uçağı birimini devredip; Primex, Force Protection ve SRA International gibi şirketleri satın alarak kara/bilişim platformlarına odaklandı.",
     "Analiz Notu": "Gulfstream iş jetleri üzerinden sağlanan sivil gelir, savunma bütçesi kesintilerine karşı tampon görevi görür."
   },
   "Boeing": {
@@ -45,14 +45,14 @@
     "Tam İsim": "Airbus SE", "Ülke": "Hollanda", "Üst Kurum / Ortaklık": "Fransa (%11), Almanya (%11), İspanya (%4), Halka Açık",
     "CEO": "Guillaume Faury", "Çalışan": "~147.000", "Faaliyet": "Sivil Havacılık, Askeri Kargo, Helikopter",
     "En Bilinen Ürünler / Markalar": "A400M, Eurofighter (ortak), H225M helikopterleri",
-    "Tarihçe & Birleşmeler": "EADS adıyla kurulup 2014'te Airbus Group olarak güncellenmiştir.",
-    "Analiz Notu": "Askeri projelerini genellikle bağımsız yürütmek yerine Avrupa konsorsiyumları (Eurofighter, MBDA) üzerinden gerçekleştirir."
+    "Tarihçe & Birleşmeler": "Aerospatiale, DaimlerChrysler Aerospace ve CASA birleşimiyle doğmuş, EADS'tan Airbus Group'a evrilmiştir.",
+    "Analiz Notu": "Askeri projelerini genellikle bağımsız yürütmek yerine Avrupa konsorsiyumları üzerinden gerçekleştirir."
   },
   "Thales": {
     "Tam İsim": "Thales Group", "Ülke": "Fransa", "Üst Kurum / Ortaklık": "Fransa Devleti (%26), Dassault Aviation (%25), Halka Açık",
     "CEO": "Patrice Caine", "Çalışan": "~81.000", "Faaliyet": "Aviyonik, Optronik Sistemler, Radarlar, Siber Güvenlik",
     "En Bilinen Ürünler / Markalar": "Rafale aviyonikleri, Sea Fire radarları",
-    "Tarihçe & Birleşmeler": "Eski adı Thomson-CSF'dir. 2000 yılında Thales adını aldı.",
+    "Tarihçe & Birleşmeler": "Eski adı Thomson-CSF'dir. Racal Electronics'i satın alarak İngiltere'de genişledi.",
     "Analiz Notu": "Platform üreticisi değil, platformların beynini (sensör, aviyonik, radar) üreten temel elektronik tedarikçisidir."
   },
   "Leonardo": {
@@ -66,7 +66,7 @@
     "Tam İsim": "L3Harris Technologies", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Halka Açık (NYSE: LHX)",
     "CEO": "Christopher E. Kubasik", "Çalışan": "~50.000", "Faaliyet": "Taktik Haberleşme, Elektro-Optik, Sensör",
     "En Bilinen Ürünler / Markalar": "Falcon telsizleri, WESCAM kameralar",
-    "Tarihçe & Birleşmeler": "2019'da L3 Technologies ve Harris Corp. birleşti. Aerojet Rocketdyne 2023'te bünyeye katıldı.",
+    "Tarihçe & Birleşmeler": "2019'da L3 Technologies ve Harris Corp. birleşti. ITT Exelis mirasını barındırır. Aerojet Rocketdyne bünyeye katıldı.",
     "Analiz Notu": "Taktik veri bağları ve askeri haberleşme ağlarında Pentagon'un ana altyapı sağlayıcısıdır."
   },
   "Teledyne": {
@@ -80,21 +80,21 @@
     "Tam İsim": "Huntington Ingalls Industries (HII)", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Halka Açık (NYSE: HII)",
     "CEO": "Chris Kastner", "Çalışan": "~44.000", "Faaliyet": "Gemi İnşa, Nükleer Denizaltı, Uçak Gemisi",
     "En Bilinen Ürünler / Markalar": "Ford sınıfı uçak gemileri, Virginia sınıfı denizaltılar",
-    "Tarihçe & Birleşmeler": "2011 yılında Northrop Grumman'ın gemi inşa bölümünün ayrılmasıyla bağımsız oldu.",
+    "Tarihçe & Birleşmeler": "2011 yılında Northrop Grumman'ın gemi inşa (Newport News) bölümünün ayrılmasıyla bağımsız oldu.",
     "Analiz Notu": "ABD Donanması'nın nükleer güçle çalışan uçak gemilerinin tek tasarımcısı ve üreticisidir."
   },
   "Textron": {
     "Tam İsim": "Textron Inc.", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Halka Açık (NYSE: TXT)",
     "CEO": "Scott C. Donnelly", "Çalışan": "~35.000", "Faaliyet": "Havacılık, Zırhlı Araçlar, Sivil İş Jetleri",
     "En Bilinen Ürünler / Markalar": "Bell V-280 Valor, Cessna uçakları, Beechcraft",
-    "Tarihçe & Birleşmeler": "Bell Helicopters ve Cessna gibi dev markaları şemsiyesi altında toplar.",
+    "Tarihçe & Birleşmeler": "Bell Helicopters ve Cessna markalarını barındırır. United Industrial (AAI) satın alınarak otonom sistemlere girilmiştir.",
     "Analiz Notu": "Özellikle döner kanatlı askeri platformlar ve sivil jet pazarında dengeli bir gelir yaratır."
   },
   "Elbit Systems": {
     "Tam İsim": "Elbit Systems Ltd.", "Ülke": "İsrail", "Üst Kurum / Ortaklık": "Halka Açık (TASE: ESLT)",
     "CEO": "Bezhalel Machlis", "Çalışan": "~19.000", "Faaliyet": "İHA, Elektro-Optik, Komuta Kontrol",
     "En Bilinen Ürünler / Markalar": "Hermes İHA'lar, JHMCS (kaska entegre nişangah)",
-    "Tarihçe & Birleşmeler": "El-Op, Tadiran ve devlete ait IMI Systems şirketlerini satın alarak tekelleşmiştir.",
+    "Tarihçe & Birleşmeler": "El-Op, Tadiran, Elisra ve devlete ait IMI Systems şirketlerini satın alarak tekelleşmiştir.",
     "Analiz Notu": "Zırhlı araç ve hava platformları için kaska entegre ekranlar (HUD) ile aktif koruma sistemlerinde liderdir."
   },
   "IAI": {
@@ -114,22 +114,22 @@
   "Rheinmetall": {
     "Tam İsim": "Rheinmetall AG", "Ülke": "Almanya", "Üst Kurum / Ortaklık": "Halka Açık (ETR: RHM)",
     "CEO": "Armin Papperger", "Çalışan": "~30.000", "Faaliyet": "Zırhlı Araçlar, Mühimmat, Otomotiv Parçaları",
-    "En Bilinen Ürünler / Markalar": "Leopard 2 ana topu (L55), KF51 Panther tankı",
-    "Tarihçe & Birleşmeler": "İspanyol mühimmat üreticisi Expal'i satın alarak üretim kapasitesini maksimize etmiştir.",
+    "En Bilinen Ürünler / Markalar": "Leopard 2 ana topu (L55), KF51 Panther tankı, Oerlikon uçaksavarlar",
+    "Tarihçe & Birleşmeler": "Oerlikon Contraves gibi sistemleri bünyesine katmıştır. İspanyol Expal'i satın alarak mühimmat üretimini artırdı.",
     "Analiz Notu": "Avrupa zırh çeliği ve 155mm topçu mühimmatı pazarında ana üreticidir."
   },
   "KNDS": {
     "Tam İsim": "KNDS (KMW+Nexter Defense Systems)", "Ülke": "Almanya / Fransa", "Üst Kurum / Ortaklık": "Wegmann & Co. (%50) ve GIAT (%50)",
     "CEO": "Frank Haun", "Çalışan": "~9.000", "Faaliyet": "Ana Muharebe Tankları, Topçu Sistemleri",
     "En Bilinen Ürünler / Markalar": "Leopard 2 tankı, Leclerc tankı, CAESAR obüsü",
-    "Tarihçe & Birleşmeler": "2015'te Alman Krauss-Maffei Wegmann (KMW) ve Fransız Nexter'in birleşmesiyle kuruldu.",
+    "Tarihçe & Birleşmeler": "2015'te Alman Krauss-Maffei Wegmann (KMW) ve Fransız Nexter (eski GIAT) birleşmesiyle kuruldu.",
     "Analiz Notu": "Avrupa ordularının yeni nesil tank projesi (MGCS) için yapılandırılmış stratejik bir konsorsiyumdur."
   },
   "Saab": {
     "Tam İsim": "Saab AB", "Ülke": "İsveç", "Üst Kurum / Ortaklık": "Halka Açık (STO: SAAB B)",
     "CEO": "Micael Johansson", "Çalışan": "~21.000", "Faaliyet": "Savaş Uçakları, Radarlar, Anti-Tank Silahları",
     "En Bilinen Ürünler / Markalar": "Gripen savaş uçağı, Carl-Gustaf, Erieye radarları",
-    "Tarihçe & Birleşmeler": "Otomobil bölümünü devrettikten sonra havacılık ve askeri sistemlere odaklandı.",
+    "Tarihçe & Birleşmeler": "2000'de Celsius AB şirketini devralarak ürün ağını konsolide etmiştir.",
     "Analiz Notu": "Gelişmiş radar sistemleri ve taşınabilir tanksavar silahlarında geniş bir ihracat ağına sahiptir."
   },
   "Kongsberg": {
@@ -157,21 +157,21 @@
     "Tam İsim": "Roketsan Roket Sanayii ve Ticaret A.Ş.", "Ülke": "Türkiye", "Üst Kurum / Ortaklık": "TSKGV (%55.5), MKE (%15), Aselsan (%15)",
     "CEO": "Murat İkinci", "Çalışan": "~4.000", "Faaliyet": "Füze Sistemleri, Roketler, Hassas Güdümlü Mühimmatlar",
     "En Bilinen Ürünler / Markalar": "MAM-L, HİSAR füzeleri, TAYFUN, SOM, ATMACA",
-    "Tarihçe & Birleşmeler": "1988 yılında kuruldu.",
+    "Tarihçe & Birleşmeler": "1988 yılında uluslararası füze programları için kuruldu.",
     "Analiz Notu": "Özellikle silahlı İHA platformlarının ana vurucu gücünü oluşturan mikro mühimmatların (MAM serisi) üreticisidir."
   },
   "Havelsan": {
     "Tam İsim": "HAVELSAN A.Ş.", "Ülke": "Türkiye", "Üst Kurum / Ortaklık": "TSKGV (%98)",
     "CEO": "Dr. Mehmet Akif Nacar", "Çalışan": "~2.500", "Faaliyet": "Komuta Kontrol, Simülasyon, Siber Güvenlik",
     "En Bilinen Ürünler / Markalar": "ADVENT Savaş Yönetim Sistemi, BARKAN, Simülatörler",
-    "Tarihçe & Birleşmeler": "1982 yılında TSKGV bünyesinde kuruldu.",
+    "Tarihçe & Birleşmeler": "1982 yılında Türk Silahlı Kuvvetlerini Güçlendirme Vakfı bünyesinde kuruldu.",
     "Analiz Notu": "Askeri platformlardan ziyade, savaş gemilerinin savaş yönetim yazılımları ve askeri ağ mimarilerine odaklanır."
   },
   "STM": {
     "Tam İsim": "STM Savunma Teknolojileri Mühendislik ve Ticaret A.Ş.", "Ülke": "Türkiye", "Üst Kurum / Ortaklık": "Savunma Sanayii Başkanlığı (SSB)",
     "CEO": "Özgür Güleryüz", "Çalışan": "~1.500", "Faaliyet": "Askeri Denizcilik, Kamikaze İHA, Siber Güvenlik",
     "En Bilinen Ürünler / Markalar": "MİLGEM (Tasarım/Mühendislik), KARGU, ALPAGU",
-    "Tarihçe & Birleşmeler": "1991 yılında devlet projelerine sistem mühendisliği desteği sağlamak için kuruldu.",
+    "Tarihçe & Birleşmeler": "1991 yılında devlet projelerine mühendislik desteği sağlamak üzere kuruldu.",
     "Analiz Notu": "Askeri tersanecilik modernizasyonları ve taktik kamikaze dron üretiminde ihtisaslaşmıştır."
   },
   "BMC": {
@@ -191,7 +191,7 @@
   "MKE": {
     "Tam İsim": "Makine ve Kimya Endüstrisi A.Ş.", "Ülke": "Türkiye", "Üst Kurum / Ortaklık": "T.C. Millî Savunma Bakanlığı",
     "CEO": "İlhami Keleş", "Çalışan": "~5.500", "Faaliyet": "Silah, Mühimmat, Patlayıcı",
-    "En Bilinen Ürünler / Markalar": "MPT-76, BORAN Obüsü, PANTER, Uçak Bombaları",
+    "En Bilinen Ürünler / Markalar": "MPT-76, BORAN Obüsü, PANTER",
     "Tarihçe & Birleşmeler": "2021 yılında A.Ş. statüsüne geçirilerek ihracat potansiyelinin artırılması hedeflenmiştir.",
     "Analiz Notu": "Türk Silahlı Kuvvetleri'nin ana kalibre mühimmat ve piyade tüfeği tedarikçisidir."
   },
@@ -200,7 +200,7 @@
     "CEO": "Prof. Dr. Mustafa İlbaş", "Çalışan": "~500 (Merkez Yönetim)", "Faaliyet": "Askeri Fabrika İşletimi, Gemi İnşa",
     "En Bilinen Ürünler / Markalar": "PN MİLGEM (Pakistan Korveti), Açık Deniz Karakol Gemileri",
     "Tarihçe & Birleşmeler": "2018'de askeri fabrika ve tersanelerin kapasitesini ticari formata çevirmek için kuruldu.",
-    "Analiz Notu": "Askeri tersanelerin (örn: Gölcük) sivil-özel sektör mantığıyla ihracat projeleri yürütmesine aracılık eder."
+    "Analiz Notu": "Askeri tersanelerin sivil-özel sektör mantığıyla ihracat projeleri yürütmesine aracılık eder."
   },
   "Hanwha": {
     "Tam İsim": "Hanwha Aerospace", "Ülke": "Güney Kore", "Üst Kurum / Ortaklık": "Hanwha Group",
@@ -231,9 +231,9 @@
     "Analiz Notu": "Güney Kore ordusunun hava savunma füze ağının elektronik ve roket sağlayıcısıdır."
   },
   "Bharat Electronics": {
-    "Tam İsim": "Bharat Electronics Limited (BEL)", "Ülke": "Hindistan", "Üst Kurum / Ortaklık": "Hindistan Devleti (%51.1)",
+    "Tam İsim": "Bharat Electronics Limited (BEL)", "Ülke": "Hindistan", "Üst Kurum / Ortaklık": "Hindistan Devleti",
     "CEO": "Bhanu Prakash Srivastava", "Çalışan": "~9.000", "Faaliyet": "Askeri Haberleşme, Elektronik Harp, Radarlar",
-    "En Bilinen Ürünler / Markalar": "Akash hava savunma radarları, taktik telsizler",
+    "En Bilinen Ürünler / Markalar": "Akash hava savunma radarları",
     "Tarihçe & Birleşmeler": "1954 yılında Savunma Bakanlığına bağlı olarak kuruldu.",
     "Analiz Notu": "Hindistan silahlı kuvvetlerinin elektro-optik, iletişim ve radar ekipmanlarını üreten ana kamu şirketidir."
   },
@@ -247,7 +247,7 @@
   "Mitsubishi": {
     "Tam İsim": "Mitsubishi Heavy Industries (MHI)", "Ülke": "Japonya", "Üst Kurum / Ortaklık": "Halka Açık",
     "CEO": "Seiji Izumisawa", "Çalışan": "~77.000", "Faaliyet": "Gemi İnşa, Füze, Savaş Uçakları, Ağır Sanayi",
-    "En Bilinen Ürünler / Markalar": "Type 10 tankları, F-2 savaş uçağı (lisanslı üretim), denizaltılar",
+    "En Bilinen Ürünler / Markalar": "Type 10 tankları, F-2 savaş uçağı, denizaltılar",
     "Tarihçe & Birleşmeler": "Japonya'nın en köklü ağır sanayi ve üretim devlerinden biridir.",
     "Analiz Notu": "Japon Öz Savunma Kuvvetleri'nin ana yüklenicisi konumundadır. Yeni nesil GCAP projesinde yer almaktadır."
   },
@@ -261,7 +261,7 @@
   "CASIC": {
     "Tam İsim": "China Aerospace Science and Industry Corporation", "Ülke": "Çin", "Üst Kurum / Ortaklık": "SASAC (Çin Devleti)",
     "CEO": "Yuan Jie", "Çalışan": "~150.000", "Faaliyet": "Füze Sistemleri, Radar, Uzay",
-    "En Bilinen Ürünler / Markalar": "Dongfeng (DF) füzeleri, HQ hava savunma serisi",
+    "En Bilinen Ürünler / Markalar": "Dongfeng (DF) balistik füzeleri, HQ hava savunma serisi",
     "Tarihçe & Birleşmeler": "Çin devletinin stratejik füze programlarını yönetmek üzere kurulmuştur.",
     "Analiz Notu": "Uzun menzilli füzeler ve hava savunma alanında Çin ordusunun teknolojik omurgasıdır."
   },
@@ -293,10 +293,17 @@
     "Tarihçe & Birleşmeler": "Sivil otomotiv üretimi ile hafif silah sanayiini bir arada yürütmektedir.",
     "Analiz Notu": "NORINCO'nun yanı sıra kara unsurlarının hafif silah ve lojistik araç ihtiyaçlarını karşılar."
   },
+  "AVIC": {
+    "Tam İsim": "Aviation Industry Corporation of China", "Ülke": "Çin", "Üst Kurum / Ortaklık": "SASAC (Çin Devleti)",
+    "CEO": "Hao Zhaoping", "Çalışan": "~400.000", "Faaliyet": "Savaş Uçakları, Helikopter, İHA",
+    "En Bilinen Ürünler / Markalar": "J-20, J-10 uçakları, Wing Loong İHA",
+    "Tarihçe & Birleşmeler": "Çin uçak endüstrisinin (Chengdu, Shenyang vb.) tüm alt firmalarını tek çatıda toplar.",
+    "Analiz Notu": "Çin'in en büyük savunma havacılık tekelidir."
+  },
   "Almaz-Antey": {
     "Tam İsim": "JSC Almaz-Antey", "Ülke": "Rusya", "Üst Kurum / Ortaklık": "Rusya Federasyonu",
     "CEO": "Yan Novikov", "Çalışan": "~130.000", "Faaliyet": "Hava Savunma Sistemleri, Radarlar",
-    "En Bilinen Ürünler / Markalar": "S-300, S-400, S-500 hava savunma sistemleri",
+    "En Bilinen Ürünler / Markalar": "S-300, S-400, S-500",
     "Tarihçe & Birleşmeler": "2002 yılında Rusya'daki ayrı hava savunma şirketlerinin tek çatı altında birleştirilmesiyle kuruldu.",
     "Analiz Notu": "Rusya'nın stratejik hava ve füze savunma kabiliyetinin yegane tasarım ve üretim merkezidir."
   },
@@ -304,91 +311,728 @@
     "Tam İsim": "JSC Tactical Missiles Corporation (KTRV)", "Ülke": "Rusya", "Üst Kurum / Ortaklık": "Rusya Federasyonu",
     "CEO": "Boris Obnosov", "Çalışan": "~50.000", "Faaliyet": "Taktik/Stratejik Füzeler, Hava-Yer Mühimmatları",
     "En Bilinen Ürünler / Markalar": "Kh-31, Kh-59, Yakhont füzeleri",
-    "Tarihçe & Birleşmeler": "Farklı roket tasarım bürolarını ve Oboronitelniye Systemy'i bünyesinde toplayarak büyüdü.",
+    "Tarihçe & Birleşmeler": "Oboronitelniye Systemy dahil birçok Rus füze bürosunun birleşimidir.",
     "Analiz Notu": "Rus savaş uçaklarının mühimmat yelpazesini ve deniz tabanlı füzeleri üretmektedir."
   },
+  "United Aircraft Corporation": {
+    "Tam İsim": "JSC United Aircraft Corporation (UAC)", "Ülke": "Rusya", "Üst Kurum / Ortaklık": "Rostec",
+    "CEO": "Yury Slyusar", "Çalışan": "~100.000", "Faaliyet": "Savaş Uçakları, Kargo Uçakları",
+    "En Bilinen Ürünler / Markalar": "Su-57, Su-35, MiG-35",
+    "Tarihçe & Birleşmeler": "Sukhoi, MiG, Irkutsk ve Ilyushin gibi tüm Sovyet dönemi uçak tasarım bürolarının birleşimidir.",
+    "Analiz Notu": "Rusya'nın tek askeri uçak tasarım ve üretim tekelidir."
+  },
+  "United Shipbuilding Corporation": {
+    "Tam İsim": "JSC United Shipbuilding Corporation (USC)", "Ülke": "Rusya", "Üst Kurum / Ortaklık": "Rusya Federasyonu",
+    "CEO": "Andrey Puchkov", "Çalışan": "~95.000", "Faaliyet": "Nükleer Denizaltı, Savaş Gemileri",
+    "En Bilinen Ürünler / Markalar": "Borei ve Yasen sınıfı nükleer denizaltılar",
+    "Tarihçe & Birleşmeler": "Sevmash, Admiralteiskie Verfi, Severnaya Verf gibi dev Rus tersanelerinin çatı şirketidir.",
+    "Analiz Notu": "Rus Donanmasının nükleer ve konvansiyonel tüm büyük yüzey gemileri için ana tedarikçidir."
+  },
+  "Russian Helicopters": {
+    "Tam İsim": "JSC Russian Helicopters", "Ülke": "Rusya", "Üst Kurum / Ortaklık": "Rostec",
+    "CEO": "Nikolay Kolesov", "Çalışan": "~40.000", "Faaliyet": "Askeri ve Sivil Helikopterler",
+    "En Bilinen Ürünler / Markalar": "Mi-8/17, Ka-52 Alligator, Mi-28",
+    "Tarihçe & Birleşmeler": "Mil ve Kamov büroları ile Kazan Helikopter Fabrikası'nın birleşimiyle kuruldu.",
+    "Analiz Notu": "Orta ve ağır sınıf askeri helikopterlerde küresel ihracat pazarının ana oyuncularındandır."
+  },
+  "United Engine Corp": {
+    "Tam İsim": "United Engine Corporation (UEC)", "Ülke": "Rusya", "Üst Kurum / Ortaklık": "Rostec",
+    "CEO": "Vadim Badekha", "Çalışan": "~Bilinmiyor", "Faaliyet": "Havacılık Motorları, Türbinler",
+    "En Bilinen Ürünler / Markalar": "AL-31F, AL-41F uçak motorları",
+    "Tarihçe & Birleşmeler": "Ufa Enginebuilding dahil tüm Rus motor üretim tesislerinin çatı kuruluşudur.",
+    "Analiz Notu": "Rus sivil ve askeri uçaklarının/helikopterlerinin tüm motor ihtiyacını karşılar."
+  },
+  "KRET": {
+    "Tam İsim": "Concern Radio-Electronic Technologies (KRET)", "Ülke": "Rusya", "Üst Kurum / Ortaklık": "Rostec",
+    "CEO": "Nikolay Kolesov", "Çalışan": "~50.000", "Faaliyet": "Elektronik Harp, Aviyonik, Radarlar",
+    "En Bilinen Ürünler / Markalar": "Krasukha elektronik harp sistemleri",
+    "Tarihçe & Birleşmeler": "Rusya'daki eski radyo ve elektronik harp bürolarının konsolidasyonudur.",
+    "Analiz Notu": "Rus ordusunun elektronik savaş şemsiyesinin donanımsal üreticisidir."
+  },
+  "Rosoboronexport": {
+    "Tam İsim": "JSC Rosoboronexport", "Ülke": "Rusya", "Üst Kurum / Ortaklık": "Rostec",
+    "CEO": "Alexander Mikheev", "Çalışan": "~Bilinmiyor", "Faaliyet": "Silah İhracatı",
+    "En Bilinen Ürünler / Markalar": "-",
+    "Tarihçe & Birleşmeler": "Eski devlet ihracat kurumu Rosvoorouzhenie ve Promexport'un birleşimi.",
+    "Analiz Notu": "Üretici değil, Rusya'nın tüm askeri endüstrisinin yurt dışı satışlarını gerçekleştiren tekel kurumdur."
+  },
   "Booz Allen Hamilton": {
-    "Tam İsim": "Booz Allen Hamilton Holding Corporation", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Halka Açık (NYSE: BAH)",
-    "CEO": "Horacio Rozanski", "Çalışan": "~31.000", "Faaliyet": "Bilişim Teknolojileri, Siber Güvenlik, Danışmanlık",
-    "En Bilinen Ürünler / Markalar": "Hükümet siber güvenlik sistemleri, AI entegrasyon hizmetleri",
-    "Tarihçe & Birleşmeler": "Askeri platformlardan çok savunma bürokrasisine teknik yönetim danışmanlığı sağlar.",
-    "Analiz Notu": "ABD Savunma Bakanlığı ve istihbarat teşkilatlarının veri yönetimi ve siber güvenlik altyapılarını destekler."
+    "Tam İsim": "Booz Allen Hamilton Holding Corporation", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Halka Açık",
+    "CEO": "Horacio Rozanski", "Çalışan": "~31.000", "Faaliyet": "Bilişim Teknolojileri, Siber Güvenlik",
+    "En Bilinen Ürünler / Markalar": "Siber entegrasyon",
+    "Tarihçe & Birleşmeler": "Askeri platformlardan çok savunma bürokrasisine yönetim danışmanlığı sağlar.",
+    "Analiz Notu": "ABD Savunma Bakanlığı ve istihbarat teşkilatlarının veri yönetimi altyapılarını destekler."
   },
   "Leidos": {
-    "Tam İsim": "Leidos Holdings, Inc.", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Halka Açık (NYSE: LDOS)",
-    "CEO": "Thomas Bell", "Çalışan": "~47.000", "Faaliyet": "Bilgi Teknolojileri, Sistem Entegrasyonu, Lojistik",
-    "En Bilinen Ürünler / Markalar": "Askeri sağlık yazılımları, sınır güvenlik teknolojileri",
-    "Tarihçe & Birleşmeler": "2013 yılında SAIC'ten ayrılarak kuruldu, 2016'da Lockheed'in bilişim (IS&GS) bölümünü satın aldı.",
-    "Analiz Notu": "Geleneksel savunma üretiminden ziyade siber, uzay ve savunma yazılım mimarilerinde hizmet veren bir mühendislik firmasıdır."
+    "Tam İsim": "Leidos Holdings, Inc.", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Halka Açık",
+    "CEO": "Thomas Bell", "Çalışan": "~47.000", "Faaliyet": "Bilişim Teknolojileri, Sistem Entegrasyonu",
+    "En Bilinen Ürünler / Markalar": "Sınır güvenlik ve askeri sağlık ağları",
+    "Tarihçe & Birleşmeler": "SAIC'ten ayrılarak kuruldu, Lockheed'in IS&GS bilişim bölümünü satın aldı.",
+    "Analiz Notu": "Siber, uzay ve savunma yazılım mimarilerinde hizmet veren dev bir mühendislik firmasıdır."
   },
   "SAIC": {
-    "Tam İsim": "Science Applications International Corp.", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Halka Açık (NYSE: SAIC)",
+    "Tam İsim": "Science Applications International Corp.", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Halka Açık",
     "CEO": "Toni Townes-Whitley", "Çalışan": "~24.000", "Faaliyet": "Mühendislik, Bilişim, Siber Güvenlik",
-    "En Bilinen Ürünler / Markalar": "Savunma istihbarat ağları, lojistik destek platformları",
-    "Tarihçe & Birleşmeler": "Eski SAIC ikiye bölündükten (Leidos) sonra, devlet hizmetlerine odaklanarak yeniden yapılandı.",
-    "Analiz Notu": "Ağ merkezli harp ve askeri teknoloji entegrasyon projelerinde ABD ordusuyla yakın çalışmaktadır."
+    "En Bilinen Ürünler / Markalar": "Askeri IT entegrasyonu",
+    "Tarihçe & Birleşmeler": "Eski SAIC bölündükten sonra (Leidos), devlet hizmetlerine odaklanmıştır. Engility'i bünyesine kattı.",
+    "Analiz Notu": "Ağ merkezli harp projelerinde ABD ordusuyla yakın çalışmaktadır."
   },
   "CACI": {
-    "Tam İsim": "CACI International Inc", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Halka Açık (NYSE: CACI)",
-    "CEO": "John Mengucci", "Çalışan": "~23.000", "Faaliyet": "İstihbarat Hizmetleri, Elektronik Harp, Lojistik",
-    "En Bilinen Ürünler / Markalar": "C-UAS (İHA savar) sistemleri, istihbarat analiz yazılımları",
-    "Tarihçe & Birleşmeler": "Askeri istihbarat ve elektronik savaş donanımları geliştirmek üzerine yoğunlaşmıştır.",
-    "Analiz Notu": "ABD hükümetinin istihbarat toplama ve elektronik/siber güvenlik misyonlarında temel bir IT sağlayıcısıdır."
+    "Tam İsim": "CACI International Inc", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Halka Açık",
+    "CEO": "John Mengucci", "Çalışan": "~23.000", "Faaliyet": "İstihbarat Hizmetleri, Elektronik Harp",
+    "En Bilinen Ürünler / Markalar": "C-UAS (İHA savar) sistemleri, istihbarat yazılımları",
+    "Tarihçe & Birleşmeler": "LGS Innovations gibi şirketleri satın alarak elektronik harp yeteneklerini artırmıştır.",
+    "Analiz Notu": "ABD istihbarat operasyonlarında temel bir IT ve elektronik destek sağlayıcısıdır."
+  },
+  "Peraton": {
+    "Tam İsim": "Peraton Inc.", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Veritas Capital (Özel)",
+    "CEO": "Stu Shea", "Çalışan": "~18.000", "Faaliyet": "Siber Güvenlik, Uzay Ağları",
+    "En Bilinen Ürünler / Markalar": "Ulusal güvenlik ağları",
+    "Tarihçe & Birleşmeler": "Perspecta, Vencore ve EDS/Northrop IT birimlerinin birleştirilmesiyle kuruldu.",
+    "Analiz Notu": "Amerikan istihbarat ve uzay ajanslarının gizli siber operasyonlarında altyapı sağlar."
   },
   "Day & Zimmermann": {
-    "Tam İsim": "Day & Zimmermann", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Özel Şirket (Yoh Ailesi)",
-    "CEO": "Hal Yoh III", "Çalışan": "~41.000", "Faaliyet": "Mühimmat, Tesis Yönetimi, İnşaat",
-    "En Bilinen Ürünler / Markalar": "Topçu ve havan mühimmatı seri üretimi",
-    "Tarihçe & Birleşmeler": "Mühendislik firması olarak kurulup zamanla mühimmat tesisleri işletmeciliğine evrilmiştir.",
-    "Analiz Notu": "ABD devleti mülkiyetindeki mühimmat üretim tesislerinin (GOCO) idaresi ve seri üretimini gerçekleştiren yapıdadır."
+    "Tam İsim": "Day & Zimmermann", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Özel Şirket",
+    "CEO": "Hal Yoh III", "Çalışan": "~41.000", "Faaliyet": "Mühimmat, Tesis Yönetimi",
+    "En Bilinen Ürünler / Markalar": "Topçu mühimmatı üretimi",
+    "Tarihçe & Birleşmeler": "Mühendislik firması iken tesis işletmeciliğine yönelmiştir.",
+    "Analiz Notu": "ABD devleti mülkiyetindeki mühimmat üretim tesislerinin (GOCO) seri üretimini gerçekleştiren firmadır."
   },
   "Austal": {
-    "Tam İsim": "Austal Limited", "Ülke": "Avustralya", "Üst Kurum / Ortaklık": "Halka Açık (ASX: ASB)",
+    "Tam İsim": "Austal Limited", "Ülke": "Avustralya", "Üst Kurum / Ortaklık": "Halka Açık",
     "CEO": "Paddy Gregg", "Çalışan": "~4.000", "Faaliyet": "Askeri Gemi İnşa, Alüminyum Gövdeli Gemiler",
-    "En Bilinen Ürünler / Markalar": "LCS (Littoral Combat Ship - Kıyı Muharebe Gemisi)",
-    "Tarihçe & Birleşmeler": "ABD Donanmasına kıyı gemileri üretmek üzere Alabama'da büyük bir tersane kurarak küresel hacme ulaştı.",
-    "Analiz Notu": "Avustralya merkezli olmasına rağmen savunma cirosunun neredeyse tamamını ABD Donanması siparişlerinden sağlar."
+    "En Bilinen Ürünler / Markalar": "LCS (Littoral Combat Ship)",
+    "Tarihçe & Birleşmeler": "ABD pazarı için Alabama'da dev bir tersane kurarak büyümüştür.",
+    "Analiz Notu": "Avustralya merkezli olmasına rağmen savunma cirosunun büyük kısmını ABD Donanması siparişlerinden sağlar."
   },
   "ST Engineering": {
     "Tam İsim": "Singapore Technologies Engineering Ltd", "Ülke": "Singapur", "Üst Kurum / Ortaklık": "Temasek Holdings (Singapur Devleti)",
-    "CEO": "Vincent Chong", "Çalışan": "~25.000", "Faaliyet": "Havacılık Bakımı, Denizcilik, Elektronik, Kara Araçları",
+    "CEO": "Vincent Chong", "Çalışan": "~25.000", "Faaliyet": "Havacılık Bakımı, Denizcilik, Kara Araçları",
     "En Bilinen Ürünler / Markalar": "Terrex zırhlı araçları, Bronco",
     "Tarihçe & Birleşmeler": "Singapur'un yerli askeri üretim kabiliyetlerini sağlamak üzere yapılandırılmıştır.",
-    "Analiz Notu": "Savunma operasyonlarının yanı sıra küresel sivil havacılık bakım ve onarım (MRO) sektöründe lider firmalardandır."
+    "Analiz Notu": "Savunma üretimi dışında, küresel sivil havacılık bakım/onarım (MRO) pazarında liderlerdendir."
   },
   "EDGE Group": {
     "Tam İsim": "EDGE Group PJSC", "Ülke": "Birleşik Arap Emirlikleri", "Üst Kurum / Ortaklık": "BAE Hükümeti",
-    "CEO": "Hamad Al Marar", "Çalışan": "~12.000", "Faaliyet": "Füze Sistemleri, İHA, Siber Güvenlik, Mühimmat",
-    "En Bilinen Ürünler / Markalar": "Al Tariq füzeleri, Yabhon İHA serisi",
+    "CEO": "Hamad Al Marar", "Çalışan": "~12.000", "Faaliyet": "Füze Sistemleri, İHA, Mühimmat",
+    "En Bilinen Ürünler / Markalar": "Al Tariq füzeleri, Yabhon İHA",
     "Tarihçe & Birleşmeler": "2019'da BAE'deki 25'ten fazla savunma şirketinin tek çatı altında toplanmasıyla kuruldu.",
-    "Analiz Notu": "Orta Doğu pazarında teknoloji transferi ve yerli otonom sistem üretimi hedefleriyle devlet destekli büyümesini sürdürmektedir."
+    "Analiz Notu": "Otonom sistemler ve teknoloji transferine dayalı stratejik bir devlet şirketidir."
   },
   "Naval Group": {
     "Tam İsim": "Naval Group", "Ülke": "Fransa", "Üst Kurum / Ortaklık": "Fransa Devleti (%62), Thales (%35)",
-    "CEO": "Pierre Éric Pommellet", "Çalışan": "~16.000", "Faaliyet": "Savaş Gemisi, Denizaltı (Nükleer/Konvansiyonel)",
+    "CEO": "Pierre Éric Pommellet", "Çalışan": "~16.000", "Faaliyet": "Savaş Gemisi, Nükleer Denizaltı",
     "En Bilinen Ürünler / Markalar": "Barracuda denizaltıları, Belharra fırkateynleri",
-    "Tarihçe & Birleşmeler": "Eski adı DCNS (Direction des Constructions Navales). Fransız donanmasının tarihsel inşa merkezidir.",
+    "Tarihçe & Birleşmeler": "Eski adı DCNS'tir. (Direction des Constructions Navales).",
     "Analiz Notu": "Yüzey gemileri ve denizaltı teknolojilerinde Avrupa'nın başlıca deniz mühendisliği yeteneğidir."
   },
   "Fincantieri": {
-    "Tam İsim": "Fincantieri S.p.A.", "Ülke": "İtalya", "Üst Kurum / Ortaklık": "İtalya Devleti (CDP) (%71.3)",
-    "CEO": "Pierroberto Folgiero", "Çalışan": "~20.000", "Faaliyet": "Askeri Gemi İnşa, Kruvaziyer Gemi Üretimi",
-    "En Bilinen Ürünler / Markalar": "FREMM fırkateynleri (ortak), Constellation sınıfı (ABD)",
+    "Tam Tam İsim": "Fincantieri S.p.A.", "Ülke": "İtalya", "Üst Kurum / Ortaklık": "İtalya Devleti",
+    "CEO": "Pierroberto Folgiero", "Çalışan": "~20.000", "Faaliyet": "Askeri Gemi İnşa, Kruvaziyer Üretimi",
+    "En Bilinen Ürünler / Markalar": "FREMM fırkateynleri, Constellation sınıfı",
     "Tarihçe & Birleşmeler": "İtalyan tersanelerinin birleşimidir. ABD'de Marinette Marine tersanesini satın almıştır.",
-    "Analiz Notu": "Sivil yolcu gemilerinden elde ettiği yüksek gelirin yanı sıra, ABD Donanması için sınıf tasarımları yapmaktadır."
+    "Analiz Notu": "Sivil yolcu gemilerinin yanı sıra ABD Donanması için de üretim yapan küresel bir tersanedir."
   },
   "Embraer": {
     "Tam İsim": "Embraer S.A.", "Ülke": "Brezilya", "Üst Kurum / Ortaklık": "Halka Açık",
-    "CEO": "Francisco Gomes Neto", "Çalışan": "~18.000", "Faaliyet": "Sivil Uçaklar, Askeri Kargo, Hafif Taarruz",
-    "En Bilinen Ürünler / Markalar": "A-29 Super Tucano, C-390 Millennium kargo uçağı",
+    "CEO": "Francisco Gomes Neto", "Çalışan": "~18.000", "Faaliyet": "Sivil Uçaklar, Askeri Kargo",
+    "En Bilinen Ürünler / Markalar": "A-29 Super Tucano, C-390 Millennium",
     "Tarihçe & Birleşmeler": "Brezilya devleti tarafından kurulup sonradan özelleştirilmiştir.",
-    "Analiz Notu": "Sivil yolcu uçağı pazarı asıl alanıdır ancak C-390 ile askeri lojistik havacılığında pazar payını artırmaktadır."
+    "Analiz Notu": "Sivil yolcu uçağı pazarı asıl alanıdır ancak askeri lojistik havacılığında (C-390) pazar payı yüksektir."
   },
   "Ukroboronprom": {
-    "Tam İsim": "JSC Ukrainian Defense Industry (Ukroboronprom)", "Ülke": "Ukrayna", "Üst Kurum / Ortaklık": "Ukrayna Hükümeti",
-    "CEO": "Herman Smetanin", "Çalışan": "~65.000", "Faaliyet": "Zırhlı Araçlar, Havacılık, Mühimmat",
-    "En Bilinen Ürünler / Markalar": "BTR-4, Oplot tankları, havacılık motorları",
+    "Tam İsim": "JSC Ukrainian Defense Industry", "Ülke": "Ukrayna", "Üst Kurum / Ortaklık": "Ukrayna Hükümeti",
+    "CEO": "Herman Smetanin", "Çalışan": "~65.000", "Faaliyet": "Zırhlı Araçlar, Havacılık",
+    "En Bilinen Ürünler / Markalar": "BTR-4, Oplot tankları",
     "Tarihçe & Birleşmeler": "Ukrayna'nın tüm savunma tesislerini tek merkezden yönetmek için oluşturulmuştur.",
-    "Analiz Notu": "Savaş koşulları nedeniyle üretim önceliklerini tamamen cephe ikmaline ve dış teknoloji adaptasyonuna kaydırmıştır."
+    "Analiz Notu": "Savaş koşulları nedeniyle üretimini tamamen cephe ikmaline kaydırmıştır."
+  },
+  "AAR": {
+    "Tam İsim": "AAR Corp.", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Halka Açık",
+    "CEO": "John M. Holmes", "Çalışan": "~4.700", "Faaliyet": "Havacılık Bakım-Onarım, Lojistik",
+    "En Bilinen Ürünler / Markalar": "Havacılık MRO hizmetleri",
+    "Tarihçe & Birleşmeler": "-",
+    "Analiz Notu": "ABD ordusuna lojistik ve tedarik zinciri desteği sunan yan yüklenicidir."
+  },
+  "AM General": {
+    "Tam İsim": "AM General LLC", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Özel Şirket (KPS Capital Partners)",
+    "CEO": "Jim Cannon", "Çalışan": "~1.500", "Faaliyet": "Taktik Kara Araçları",
+    "En Bilinen Ürünler / Markalar": "HMMWV (Humvee), JLTV",
+    "Tarihçe & Birleşmeler": "-",
+    "Analiz Notu": "Küresel ölçekte tanınan Humvee zırhlı araçlarının ana tasarımcısı ve üreticisidir."
+  },
+  "Advanced Technical Products": {
+    "Tam İsim": "Advanced Technical Products", "Ülke": "ABD", "Üst Kurum / Ortaklık": "General Dynamics (Satın Alındı)",
+    "CEO": "-", "Çalışan": "-", "Faaliyet": "Kompozit Materyaller",
+    "En Bilinen Ürünler / Markalar": "Kompozit zırhlar",
+    "Tarihçe & Birleşmeler": "Zırh teknolojileri üreticisi olarak 2002 yılında General Dynamics tarafından satın alınarak yutulmuştur.",
+    "Analiz Notu": "Tarihsel verilerde görünmektedir."
+  },
+  "Advanced Technology International": {
+    "Tam İsim": "Advanced Technology International (ATI)", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Özel Şirket",
+    "CEO": "Chris Van Metre", "Çalışan": "~300", "Faaliyet": "Ar-Ge Yönetimi",
+    "En Bilinen Ürünler / Markalar": "Federal Ar-Ge konsorsiyumları",
+    "Tarihçe & Birleşmeler": "-",
+    "Analiz Notu": "Doğrudan üretim yapmaz, ABD hükümeti için gelişmiş teknoloji Ar-Ge ihalelerini organize eder."
+  },
+  "Aerojet Rocketdyne": {
+    "Tam İsim": "Aerojet Rocketdyne", "Ülke": "ABD", "Üst Kurum / Ortaklık": "L3Harris (Satın Alındı)",
+    "CEO": "Ross Niebergall", "Çalışan": "~5.000", "Faaliyet": "Uzay İtkisi, Füze Motorları",
+    "En Bilinen Ürünler / Markalar": "RS-25 roket motorları, füze itki sistemleri",
+    "Tarihçe & Birleşmeler": "GenCorp altyapısından gelir, 2023'te L3Harris tarafından satın alınmıştır.",
+    "Analiz Notu": "ABD füzelerinin ve uzay roketlerinin ana itki motoru sağlayıcısıdır."
+  },
+  "Aerospace Equipment": {
+    "Tam İsim": "Aerospace Equipment (Aerokosmicheskoe Oborudovanie)", "Ülke": "Rusya", "Üst Kurum / Ortaklık": "KRET / Rostec",
+    "CEO": "-", "Çalışan": "-", "Faaliyet": "Aviyonik",
+    "En Bilinen Ürünler / Markalar": "Uçak enstrümanları",
+    "Tarihçe & Birleşmeler": "Rus uçak sanayi aviyonik birliğiydi, sonradan KRET bünyesine dahil edildi.",
+    "Analiz Notu": "Tarihsel verilerde kendi adıyla yer almıştır."
+  },
+  "Amphenol": {
+    "Tam İsim": "Amphenol Corporation", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Halka Açık",
+    "CEO": "R. Adam Norwitt", "Çalışan": "~90.000", "Faaliyet": "Konnektörler, Sensörler",
+    "En Bilinen Ürünler / Markalar": "Askeri sınıf konnektör ağları",
+    "Tarihçe & Birleşmeler": "-",
+    "Analiz Notu": "Savunma ve havacılık sektörlerine yüksek kaliteli kablo, sensör ve bağlantı parçaları sağlayan ana donanım tedarikçisidir."
+  },
+  "BWX Technologies": {
+    "Tam İsim": "BWX Technologies, Inc.", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Halka Açık",
+    "CEO": "Rex D. Geveden", "Çalışan": "~7.000", "Faaliyet": "Nükleer Bileşenler",
+    "En Bilinen Ürünler / Markalar": "Denizaltı nükleer reaktörleri",
+    "Tarihçe & Birleşmeler": "Eski adı Babcock & Wilcox'tır.",
+    "Analiz Notu": "ABD Donanması'nın nükleer denizaltı ve uçak gemileri için nükleer reaktör tedarik eden tek kaynağıdır."
+  },
+  "Babcock": {
+    "Tam İsim": "Babcock International Group", "Ülke": "İngiltere", "Üst Kurum / Ortaklık": "Halka Açık",
+    "CEO": "David Lockwood", "Çalışan": "~35.000", "Faaliyet": "Gemi İnşa, Donanım Bakımı",
+    "En Bilinen Ürünler / Markalar": "Type 31 fırkateynleri",
+    "Tarihçe & Birleşmeler": "İngiliz VT Group (Vosper Thornycroft) ile tersane ortaklıkları yürüttü.",
+    "Analiz Notu": "İngiliz ordusunun, özellikle denizaltı bakım ve savaş gemisi inşa programlarında kilit mühendislik sağlayıcısıdır."
+  },
+  "Ball": {
+    "Tam İsim": "Ball Aerospace", "Ülke": "ABD", "Üst Kurum / Ortaklık": "BAE Systems (Satın Alındı)",
+    "CEO": "-", "Çalışan": "-", "Faaliyet": "Uzay ve Optik",
+    "En Bilinen Ürünler / Markalar": "Uydu sensörleri",
+    "Tarihçe & Birleşmeler": "Ana Ball Corporation paketleme firmasından ayrılarak savunma uzayına girdi. 2024'te BAE Systems tarafından satın alındı.",
+    "Analiz Notu": "Gelişmiş optik ve uydu sistemlerinde faaliyet göstermektedir."
+  },
+  "Battelle": {
+    "Tam İsim": "Battelle Memorial Institute", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Kâr Amacı Gütmeyen Kuruluş",
+    "CEO": "Lewis Von Thaer", "Çalışan": "~40.000", "Faaliyet": "Ar-Ge, Laboratuvar Yönetimi",
+    "En Bilinen Ürünler / Markalar": "Ulusal laboratuvar işletmeciliği",
+    "Tarihçe & Birleşmeler": "-",
+    "Analiz Notu": "Sivil ve askeri alanda dünyanın en büyük bağımsız bilimsel araştırma kurumu olarak devlet projelerini yürütür."
+  },
+  "BearingPoint": {
+    "Tam İsim": "BearingPoint", "Ülke": "ABD / Avrupa", "Üst Kurum / Ortaklık": "Bağımsızlık",
+    "CEO": "Kiumars Hamidian", "Çalışan": "~5.000", "Faaliyet": "Danışmanlık, Bilişim",
+    "En Bilinen Ürünler / Markalar": "Savunma yönetim danışmanlığı",
+    "Tarihçe & Birleşmeler": "KPMG Consulting'in ayrılmasıyla oluştu, ABD kolu iflas edip Deloitte vb. şirketlere satılırken, Avrupa kolu devam etmektedir.",
+    "Analiz Notu": "Savunma ve kamu sektörlerine yönetim ve IT danışmanlığı sunmaktadır."
+  },
+  "Bechtel": {
+    "Tam İsim": "Bechtel Corporation", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Özel Şirket",
+    "CEO": "Brendan Bechtel", "Çalışan": "~55.000", "Faaliyet": "İnşaat, Mühendislik",
+    "En Bilinen Ürünler / Markalar": "Askeri tesis inşası",
+    "Tarihçe & Birleşmeler": "-",
+    "Analiz Notu": "Nükleer güvenlik, askeri üs inşası ve küresel altyapı projelerinde dünyanın en büyük mühendislik firmalarındandır."
+  },
+  "CAE": {
+    "Tam İsim": "CAE Inc.", "Ülke": "Kanada", "Üst Kurum / Ortaklık": "Halka Açık",
+    "CEO": "Marc Parent", "Çalışan": "~13.000", "Faaliyet": "Simülasyon, Eğitim Sistemleri",
+    "En Bilinen Ürünler / Markalar": "Uçuş ve operasyon simülatörleri",
+    "Tarihçe & Birleşmeler": "L3Harris'in askeri eğitim (Military Training) bölümünü 2021'de satın aldı.",
+    "Analiz Notu": "Sivil ve askeri havacılık için uçuş simülatörleri üreten küresel pazar lideridir."
+  },
+  "CETC": {
+    "Tam İsim": "China Electronics Technology Group", "Ülke": "Çin", "Üst Kurum / Ortaklık": "SASAC (Çin Devleti)",
+    "CEO": "Chen Zhaoxiong", "Çalışan": "~180.000", "Faaliyet": "Askeri Elektronik, Radarlar",
+    "En Bilinen Ürünler / Markalar": "Erken uyarı uçakları, AESA radarları",
+    "Tarihçe & Birleşmeler": "Çin devletinin bilişim ve askeri elektronik üreten konsorsiyumudur.",
+    "Analiz Notu": "Çin ordusunun radar sistemleri ve bilgi ağı donanımlarının omurgasını teşkil eder."
+  },
+  "CSC": {
+    "Tam İsim": "Computer Sciences Corporation", "Ülke": "ABD", "Üst Kurum / Ortaklık": "CSRA / General Dynamics",
+    "CEO": "-", "Çalışan": "-", "Faaliyet": "Bilgi Teknolojileri",
+    "En Bilinen Ürünler / Markalar": "Askeri IT altyapıları",
+    "Tarihçe & Birleşmeler": "Kamu sektörü bölümü CSRA olarak ayrıldı, ardından 2018'de General Dynamics tarafından satın alındı.",
+    "Analiz Notu": "Pentagon'un bilişim ağlarını kuran tarihsel oyunculardan biridir."
+  },
+  "Camber": {
+    "Tam İsim": "Camber Corporation", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Huntington Ingalls (Satın Alındı)",
+    "CEO": "-", "Çalışan": "-", "Faaliyet": "Simülasyon, Mühendislik",
+    "En Bilinen Ürünler / Markalar": "Siber sistem mühendisliği",
+    "Tarihçe & Birleşmeler": "2016 yılında Huntington Ingalls Industries (HII) tarafından satın alındı.",
+    "Analiz Notu": "Gemi inşa devi HII'nin teknik mühendislik kapasitesini artırmak için kullanılmıştır."
+  },
+  "Chemring": {
+    "Tam İsim": "Chemring Group", "Ülke": "İngiltere", "Üst Kurum / Ortaklık": "Halka Açık",
+    "CEO": "Michael Ord", "Çalışan": "~2.500", "Faaliyet": "Karşı Tedbir (Countermeasure), Sensörler",
+    "En Bilinen Ürünler / Markalar": "Chaff ve Flare sistemleri",
+    "Tarihçe & Birleşmeler": "-",
+    "Analiz Notu": "Savaş uçaklarını ve gemilerini füzelerden koruyan kimyasal tuzak mühimmatı (Flare/Chaff) pazarında dünyadaki sayılı üreticilerdendir."
+  },
+  "Cobham": {
+    "Tam İsim": "Cobham Limited / CAES", "Ülke": "İngiltere / ABD", "Üst Kurum / Ortaklık": "Advent International (Özel)",
+    "CEO": "-", "Çalışan": "-", "Faaliyet": "Havacılık Bileşenleri, İletişim",
+    "En Bilinen Ürünler / Markalar": "Havada yakıt ikmal podları",
+    "Tarihçe & Birleşmeler": "Özel sermaye fonuna satıldıktan sonra parçalara (CAES, Cobham Aerospace) bölündü.",
+    "Analiz Notu": "Havadan havaya yakıt ikmal sistemlerinde küresel tekele yakın bir pazar payı vardır."
+  },
+  "Cubic": {
+    "Tam İsim": "Cubic Corporation", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Veritas Capital & Evergreen Coast Capital",
+    "CEO": "Stevan Sletten", "Çalışan": "~6.000", "Faaliyet": "Savaş Eğitim Sistemleri, Ulaşım IT",
+    "En Bilinen Ürünler / Markalar": "MILES lazerli çatışma eğitim sistemleri",
+    "Tarihçe & Birleşmeler": "2021 yılında özel sermaye şirketleri tarafından satın alınarak borsadan çekildi.",
+    "Analiz Notu": "Orduların lazer tabanlı (MILES) tatbikat simülatörlerinde ana tasarımcı firmalardandır."
+  },
+  "Curtiss-Wright": {
+    "Tam İsim": "Curtiss-Wright Corporation", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Halka Açık",
+    "CEO": "Lynn Bamford", "Çalışan": "~8.000", "Faaliyet": "Havacılık, Savunma Donanımı, Nükleer",
+    "En Bilinen Ürünler / Markalar": "Savunma gömülü bilgisayarları (Embedded computing)",
+    "Tarihçe & Birleşmeler": "1929'da havacılık öncüleri Curtiss ve Wright kardeşlerin firmalarının birleşimiyle kuruldu.",
+    "Analiz Notu": "Platformlardan çok, havacılık ve savunma sistemlerindeki kritik ağır endüstri ve elektronik parçaları üretir."
+  },
+  "DRS Technologies": {
+    "Tam İsim": "Leonardo DRS", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Leonardo / Halka Açık",
+    "CEO": "William J. Lynn III", "Çalışan": "~6.500", "Faaliyet": "Savunma Elektroniği, Optroik",
+    "En Bilinen Ürünler / Markalar": "Termal görüntüleme, denizcilik tahrik sistemleri",
+    "Tarihçe & Birleşmeler": "DRS Technologies adındayken İtalyan Leonardo tarafından satın alınarak ABD pazarındaki ana iştiraki (Leonardo DRS) yapıldı.",
+    "Analiz Notu": "İtalyan savunma devinin ABD Savunma Bakanlığına doğrudan donanım sağlayan Amerikan koludur."
+  },
+  "Dassault": {
+    "Tam İsim": "Dassault Aviation", "Ülke": "Fransa", "Üst Kurum / Ortaklık": "Dassault Group (%62), Airbus (%9.9)",
+    "CEO": "Éric Trappier", "Çalışan": "~12.000", "Faaliyet": "Savaş Uçakları, İş Jetleri",
+    "En Bilinen Ürünler / Markalar": "Rafale savaş uçağı, Falcon iş jetleri",
+    "Tarihçe & Birleşmeler": "-",
+    "Analiz Notu": "Rafale jetlerinin son dönemdeki yüksek ihracat başarısı (Hindistan, Mısır, BAE vb.) savunma cirosunu büyük oranda artırmıştır."
+  },
+  "Denel": {
+    "Tam İsim": "Denel SOC Ltd", "Ülke": "Güney Afrika", "Üst Kurum / Ortaklık": "Güney Afrika Devleti",
+    "CEO": "Tsepo Monaheng", "Çalışan": "~3.000", "Faaliyet": "Kara Sistemleri, Mühimmat, Havacılık",
+    "En Bilinen Ürünler / Markalar": "Rooivalk helikopteri, G6 Kundağı Motorlu Obüs",
+    "Tarihçe & Birleşmeler": "Eski Armscor üretim tesislerinin özelleştirilmesiyle devlete bağlı şirket haline getirildi.",
+    "Analiz Notu": "Güney Afrika'nın ana savunma firmasıdır ancak son yıllarda ciddi ekonomik ve yönetim krizleri nedeniyle pazar payı daralmıştır."
+  },
+  "Diehl": {
+    "Tam İsim": "Diehl Defence GmbH & Co. KG", "Ülke": "Almanya", "Üst Kurum / Ortaklık": "Diehl Stiftung (Aile Şirketi)",
+    "CEO": "Helmut Rauch", "Çalışan": "~3.000", "Faaliyet": "Hava Savunma, Füzeler, Mühimmat",
+    "En Bilinen Ürünler / Markalar": "IRIS-T hava savunma sistemi, IRIS-T füzeleri",
+    "Tarihçe & Birleşmeler": "-",
+    "Analiz Notu": "Özellikle IRIS-T hava savunma sistemi ile Avrupa'nın kısa-orta menzilli füze ağında çok güçlü bir ihracat yakalamıştır."
+  },
+  "DynCorp": {
+    "Tam İsim": "DynCorp International", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Amentum (Satın Alındı)",
+    "CEO": "-", "Çalışan": "-", "Faaliyet": "Askeri Lojistik, Eğitim",
+    "En Bilinen Ürünler / Markalar": "Askeri üs yönetimi, personel desteği",
+    "Tarihçe & Birleşmeler": "Özel askeri şirket ve lojistik devi olan DynCorp, 2020 yılında Amentum tarafından yutulmuştur.",
+    "Analiz Notu": "Irak ve Afganistan operasyonlarında ABD ordusuna verdiği sivil müteahhitlik (PMC) hizmetleriyle tarihsel verilere geçmiştir."
+  },
+  "EDO": {
+    "Tam İsim": "EDO Corporation", "Ülke": "ABD", "Üst Kurum / Ortaklık": "L3Harris (Satın Alındı)",
+    "CEO": "-", "Çalışan": "-", "Faaliyet": "Savunma Elektroniği, İletişim",
+    "En Bilinen Ürünler / Markalar": "Sonarlar, elektronik harp podları",
+    "Tarihçe & Birleşmeler": "2007 yılında ITT Corporation tarafından satın alınmış, Exelis üzerinden şu anki L3Harris bünyesine girmiştir.",
+    "Analiz Notu": "Tarihsel verilerde elektronik ve akustik sensör üreticisi olarak bulunmaktadır."
+  },
+  "EG&G": {
+    "Tam İsim": "EG&G (Edgerton, Germeshausen, and Grier)", "Ülke": "ABD", "Üst Kurum / Ortaklık": "URS / Amentum (Satın Alındı)",
+    "CEO": "-", "Çalışan": "-", "Faaliyet": "Askeri Test, Nükleer Tesis Yönetimi",
+    "En Bilinen Ürünler / Markalar": "Nükleer patlama dedektörleri",
+    "Tarihçe & Birleşmeler": "URS Corporation tarafından alındı, sonrasında AECOM ve Amentum'a devredildi.",
+    "Analiz Notu": "Özellikle ABD nükleer test programlarının ana özel yüklenicisi olarak tarihsel bir önemi vardır."
+  },
+  "FLIR": {
+    "Tam İsim": "Teledyne FLIR", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Teledyne (Satın Alındı)",
+    "CEO": "-", "Çalışan": "-", "Faaliyet": "Termal Kameralar",
+    "En Bilinen Ürünler / Markalar": "FLIR termal sistemleri",
+    "Tarihçe & Birleşmeler": "2021 yılında Teledyne Technologies tarafından yutuldu.",
+    "Analiz Notu": "Mıknatıs listesinde Teledyne altında konsolide olmaktadır."
+  },
+  "GE Aerospace": {
+    "Tam İsim": "GE Aerospace (General Electric)", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Halka Açık",
+    "CEO": "H. Lawrence Culp Jr.", "Çalışan": "~52.000", "Faaliyet": "Havacılık Motorları",
+    "En Bilinen Ürünler / Markalar": "F414 (F-18 motoru), F110, T700 (Black Hawk motoru)",
+    "Tarihçe & Birleşmeler": "General Electric'in bölünmesi sonucu sadece havacılık ve motor üretimine odaklanan bağımsız bir firma oldu.",
+    "Analiz Notu": "Dünyadaki sivil ve askeri uçak ile helikopterlerin motor ihtiyacının büyük kısmını sağlayan dev bir şirkettir."
+  },
+  "GKN": {
+    "Tam İsim": "GKN Aerospace", "Ülke": "İngiltere", "Üst Kurum / Ortaklık": "Melrose Industries",
+    "CEO": "David Paja", "Çalışan": "~15.000", "Faaliyet": "Havacılık Yapıları, Motor Bileşenleri",
+    "En Bilinen Ürünler / Markalar": "Uçak aeroyapıları",
+    "Tarihçe & Birleşmeler": "2018'de Melrose Industries tarafından agresif bir satın alma ile bünyeye katıldı.",
+    "Analiz Notu": "F-35 dahil olmak üzere batıdaki neredeyse her askeri uçağın yapısal bir parçasını üreten katma değerli tedarikçidir."
+  },
+  "Griffon": {
+    "Tam İsim": "Griffon Corporation", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Halka Açık",
+    "CEO": "Ronald J. Kramer", "Çalışan": "~7.000", "Faaliyet": "İletişim, Veri Bağlantısı",
+    "En Bilinen Ürünler / Markalar": "Telephonics radarları",
+    "Tarihçe & Birleşmeler": "Savunma birimi olan Telephonics'i daha sonra TTM Technologies'e satmıştır.",
+    "Analiz Notu": "Tarihsel olarak deniz devriye radarları ve askeri iletişim cihazlarıyla listede yer almıştır."
+  },
+  "HEICO": {
+    "Tam İsim": "HEICO Corporation", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Halka Açık",
+    "CEO": "Laurans A. Mendelson", "Çalışan": "~9.000", "Faaliyet": "Havacılık Yedek Parçaları, Elektronik",
+    "En Bilinen Ürünler / Markalar": "FAA onaylı havacılık bileşenleri",
+    "Tarihçe & Birleşmeler": "-",
+    "Analiz Notu": "OEM (Orijinal ekipman üreticisi) dışında sivil ve askeri uçaklar için en büyük bağımsız yedek parça tedarikçisidir."
+  },
+  "Hensoldt": {
+    "Tam İsim": "Hensoldt AG", "Ülke": "Almanya", "Üst Kurum / Ortaklık": "Almanya Devleti (%25), Leonardo (%25)",
+    "CEO": "Oliver Dörre", "Çalışan": "~7.000", "Faaliyet": "Sensörler, Radarlar, Optronik",
+    "En Bilinen Ürünler / Markalar": "TRML-4D hava savunma radarları",
+    "Tarihçe & Birleşmeler": "2017'de Airbus'ın elektronik bölümünden (Cassidian) ayrılarak kuruldu.",
+    "Analiz Notu": "Avrupa zırhlı araç optikleri ve taktik hava savunma radarları konusunda öncü tasarımcıdır."
+  },
+  "Hitachi": {
+    "Tam İsim": "Hitachi, Ltd.", "Ülke": "Japonya", "Üst Kurum / Ortaklık": "Halka Açık",
+    "CEO": "Keiji Kojima", "Çalışan": "~320.000", "Faaliyet": "Ağır Sanayi, Elektronik, Bilişim",
+    "En Bilinen Ürünler / Markalar": "Gemi sistemleri, savunma elektroniği",
+    "Tarihçe & Birleşmeler": "-",
+    "Analiz Notu": "Japonya pazarında ordunun IT ağları ve donanım alt bileşenlerini sağlayan ağır sanayi devidir."
+  },
+  "Hunting": {
+    "Tam İsim": "Hunting PLC", "Ülke": "İngiltere", "Üst Kurum / Ortaklık": "Halka Açık",
+    "CEO": "Jim Johnson", "Çalışan": "~2.000", "Faaliyet": "Mühimmat, Petrol/Gaz Hizmetleri",
+    "En Bilinen Ürünler / Markalar": "Askeri ekipman bileşenleri",
+    "Tarihçe & Birleşmeler": "Geçmişte savunma sanayii odaklı iken büyük oranda enerji sektörüne kaymıştır.",
+    "Analiz Notu": "Eski yıllarda (örneğin 2000 başları) hafif mühimmat üretimleriyle listede kendine yer bulmuştur."
+  },
+  "IHI": {
+    "Tam İsim": "IHI Corporation (Ishikawajima-Harima Heavy Industries)", "Ülke": "Japonya", "Üst Kurum / Ortaklık": "Halka Açık",
+    "CEO": "Hiroshi Ide", "Çalışan": "~29.000", "Faaliyet": "Gemi İnşa, Havacılık Motorları",
+    "En Bilinen Ürünler / Markalar": "XF9-1 turbofan motorları",
+    "Tarihçe & Birleşmeler": "-",
+    "Analiz Notu": "Japonya'nın savaş uçakları için itki (motor) sistemleri geliştiren birincil yüklenicisidir."
+  },
+  "IMI Systems": {
+    "Tam İsim": "IMI Systems", "Ülke": "İsrail", "Üst Kurum / Ortaklık": "Elbit Systems (Satın Alındı)",
+    "CEO": "-", "Çalışan": "-", "Faaliyet": "Silah, Mühimmat, Zırh",
+    "En Bilinen Ürünler / Markalar": "Uzi, Tavor, Iron Fist aktif koruma",
+    "Tarihçe & Birleşmeler": "Eski devlete ait Israel Military Industries, 2018 yılında Elbit Systems'e satılarak yutulmuştur.",
+    "Analiz Notu": "Tarihsel İsrail silah markalarının üreticisidir."
+  },
+  "Indra": {
+    "Tam İsim": "Indra Sistemas, S.A.", "Ülke": "İspanya", "Üst Kurum / Ortaklık": "İspanya Devleti (%28)",
+    "CEO": "José Vicente de los Mozos", "Çalışan": "~56.000", "Faaliyet": "Bilişim, Radarlar, Simülasyon",
+    "En Bilinen Ürünler / Markalar": "Lanza 3D radarları, Eurofighter EW suitleri",
+    "Tarihçe & Birleşmeler": "-",
+    "Analiz Notu": "İspanya'nın bayrak taşıyıcı teknoloji şirketidir, sivil IT ve savunma elektroniği dengelidir."
+  },
+  "Itochu": {
+    "Tam İsim": "Itochu Corporation", "Ülke": "Japonya", "Üst Kurum / Ortaklık": "Halka Açık",
+    "CEO": "Keita Ishii", "Çalışan": "~130.000", "Faaliyet": "Ticaret (Sogo Shosha), Tedarik Zinciri",
+    "En Bilinen Ürünler / Markalar": "Savunma ve Havacılık ithalatı",
+    "Tarihçe & Birleşmeler": "Japon havacılık şirketi Itochu Aviation ile yabancı teknolojileri (Boeing vb.) ülkeye entegre eder.",
+    "Analiz Notu": "Doğrudan savunma üretiminden ziyade Japonya Savunma Bakanlığı için komisyoncu ve tedarikçidir."
+  },
+  "Jacobs": {
+    "Tam İsim": "Jacobs Solutions Inc.", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Halka Açık",
+    "CEO": "Bob Pragada", "Çalışan": "~60.000", "Faaliyet": "Askeri Altyapı, Uzay Mühendisliği",
+    "En Bilinen Ürünler / Markalar": "NASA mühendislik destekleri",
+    "Tarihçe & Birleşmeler": "-",
+    "Analiz Notu": "ABD hükümetine ve ordusuna test laboratuvarları ve ileri mühendislik üslerinin inşasında destek sunar."
+  },
+  "John Cockerill": {
+    "Tam İsim": "John Cockerill Defense", "Ülke": "Belçika", "Üst Kurum / Ortaklık": "Özel Şirket",
+    "CEO": "Thierry Renaudin", "Çalışan": "~6.000", "Faaliyet": "Silah Kuleleri",
+    "En Bilinen Ürünler / Markalar": "Cockerill 3000 Serisi (Hafif Tank Kuleleri)",
+    "Tarihçe & Birleşmeler": "Eski adı CMI Defence olan tarihi Belçikalı üreticidir. Arquus (eski Renault Trucks) şirketini satın alma aşamasındadır.",
+    "Analiz Notu": "Tekerlekli ve paletli zırhlı araçlar için top ve silah kulesi tasarımında liderlerdendir."
+  },
+  "KBP Instrument Design Bureau": {
+    "Tam İsim": "JSC KBP Instrument Design Bureau", "Ülke": "Rusya", "Üst Kurum / Ortaklık": "Rostec (High Precision Systems)",
+    "CEO": "Vyacheslav Kovalev", "Çalışan": "~Bilinmiyor", "Faaliyet": "Hava Savunma, Tanksavar füzeler",
+    "En Bilinen Ürünler / Markalar": "Pantsir-S1, Kornet tanksavar füzeleri",
+    "Tarihçe & Birleşmeler": "Oboronprom üzerinden Rostec yapılanmasına entegre olmuştur.",
+    "Analiz Notu": "Taktik kısa menzilli hava savunma (Pantsir) sistemlerinin tasarımcı şirketidir."
+  },
+  "KRET": {
+    "Tam İsim": "Concern Radio-Electronic Technologies (KRET)", "Ülke": "Rusya", "Üst Kurum / Ortaklık": "Rostec",
+    "CEO": "Nikolay Kolesov", "Çalışan": "~50.000", "Faaliyet": "Elektronik Harp, Aviyonik",
+    "En Bilinen Ürünler / Markalar": "Krasukha elektronik harp sistemleri",
+    "Tarihçe & Birleşmeler": "Eski radyo ve elektronik harp bürolarının konsolidasyonuyla kuruldu.",
+    "Analiz Notu": "Rus ordusunun elektronik savaş şemsiyesinin donanımsal omurgasını üretir."
+  },
+  "Komatsu": {
+    "Tam İsim": "Komatsu Ltd.", "Ülke": "Japonya", "Üst Kurum / Ortaklık": "Halka Açık",
+    "CEO": "Hiroyuki Ogawa", "Çalışan": "~62.000", "Faaliyet": "Ağır İş Makinaları, Zırhlı Araçlar",
+    "En Bilinen Ürünler / Markalar": "LAV (Hafif Zırhlı Araçlar)",
+    "Tarihçe & Birleşmeler": "-",
+    "Analiz Notu": "Askeri zırhlı personel taşıyıcı ve araç üretimine yönelik askeri projeleri olmakla birlikte yakın zamanda bu iş kolunu küçültme kararı almıştır."
+  },
+  "Lumen Technologies": {
+    "Tam İsim": "Lumen Technologies, Inc.", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Halka Açık",
+    "CEO": "Kate Johnson", "Çalışan": "~28.000", "Faaliyet": "Siber Güvenlik, Telekomünikasyon",
+    "En Bilinen Ürünler / Markalar": "Askeri veri ağları",
+    "Tarihçe & Birleşmeler": "Eski adı CenturyLink'tir.",
+    "Analiz Notu": "ABD devletinin savunma iletişim ağları ve gizli IT altyapılarını destekleyen sivil bir teknoloji firmasıdır."
+  },
+  "MBDA": {
+    "Tam İsim": "MBDA", "Ülke": "Avrupa", "Üst Kurum / Ortaklık": "Airbus (%37.5), BAE (%37.5), Leonardo (%25)",
+    "CEO": "Éric Béranger", "Çalışan": "~14.000", "Faaliyet": "Füzeler",
+    "En Bilinen Ürünler / Markalar": "Meteor, Aster, Storm Shadow, Exocet",
+    "Tarihçe & Birleşmeler": "Matra, BAE Dynamics ve Alenia'nın füze operasyonlarının birleştirilmesiyle kuruldu.",
+    "Analiz Notu": "Avrupa'nın en büyük çok uluslu füze üretim konsorsiyumudur."
+  },
+  "Maxar Technologies": {
+    "Tam İsim": "Maxar Technologies", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Advent International (Özel Şirket)",
+    "CEO": "Dan Jablonsky", "Çalışan": "~4.500", "Faaliyet": "Uzay Görüntüleme, Uydular",
+    "En Bilinen Ürünler / Markalar": "Dünya gözlem uyduları (WorldView)",
+    "Tarihçe & Birleşmeler": "DigitalGlobe ve SSL'in birleşmesiyle kuruldu. 2023'te borsadan çekilerek özel sermayeye satıldı.",
+    "Analiz Notu": "Askeri istihbarat ve savaş sahası gözleminde yüksek çözünürlüklü uydu görüntüsü sağlar."
+  },
+  "Mazagon Dock": {
+    "Tam İsim": "Mazagon Dock Shipbuilders Limited", "Ülke": "Hindistan", "Üst Kurum / Ortaklık": "Hindistan Devleti",
+    "CEO": "Sanjeev Singhal", "Çalışan": "~4.000", "Faaliyet": "Askeri Gemi ve Denizaltı İnşası",
+    "En Bilinen Ürünler / Markalar": "Kalvari sınıfı (Scorpene) denizaltılar, Visakhapatnam sınıfı destroyerler",
+    "Tarihçe & Birleşmeler": "-",
+    "Analiz Notu": "Hindistan donanmasının su üstü ve denizaltı inşaat kapasitesinin merkezidir."
+  },
+  "Mercury Systems": {
+    "Tam İsim": "Mercury Systems, Inc.", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Halka Açık",
+    "CEO": "Bill Ballhaus", "Çalışan": "~2.500", "Faaliyet": "Gömülü Savunma Elektroniği (Embedded)",
+    "En Bilinen Ürünler / Markalar": "RF ve Mikrodalga veri işleme sistemleri",
+    "Tarihçe & Birleşmeler": "-",
+    "Analiz Notu": "Savaş uçakları ve füzeler için siber güvenlikli çipler ve mikroelektronik sistemler üretir."
+  },
+  "Mitsui": {
+    "Tam İsim": "Mitsui E&S (Engineering & Shipbuilding)", "Ülke": "Japonya", "Üst Kurum / Ortaklık": "Halka Açık",
+    "CEO": "Takeyuki Takahashi", "Çalışan": "~12.000", "Faaliyet": "Gemi İnşa, Savunma Taahhüt",
+    "En Bilinen Ürünler / Markalar": "Lojistik gemiler, sonar sistemleri",
+    "Tarihçe & Birleşmeler": "-",
+    "Analiz Notu": "Mitsubishi'den tamamen bağımsız olan diğer büyük Japon deniz ve ticaret holdingidir."
+  },
+  "NEC": {
+    "Tam İsim": "NEC Corporation", "Ülke": "Japonya", "Üst Kurum / Ortaklık": "Halka Açık",
+    "CEO": "Takayuki Morita", "Çalışan": "~118.000", "Faaliyet": "Bilişim Teknolojileri, Radarlar",
+    "En Bilinen Ürünler / Markalar": "Erken uyarı sensörleri, su altı akustik sistemler",
+    "Tarihçe & Birleşmeler": "-",
+    "Analiz Notu": "Japon Öz Savunma Kuvvetleri'nin komuta kontrol ve radar (özellikle sonarlar) elektroniğini destekler."
+  },
+  "Nammo": {
+    "Tam İsim": "Nammo AS", "Ülke": "Norveç / Finlandiya", "Üst Kurum / Ortaklık": "Norveç Devleti (%50), Patria (%50)",
+    "CEO": "Morten Brandtzæg", "Çalışan": "~2.800", "Faaliyet": "Mühimmat, Roket Motorları",
+    "En Bilinen Ürünler / Markalar": "155mm topçu mühimmatı, omuzdan ateşlemeli sistemler (M72)",
+    "Tarihçe & Birleşmeler": "İskandinav ülkelerinin mühimmat tesislerinin birleştirilmesiyle kuruldu.",
+    "Analiz Notu": "Avrupa mühimmat tüketimini besleyen ve roket itki sistemleri konusunda (AMRAAM vb.) çok uzmanlaşmış bir şirkettir."
+  },
+  "Navantia": {
+    "Tam İsim": "Navantia S.A.", "Ülke": "İspanya", "Üst Kurum / Ortaklık": "İspanya Devleti (SEPI)",
+    "CEO": "Ricardo Domínguez", "Çalışan": "~4.000", "Faaliyet": "Askeri Gemi İnşası",
+    "En Bilinen Ürünler / Markalar": "F110 fırkateynleri, S-80 denizaltıları, Juan Carlos I / Anadolu (tasarım LHD)",
+    "Tarihçe & Birleşmeler": "Eski adı Izar ve Bazan olan İspanyol devlet tersaneleridir.",
+    "Analiz Notu": "Avustralya, Suudi Arabistan ve Türkiye gibi ülkelere amfibi hücum gemisi ve fırkateyn tasarımı ihraç etmektedir."
+  },
+  "Orbital ATK": {
+    "Tam İsim": "Orbital ATK", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Northrop Grumman (Satın Alındı)",
+    "CEO": "-", "Çalışan": "-", "Faaliyet": "Uzay, İtki Sistemleri, Mühimmat",
+    "En Bilinen Ürünler / Markalar": "Roket motorları, gelişmiş mühimmatlar",
+    "Tarihçe & Birleşmeler": "Alliant Techsystems (ATK) ve Orbital Sciences'ın birleşimiydi. 2018'de Northrop Grumman tarafından yutuldu.",
+    "Analiz Notu": "Geçmiş verilerde yer alan en önemli katı roket yakıtı üreticilerinden biridir."
+  },
+  "Oshkosh": {
+    "Tam İsim": "Oshkosh Corporation", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Halka Açık",
+    "CEO": "John Pfeifer", "Çalışan": "~17.000", "Faaliyet": "Taktik Tekerlekli Araçlar",
+    "En Bilinen Ürünler / Markalar": "JLTV (Hafif Taktik Araç), M-ATV, FMTV",
+    "Tarihçe & Birleşmeler": "-",
+    "Analiz Notu": "ABD Ordusu'nun lojistik ve zırhlı kamyon (Humvee'nin yerini alan JLTV dahil) ihtiyacının ana tedarikçisidir."
+  },
+  "Palantir Technologies": {
+    "Tam İsim": "Palantir Technologies", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Halka Açık",
+    "CEO": "Alex Karp", "Çalışan": "~3.800", "Faaliyet": "Yapay Zeka, Veri Analitiği",
+    "En Bilinen Ürünler / Markalar": "Palantir Gotham, AIP (Yapay Zeka Platformu)",
+    "Tarihçe & Birleşmeler": "CIA destekli In-Q-Tel yatırımıyla büyümüştür.",
+    "Analiz Notu": "Savaş sahasında hedef analizi ve istihbarat verilerini yapay zeka ile işleyen yazılımlarıyla yeni nesil savaşın öncüsüdür."
+  },
+  "Parker Hannifin": {
+    "Tam İsim": "Parker-Hannifin Corporation", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Halka Açık",
+    "CEO": "Jennifer A. Parmentier", "Çalışan": "~62.000", "Faaliyet": "Havacılık Kontrol Sistemleri",
+    "En Bilinen Ürünler / Markalar": "Uçak uçuş kontrolleri, hidrolik/pnömatik sistemler",
+    "Tarihçe & Birleşmeler": "2022 yılında İngiliz savunma devi Meggitt plc'yi satın aldı.",
+    "Analiz Notu": "Pompalar ve hareket kontrol teknolojilerinde tüm savaş uçakları için hayati bir alt-tedarikçidir."
+  },
+  "Parsons": {
+    "Tam İsim": "Parsons Corporation", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Halka Açık",
+    "CEO": "Carey Smith", "Çalışan": "~17.000", "Faaliyet": "Siber Güvenlik, Uzay, Askeri Tesis İnşası",
+    "En Bilinen Ürünler / Markalar": "Füze savunma komuta kontrol ağları, siber altyapı",
+    "Tarihçe & Birleşmeler": "-",
+    "Analiz Notu": "Geleneksel inşaattan savunma bilgi teknolojilerine (IT) kayan başarılı müteahhitlerdendir."
+  },
+  "Patria": {
+    "Tam İsim": "Patria Oyj", "Ülke": "Finlandiya", "Üst Kurum / Ortaklık": "Finlandiya Devleti (%50.1), Kongsberg (%49.9)",
+    "CEO": "Esa Rautalinko", "Çalışan": "~3.300", "Faaliyet": "Zırhlı Araçlar, Havacılık MRO, Havan Sistemleri",
+    "En Bilinen Ürünler / Markalar": "Patria AMV zırhlı araçları, NEMO havan",
+    "Tarihçe & Birleşmeler": "İskandinav savunma entegrasyonu kapsamında Kongsberg ile ortaklığa gitti.",
+    "Analiz Notu": "Avrupa'da yüksek taktik hareketliliğe sahip tekerlekli zırhlı platformlarda (AMV) çok popülerdir."
+  },
+  "QinetiQ": {
+    "Tam İsim": "QinetiQ Group plc", "Ülke": "İngiltere", "Üst Kurum / Ortaklık": "Halka Açık",
+    "CEO": "Steve Wadey", "Çalışan": "~8.000", "Faaliyet": "Test/Değerlendirme, Otonom Sistemler",
+    "En Bilinen Ürünler / Markalar": "Banshee hava hedefleri, Talon robotik araçları",
+    "Tarihçe & Birleşmeler": "2001 yılında İngiliz Savunma Bakanlığı laboratuvarlarının (DERA) özelleştirilmesiyle doğdu.",
+    "Analiz Notu": "Orduların silahlarını denediği poligonları işleten ve hedef/test dronları geliştiren Ar-Ge şirketidir."
+  },
+  "RTI": {
+    "Tam İsim": "RTI Systems Concern", "Ülke": "Rusya", "Üst Kurum / Ortaklık": "AFK Sistema",
+    "CEO": "Pavel Laptev", "Çalışan": "~Bilinmiyor", "Faaliyet": "Radarlar, Komuta Kontrol",
+    "En Bilinen Ürünler / Markalar": "Voronezh erken uyarı radarları",
+    "Tarihçe & Birleşmeler": "-",
+    "Analiz Notu": "Rusya'nın devasa ufuk ötesi erken füze uyarısı (anti-balistik) radar ağlarını kurar."
+  },
+  "Rolls-Royce": {
+    "Tam İsim": "Rolls-Royce Holdings plc", "Ülke": "İngiltere", "Üst Kurum / Ortaklık": "Halka Açık",
+    "CEO": "Tufan Erginbilgiç", "Çalışan": "~42.000", "Faaliyet": "Havacılık Motorları, Nükleer Denizaltı İtkisi",
+    "En Bilinen Ürünler / Markalar": "EJ200 (Typhoon), F130 (B-52), Astute Nükleer Reaktörü",
+    "Tarihçe & Birleşmeler": "-",
+    "Analiz Notu": "Avrupa hava kuvvetleri ve İngiliz donanma denizaltılarının yegane itki/motor merkezidir."
+  },
+  "SRA International": {
+    "Tam İsim": "SRA International", "Ülke": "ABD", "Üst Kurum / Ortaklık": "General Dynamics (Satın Alındı)",
+    "CEO": "-", "Çalışan": "-", "Faaliyet": "Bilgi Teknolojileri",
+    "En Bilinen Ürünler / Markalar": "Hükümet veritabanları",
+    "Tarihçe & Birleşmeler": "CSRA olarak birleşip ardından General Dynamics Information Technology (GDIT) tarafından yutuldu.",
+    "Analiz Notu": "Tarihsel olarak Washington IT pazarında aktifti."
+  },
+  "SRC": {
+    "Tam İsim": "SRC, Inc.", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Kâr Amacı Gütmeyen Şirket",
+    "CEO": "Kevin Hair", "Çalışan": "~1.500", "Faaliyet": "Radarlar, Ar-Ge, Elektronik Harp",
+    "En Bilinen Ürünler / Markalar": "AN/TPQ-50 anti-havan radarları, C-UAS",
+    "Tarihçe & Birleşmeler": "Eski adıyla Syracuse Research Corporation.",
+    "Analiz Notu": "Küçük boyutlu seyyar radar ve dron savar (C-UAS) sistemlerinde öncü bir bağımsız Ar-Ge şirketidir."
+  },
+  "Safran": {
+    "Tam İsim": "Safran S.A.", "Ülke": "Fransa", "Üst Kurum / Ortaklık": "Halka Açık",
+    "CEO": "Olivier Andriès", "Çalışan": "~92.000", "Faaliyet": "Havacılık Motorları, Optronik",
+    "En Bilinen Ürünler / Markalar": "M88 (Rafale motoru), AASM Hammer",
+    "Tarihçe & Birleşmeler": "2005'te SNECMA ve SAGEM'in (Sextant) birleşmesiyle kuruldu.",
+    "Analiz Notu": "Fransız havacılık sanayiinin itki (motor) ve hassas optik mühimmat tedarikçisidir."
+  },
+  "Serco": {
+    "Tam İsim": "Serco Group plc", "Ülke": "İngiltere", "Üst Kurum / Ortaklık": "Halka Açık",
+    "CEO": "Mark Irwin", "Çalışan": "~50.000", "Faaliyet": "Tesis Yönetimi, Lojistik",
+    "En Bilinen Ürünler / Markalar": "Erken Uyarı Radarları (Fylingdales) yönetimi",
+    "Tarihçe & Birleşmeler": "-",
+    "Analiz Notu": "Ordu tesislerini (üssler, radarlar, limanlar) devlet adına işleten İngiliz yönetim firmasıdır."
+  },
+  "Sierra Nevada": {
+    "Tam İsim": "Sierra Nevada Corporation (SNC)", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Özel Şirket",
+    "CEO": "Fatih Özmen", "Çalışan": "~5.000", "Faaliyet": "Uzay, Aviyonik Entegrasyonu, Elektronik Harp",
+    "En Bilinen Ürünler / Markalar": "Dream Chaser (uzay aracı), Özel Görev Uçakları",
+    "Tarihçe & Birleşmeler": "Uçak yapısal entegrasyonları için Embraer A-29 platformunu ABD pazarına taşımıştır.",
+    "Analiz Notu": "Özellikle keşif ve istihbarat (ISR) uçaklarının elektronik entegrasyonunu yapan gizli bir güçtür."
+  },
+  "Smiths Group": {
+    "Tam İsim": "Smiths Group plc", "Ülke": "İngiltere", "Üst Kurum / Ortaklık": "Halka Açık",
+    "CEO": "Paul Keel", "Çalışan": "~15.000", "Faaliyet": "Detektörler, Sensörler",
+    "En Bilinen Ürünler / Markalar": "Kimyasal/biyolojik tehdit detektörleri",
+    "Tarihçe & Birleşmeler": "Havacılık aviyonikleri birimini GE'ye satıp, savunmada tarama ve dedektörlere odaklandı.",
+    "Analiz Notu": "Sınır güvenliği ve askeri X-Ray/Kimyasal tarayıcılar (Smiths Detection) alanında liderdir."
+  },
+  "Stork": {
+    "Tam İsim": "Stork Aerospace (Fokker)", "Ülke": "Hollanda", "Üst Kurum / Ortaklık": "GKN Aerospace (Satın Alındı)",
+    "CEO": "-", "Çalışan": "-", "Faaliyet": "Havacılık Bileşenleri",
+    "En Bilinen Ürünler / Markalar": "Uçak yapısal parçaları",
+    "Tarihçe & Birleşmeler": "GKN Aerospace tarafından satın alınarak yutuldu.",
+    "Analiz Notu": "Tarihsel verilerde kompozit aero-yapılar ve F-35 bileşenleri ile yer almıştır."
+  },
+  "Subaru": {
+    "Tam İsim": "Subaru Corporation", "Ülke": "Japonya", "Üst Kurum / Ortaklık": "Halka Açık",
+    "CEO": "Atsushi Osaki", "Çalışan": "~37.000", "Faaliyet": "Otomotiv, Askeri Helikopter",
+    "En Bilinen Ürünler / Markalar": "UH-2 askeri helikopterleri",
+    "Tarihçe & Birleşmeler": "Eski adı Fuji Heavy Industries'dir.",
+    "Analiz Notu": "Otomotiv ağırlıklı olmasına rağmen Japon ordusu için lisans altında taarruz/nakliye helikopterleri üretir."
+  },
+  "Telesat": {
+    "Tam İsim": "Telesat Corporation", "Ülke": "Kanada", "Üst Kurum / Ortaklık": "Halka Açık",
+    "CEO": "Daniel S. Goldberg", "Çalışan": "~400", "Faaliyet": "Uydu İletişimi",
+    "En Bilinen Ürünler / Markalar": "Lightspeed LEO uydu ağı",
+    "Tarihçe & Birleşmeler": "Loral Space'ten ayrılarak borsaya açıldı.",
+    "Analiz Notu": "Savunma ve hükümet kurumları için güvenli uydu bant genişliği sağlar."
+  },
+  "Tenix": {
+    "Tam İsim": "Tenix Defence", "Ülke": "Avustralya", "Üst Kurum / Ortaklık": "BAE Systems (Satın Alındı)",
+    "CEO": "-", "Çalışan": "-", "Faaliyet": "Askeri Gemi İnşa, Kara Araçları",
+    "En Bilinen Ürünler / Markalar": "ANZAC sınıfı fırkateynler (ortak)",
+    "Tarihçe & Birleşmeler": "2008 yılında BAE Systems Australia tarafından satın alınarak yutulmuştur.",
+    "Analiz Notu": "Tarihsel bir Avustralya şirketidir."
+  },
+  "ThyssenKrupp": {
+    "Tam İsim": "ThyssenKrupp Marine Systems (TKMS)", "Ülke": "Almanya", "Üst Kurum / Ortaklık": "ThyssenKrupp AG",
+    "CEO": "Oliver Burkhard", "Çalışan": "~6.000", "Faaliyet": "Askeri Denizcilik, Denizaltı",
+    "En Bilinen Ürünler / Markalar": "Type 214 denizaltılar, MEKO fırkateynleri",
+    "Tarihçe & Birleşmeler": "Howaldtswerke-Deutsche Werft (HDW) dahil pek çok Alman tersanesini birleştirdi.",
+    "Analiz Notu": "Hava bağımsız tahrik (AIP) özellikli dizel-elektrik denizaltılarında Avrupa'nın ana tedarikçisidir."
+  },
+  "Toshiba": {
+    "Tam İsim": "Toshiba Corporation", "Ülke": "Japonya", "Üst Kurum / Ortaklık": "Özel Konsorsiyum (JIP)",
+    "CEO": "Taro Shimada", "Çalışan": "~100.000", "Faaliyet": "Elektronik, Ağır Sanayi",
+    "En Bilinen Ürünler / Markalar": "Hava savunma radarları, füze bileşenleri",
+    "Tarihçe & Birleşmeler": "Borsadan çekilerek özel Japon konsorsiyumuna devredildi.",
+    "Analiz Notu": "Japon Öz Savunma Kuvvetleri'nin radar ve optik güdüm sistemlerine katkı sağlar."
+  },
+  "Ultra Electronics": {
+    "Tam İsim": "Ultra Electronics Holdings", "Ülke": "İngiltere", "Üst Kurum / Ortaklık": "Cobham (Advent International)",
+    "CEO": "Simon Pryce", "Çalışan": "~4.500", "Faaliyet": "Sonoboylar, Elektronik Harp, İletişim",
+    "En Bilinen Ürünler / Markalar": "Denizaltı tespit sonoboyları",
+    "Tarihçe & Birleşmeler": "2022 yılında Cobham'ı da elinde tutan Advent International tarafından satın alındı.",
+    "Analiz Notu": "Savaş gemileri ve deniz karakol uçakları için hayati önem taşıyan anti-denizaltı (ASW) teknolojilerinde öncüdür."
+  },
+  "United Aircraft Corporation": {
+    "Tam İsim": "JSC United Aircraft Corporation (UAC)", "Ülke": "Rusya", "Üst Kurum / Ortaklık": "Rostec",
+    "CEO": "Yury Slyusar", "Çalışan": "~100.000", "Faaliyet": "Savaş Uçakları",
+    "En Bilinen Ürünler / Markalar": "Su-57, Su-35, MiG-35, Yak-130",
+    "Tarihçe & Birleşmeler": "Sukhoi, MiG, Irkutsk, Tupolev ve Ilyushin tasarım bürolarının birleşimidir.",
+    "Analiz Notu": "Rusya'nın askeri uçak üreten dev tekelidir."
+  },
+  "United Shipbuilding Corporation": {
+    "Tam İsim": "JSC United Shipbuilding Corporation (USC)", "Ülke": "Rusya", "Üst Kurum / Ortaklık": "Rusya Federasyonu",
+    "CEO": "Andrey Puchkov", "Çalışan": "~95.000", "Faaliyet": "Denizaltı, Savaş Gemileri",
+    "En Bilinen Ürünler / Markalar": "Borei sınıfı denizaltılar",
+    "Tarihçe & Birleşmeler": "Admiralteiskie Verfi, Sevmash ve Baltiisky Zavod gibi dev Rus tersanelerinin birleşimidir.",
+    "Analiz Notu": "Rus Donanmasının denizaltı ve gemi inşasından sorumlu kurumdur."
+  },
+  "Russian Helicopters": {
+    "Tam İsim": "JSC Russian Helicopters", "Ülke": "Rusya", "Üst Kurum / Ortaklık": "Rostec",
+    "CEO": "Nikolay Kolesov", "Çalışan": "~40.000", "Faaliyet": "Helikopter",
+    "En Bilinen Ürünler / Markalar": "Mi-8, Ka-52, Mi-28",
+    "Tarihçe & Birleşmeler": "Mil ve Kamov bürolarının birleşimi.",
+    "Analiz Notu": "Rusya'nın döner kanatlı platformlardaki tek ana şirketidir."
+  },
+  "United Engine Corp": {
+    "Tam İsim": "United Engine Corporation (UEC)", "Ülke": "Rusya", "Üst Kurum / Ortaklık": "Rostec",
+    "CEO": "Vadim Badekha", "Çalışan": "~Bilinmiyor", "Faaliyet": "Havacılık Motorları",
+    "En Bilinen Ürünler / Markalar": "AL-31F, AL-41F motorları",
+    "Tarihçe & Birleşmeler": "Ufa, Salyut gibi uçak motoru üreten fabrikaların çatı kuruluşudur.",
+    "Analiz Notu": "Rus uçaklarının motor tedarikçisidir."
+  },
+  "Rosoboronexport": {
+    "Tam İsim": "JSC Rosoboronexport", "Ülke": "Rusya", "Üst Kurum / Ortaklık": "Rostec",
+    "CEO": "Alexander Mikheev", "Çalışan": "-", "Faaliyet": "Silah İhracatı",
+    "En Bilinen Ürünler / Markalar": "Tüm Rus Silahları",
+    "Tarihçe & Birleşmeler": "Rosvoorouzhenie firmasının yeni halidir.",
+    "Analiz Notu": "Rusya'nın silah ihracat tekelidir."
+  },
+  "VSE": {
+    "Tam İsim": "VSE Corporation", "Ülke": "ABD", "Üst Kurum / Ortaklık": "Halka Açık",
+    "CEO": "John Cuomo", "Çalışan": "~2.500", "Faaliyet": "Askeri Araç Bakımı, Lojistik",
+    "En Bilinen Ürünler / Markalar": "FMS (Yabancı Askeri Satış) destek hizmetleri",
+    "Tarihçe & Birleşmeler": "-",
+    "Analiz Notu": "ABD tarafından diğer ülkelere (FMS) satılan veya hibe edilen gemi/araçların modernizasyonu ve transfer hizmetlerini gerçekleştirir."
+  },
+  "VT Group": {
+    "Tam İsim": "VT Group (Vosper Thornycroft)", "Ülke": "İngiltere", "Üst Kurum / Ortaklık": "Babcock & BAE (Satın Alındı)",
+    "CEO": "-", "Çalışan": "-", "Faaliyet": "Gemi İnşa, Destek Hizmetleri",
+    "En Bilinen Ürünler / Markalar": "Type 45 fırkateynleri",
+    "Tarihçe & Birleşmeler": "Tersane işleri BAE Systems ile ortak girişime devredildi, şirket ardından Babcock tarafından yutuldu.",
+    "Analiz Notu": "Tarihsel bir İngiliz tersane ve savunma müteahhidiydi."
+  },
+  "Veridian": {
+    "Tam İsim": "Veridian Corporation", "Ülke": "ABD", "Üst Kurum / Ortaklık": "General Dynamics (Satın Alındı)",
+    "CEO": "-", "Çalışan": "-", "Faaliyet": "Bilgi Güvenliği, Sistem Mühendisliği",
+    "En Bilinen Ürünler / Markalar": "İstihbarat ağları",
+    "Tarihçe & Birleşmeler": "2003 yılında General Dynamics tarafından satın alındı.",
+    "Analiz Notu": "ABD istihbarat ve havacılık sektörüne bilişim desteği veren ve GD'nin siber yeteneklerini geliştiren eski bir firmadır."
   }
 }
