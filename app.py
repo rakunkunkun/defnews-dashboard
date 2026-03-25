@@ -4,8 +4,10 @@ import plotly.express as px
 import plotly.graph_objects as go
 import numpy as np
 import re
+import json
+import os
 
-# 1. KÖK KELİME MIKNATISI (İsim Standartlaştırma)
+# 1. KÖK KELİME MIKNATISI (Temizlenmiş Kesin Birleşmeler)
 ROOT_MAGNETS = {
     'lockheed': 'Lockheed Martin', 'boeing': 'Boeing', 
     'rockwell': 'RTX', 'raytheon': 'RTX', 'rtx': 'RTX', 'united technologies': 'RTX',
@@ -16,33 +18,48 @@ ROOT_MAGNETS = {
     'thomson': 'Thales', 'thales': 'Thales', 
     'itt': 'L3Harris', 'exelis': 'L3Harris', 'l 3': 'L3Harris', 'l3': 'L3Harris', 'harris': 'L3Harris', 'lharris': 'L3Harris',
     'kongsberg': 'Kongsberg', 'saab': 'Saab', 'dassault': 'Dassault', 'rheinmetall': 'Rheinmetall', 'textron': 'Textron',
+    
+    # Hunting ve Huntington Ayrı Tutuldu
     'huntington': 'Huntington Ingalls', 'hii': 'Huntington Ingalls', 'newport news': 'Huntington Ingalls', 
+    'hunting': 'Hunting', 
+    
     'rolls': 'Rolls-Royce',
-    'el op': 'Elbit Systems', 'elbit': 'Elbit Systems', 
+    'el op': 'Elbit Systems', 'elbit': 'Elbit Systems', 'tadiran': 'Elbit Systems',
     'rafael': 'Rafael', 
     'israel aerospace': 'IAI', 'iai': 'IAI', 'israel aircraft': 'IAI',
     'israel military': 'IMI Systems', 'imi': 'IMI Systems', 
     'naval group': 'Naval Group', 'dcns': 'Naval Group', 'dcn': 'Naval Group', 'direction des constructions': 'Naval Group', 
+    
     'casic': 'CASIC', 'china aerospace science and industry': 'CASIC', 
     'casc': 'CASC', 'china aerospace science and technology': 'CASC',
     'china north': 'NORINCO', 'norinco': 'NORINCO', 
     'china south': 'CSGC', 'csgc': 'CSGC', 
     'cssc': 'CSSC', 'china state': 'CSSC', 'csic': 'CSSC', 'china shipbuilding industry': 'CSSC',
     'aviation industry of china': 'AVIC', 
+    
     'cobham': 'Cobham', 'curtis': 'Curtiss-Wright', 'curtiss': 'Curtiss-Wright',
     'concern radio': 'KRET', 'kret': 'KRET', 'rdaio': 'KRET', 
     'denel': 'Denel', 'heico': 'HEICO', 
     'ukroboronprom': 'Ukroboronprom', 'ukrainian defense': 'Ukroboronprom', 
-    'indra': 'Indra', 'mitsubishi': 'Mitsubishi', 'kawasaki': 'Kawasaki',
-    'komatsu': 'Komatsu', 'fuji': 'Fuji', 'hitachi': 'Hitachi', 'toshiba': 'Toshiba', 'nec': 'NEC', 'ishikawajima': 'IHI',
-    'ihi': 'IHI', 'booz': 'Booz Allen Hamilton', 
-    'computer science': 'CSC', 'csc': 'CSC', 'csra': 'CSC', 'drs': 'DRS Technologies',
+    'indra': 'Indra', 
+    
+    # Japon Şirketleri Doğru Ayrıştırıldı
+    'mitsubishi': 'Mitsubishi', 'misubishi': 'Mitsubishi',
+    'mitsui': 'Mitsui', 
+    'itochu': 'Itochu',
+    'kawasaki': 'Kawasaki', 'komatsu': 'Komatsu', 'fuji': 'Fuji', 'hitachi': 'Hitachi', 'toshiba': 'Toshiba', 'nec': 'NEC', 
+    'ishikawajima': 'IHI', 'ihi': 'IHI', 
+    
+    'booz': 'Booz Allen Hamilton', 'computer science': 'CSC', 'csc': 'CSC', 'csra': 'CSC', 'drs': 'DRS Technologies',
     'almaz': 'Almaz-Antey', 'antei': 'Almaz-Antey', 'antey': 'Almaz-Antey', 
+    
+    # Uçak ve Helikopter Birleşmeleri
     'sukhoi': 'Sukhoi', 'mig': 'MiG', 'irkut': 'Irkut', 'salyut': 'Salyut', 'izhmash': 'Izhmash', 'sevmash': 'Sevmash', 
     'admiralteisk': 'Admiralteiskie Verfi', 'severnaya': 'Severnaya Verf', 
     'russia s helicopter': 'Russian Helicopters', 'russian helicopter': 'Russian Helicopters',
     'tactical missile': 'Tactical Missiles Corp', 'oboronitelniye': 'Tactical Missiles Corp', 
     'united engine': 'United Engine Corp', 'ufa': 'United Engine Corp',
+    
     'alliant': 'Orbital ATK', 'orbital': 'Orbital ATK', 'atk': 'Orbital ATK',
     'smiths': 'Smiths Group', 'babcock': 'Babcock', 'backbock': 'Babcock', 'battelle': 'Battelle', 
     'bearingpoint': 'BearingPoint', 'kpmg': 'BearingPoint', 'bechtel': 'Bechtel', 'bharat': 'Bharat Electronics', 
@@ -50,10 +67,15 @@ ROOT_MAGNETS = {
     'flir': 'FLIR', 'gkn': 'GKN', 'jacobs': 'Jacobs', 'qinetiq': 'QinetiQ', 'sagem': 'SAGEM', 'saic': 'SAIC', 
     'science application': 'SAIC', 'aerospace equipment': 'Aerospace Equipment', 'aerokosmicheskoe': 'Aerospace Equipment', 
     'advanced technical': 'Advanced Technical Products', 'advanced technology': 'Advanced Technology International', 
-    'teledyne': 'Teledyne', 'allegheny': 'Teledyne', 'thyssenkrupp': 'ThyssenKrupp', 'ball': 'Ball', 'caci': 'CACI', 
+    
+    'teledyne': 'Teledyne', 'allegheny': 'Teledyne', 
+    'thyssenkrupp': 'ThyssenKrupp', 'ball': 'Ball', 'caci': 'CACI', 
+    
+    # Türk Şirketleri
     'aselsan': 'Aselsan', 'roketsan': 'Roketsan', 'havelsan': 'Havelsan', 'hava elektronik': 'Havelsan', 
     'stm': 'STM', 'makine ve kimya': 'MKE', 'bmc': 'BMC', 'askeri fabrika': 'ASFAT', 'fnss': 'FNSS', 
     'tusaş': 'TUSAŞ', 'tusas': 'TUSAŞ', 'tai': 'TUSAŞ', 'turkish aerospace': 'TUSAŞ', 
+    
     'krauss': 'KNDS', 'nexter': 'KNDS', 'giat': 'KNDS', 'knds': 'KNDS', 'korea aerospace': 'KAI', 
     'korean aerospace': 'KAI', 'hanwha': 'Hanwha', 'hyundai': 'Hyundai Rotem', 'rotem': 'Hyundai Rotem', 
     'lig nex': 'LIG Nex1', 'mazagon': 'Mazagon Dock', 'hindustan': 'Hindustan Aeronautics', 'embraer': 'Embraer', 
@@ -61,7 +83,7 @@ ROOT_MAGNETS = {
     'armor holding': 'Armor Holdings', 'austal': 'Austal', 'bwx': 'BWX Technologies', 'camber': 'Camber', 
     'celsius': 'Celsius', 'dyncorp': 'DynCorp', 'edo': 'EDO', 'eg g': 'EG&G', 'engility': 'Engility', 
     'force protection': 'Force Protection', 'griffon': 'Griffon', 'hensoldt': 'Hensoldt', 'leidos': 'Leidos', 
-    'lumen': 'Lumen Technologies', 'maxar': 'Maxar Technologies', 'mercury': 'Mercury Systems', 'mitsui': 'Mitsui', 
+    'lumen': 'Lumen Technologies', 'maxar': 'Maxar Technologies', 'mercury': 'Mercury Systems',
     'nammo': 'Nammo', 'palantir': 'Palantir Technologies', 'parker': 'Parker Hannifin', 'parsons': 'Parsons',
     'peraton': 'Peraton', 'perspecta': 'Perspecta', 'primex': 'Primex Technologies', 'serco': 'Serco',
     'sierra nevada': 'Sierra Nevada', 'stork': 'Stork', 'telesat': 'Telesat', 'tenix': 'Tenix', 
@@ -77,51 +99,11 @@ ROOT_MAGNETS = {
 
 SORTED_MAGNETS = sorted(ROOT_MAGNETS.keys(), key=len, reverse=True)
 
-# 2. ŞİRKET KÜNYE VERİTABANI (Ansiklopedi)
-KUNYE_VERITABANI = {
-    "Lockheed Martin": {
-        "Tam İsim": "Lockheed Martin Corporation", "Ülke": "ABD", 
-        "Faaliyet": "Havacılık, Uzay, Füze Sistemleri, Savunma Elektroniği (F-35, HIMARS)",
-        "Çalışan": "~122.000 (2024)", "CEO": "James D. Taiclet",
-        "Tarihçe & Birleşmeler": "1995 yılında Lockheed Corporation ile Martin Marietta'nın birleşmesiyle kuruldu. Sikorsky'i bünyesine kattı.",
-        "Analiz Notu": "Dünyanın tartışmasız en büyük savunma yüklenicisi. Gelirinin yaklaşık %96'sı doğrudan savunma sanayii ve devlet ihalelerinden gelmektedir."
-    },
-    "RTX": {
-        "Tam İsim": "RTX Corporation (Eski adıyla Raytheon Technologies)", "Ülke": "ABD", 
-        "Faaliyet": "Füze sistemleri, Havacılık Motorları, Hava Savunma (Patriot, Tomahawk)",
-        "Çalışan": "~185.000 (2024)", "CEO": "Gregory J. Hayes",
-        "Tarihçe & Birleşmeler": "2020'de Raytheon Company ve United Technologies (Pratt & Whitney, Collins Aerospace) birleşti. 2023'te adını RTX olarak değiştirdi.",
-        "Analiz Notu": "Sivil havacılık (motor/aviyonik) ve savunma sistemleri arasında çok dengeli bir gelir yapısına (yaklaşık %55 sivil, %45 savunma) sahiptir."
-    },
-    "BAE Systems": {
-        "Tam İsim": "BAE Systems plc", "Ülke": "İngiltere", 
-        "Faaliyet": "Savaş uçakları, Nükleer Denizaltılar, Kara Araçları, Elektronik Harp",
-        "Çalışan": "~93.000 (2024)", "CEO": "Charles Woodburn",
-        "Tarihçe & Birleşmeler": "1999'da British Aerospace (BAe) ile Marconi Electronic Systems'in birleşmesiyle doğdu. United Defense ve Armor Holdings'i bünyesine katarak ABD pazarında çok büyüdü.",
-        "Analiz Notu": "Avrupa'nın en büyük savunma şirketi olmasına rağmen, gelirinin yarısına yakınını ABD Savunma Bakanlığı (Pentagon) sözleşmelerinden elde eder."
-    },
-    "Aselsan": {
-        "Tam İsim": "ASELSAN Elektronik Sanayi ve Ticaret A.Ş.", "Ülke": "Türkiye", 
-        "Faaliyet": "Haberleşme, Radar, Elektronik Harp, Elektro-Optik, Komuta Kontrol",
-        "Çalışan": "~10.500 (2024)", "CEO": "Ahmet Akyol",
-        "Tarihçe & Birleşmeler": "1975 Kıbrıs Barış Harekatı sonrası Türk Silahlı Kuvvetlerini Güçlendirme Vakfı (TSKGV) bünyesinde kuruldu.",
-        "Analiz Notu": "Türkiye'nin teknolojik bağımsızlık stratejisinin amiral gemisidir. Küresel Top 100 listesinde en istikrarlı büyüme ivmesine sahip şirketlerden biridir."
-    },
-    "TUSAŞ": {
-        "Tam İsim": "Türk Havacılık ve Uzay Sanayii A.Ş. (TAI)", "Ülke": "Türkiye", 
-        "Faaliyet": "Hava Platformları (KAAN, HÜRJET, ATAK), İHA/SİHA (ANKA, AKSUNGUR), Uzay Sistemleri",
-        "Çalışan": "~15.000 (2024)", "CEO": "Temel Kotil",
-        "Tarihçe & Birleşmeler": "Başlangıçta F-16 üretimi için kurulan TAI ve TUSAŞ, 2005 yılında birleşerek yabancı hisselerden arındırıldı ve millileşti.",
-        "Analiz Notu": "Özellikle 5. Nesil savaş uçağı KAAN ve döner kanat platform yatırımları ile Ar-Ge yoğunluğu en yüksek Türk savunma şirketidir."
-    },
-    "Boeing": {
-        "Tam İsim": "The Boeing Company", "Ülke": "ABD", 
-        "Faaliyet": "Ticari Uçaklar, Askeri Uçaklar (F-15, F/A-18, Apache), Uzay ve Güvenlik",
-        "Çalışan": "~171.000 (2024)", "CEO": "David Calhoun",
-        "Tarihçe & Birleşmeler": "1997'de rakibi McDonnell Douglas'ı satın alarak savunma kanadını devasa bir boyuta ulaştırdı.",
-        "Analiz Notu": "Ticari uçak pazarındaki dalgalanmalar (737 MAX krizleri vb.) şirketin savunma gelirlerinin toplam ciro içindeki yüzdesini (sivil gelirin düşmesi nedeniyle) suni olarak yükseltmektedir."
-    }
-}
+def load_kunye():
+    if os.path.exists("kunye.json"):
+        with open("kunye.json", "r", encoding="utf-8") as f:
+            return json.load(f)
+    return {}
 
 def clean_company_name(name):
     clean_str = re.sub(r'[^a-z0-9\s]', ' ', str(name).lower())
@@ -141,9 +123,8 @@ def clean_company_name(name):
         
     return " ".join(clean_str.split()).title()
 
-# 3. VERİ TOPLAYICI
 @st.cache_data
-def load_and_merge_excel(file_path="DefNews100.xlsx", cache_buster="v7"):
+def load_and_merge_excel(file_path="DefNews100.xlsx", cache_buster="v9"):
     try:
         excel_data = pd.read_excel(file_path, sheet_name=None)
         all_data = []
@@ -198,24 +179,24 @@ def load_and_merge_excel(file_path="DefNews100.xlsx", cache_buster="v7"):
 # 4. KONTROL PANELİ VE GÖRSELLEŞTİRME
 st.title("Top 100 Savunma Şirketleri Analizi")
 
-df = load_and_merge_excel("DefNews100.xlsx", cache_buster="v7")
+df = load_and_merge_excel("DefNews100.xlsx", cache_buster="v9")
+kunye_veritabani = load_kunye()
 
 if not df.empty:
     sirketler = sorted(df["Şirket"].unique())
     secilen_sirket = st.selectbox("İncelemek istediğiniz şirketi seçin:", sirketler)
     sirket_verisi = df[df["Şirket"] == secilen_sirket].copy()
     
-    # ---------------- ŞİRKET KÜNYESİ (YENİ MODÜL) ---------------- #
-    if secilen_sirket in KUNYE_VERITABANI:
-        k = KUNYE_VERITABANI[secilen_sirket]
-        st.info(f"**{k['Tam İsim']} ({k['Ülke']})**\n\n"
-                f"👤 **Mevcut CEO:** {k['CEO']} | 👥 **Çalışan:** {k['Çalışan']}\n\n"
-                f"⚙️ **Faaliyet Alanı:** {k['Faaliyet']}\n\n"
-                f"🔗 **Tarihçe & Birleşmeler:** {k['Tarihçe & Birleşmeler']}\n\n"
-                f"📊 **Analitik Not:** {k['Analiz Notu']}")
+    # ---------------- ŞİRKET KÜNYESİ ---------------- #
+    if secilen_sirket in kunye_veritabani:
+        k = kunye_veritabani[secilen_sirket]
+        st.info(f"**{k.get('Tam İsim', secilen_sirket)} ({k.get('Ülke', 'Bilinmiyor')})**\n\n"
+                f"👤 **Mevcut CEO:** {k.get('CEO', '-')} | 👥 **Çalışan:** {k.get('Çalışan', '-')}\n\n"
+                f"⚙️ **Faaliyet Alanı:** {k.get('Faaliyet', '-')}\n\n"
+                f"🔗 **Tarihçe & Birleşmeler:** {k.get('Tarihçe & Birleşmeler', '-')}\n\n"
+                f"📊 **Analitik Not:** {k.get('Analiz Notu', '-')}")
     else:
-        st.warning(f"💡 {secilen_sirket} şirketinin detaylı analiz künyesi henüz sisteme işlenmedi. "
-                   "KUNYE_VERITABANI sözlüğüne manuel olarak eklenebilir.")
+        st.warning(f"💡 {secilen_sirket} şirketine ait bilgiler kunye.json dosyasında bulunmuyor. Manuel olarak eklenebilir.")
     # ------------------------------------------------------------- #
 
     st.markdown("---")
