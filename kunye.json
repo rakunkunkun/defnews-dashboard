@@ -1,0 +1,128 @@
+{
+  "Lockheed Martin": {
+    "Tam İsim": "Lockheed Martin Corporation",
+    "Ülke": "ABD",
+    "Faaliyet": "Havacılık, Füze Sistemleri, Savunma Elektroniği",
+    "Çalışan": "~122.000",
+    "CEO": "James D. Taiclet",
+    "Tarihçe & Birleşmeler": "1995'te Lockheed Corp. ve Martin Marietta birleşti. 2015'te Sikorsky Aircraft bünyeye katıldı.",
+    "Analiz Notu": "Küresel savunma gelirleri sıralamasında ilk sıradadır. Cironun büyük bölümü ABD devleti ile yapılan F-35 ve benzeri platform sözleşmelerine dayanır."
+  },
+  "RTX": {
+    "Tam İsim": "RTX Corporation (Eski: Raytheon Technologies)",
+    "Ülke": "ABD",
+    "Faaliyet": "Hava Savunma, Havacılık Motorları, Aviyonik",
+    "Çalışan": "~185.000",
+    "CEO": "Christopher T. Calio",
+    "Tarihçe & Birleşmeler": "2020'de Raytheon ve United Technologies birleşti. 2023'te RTX adını aldı.",
+    "Analiz Notu": "Pratt & Whitney ve Collins Aerospace aracılığıyla sivil havacılık pazarında da önemli bir paya sahiptir."
+  },
+  "BAE Systems": {
+    "Tam İsim": "BAE Systems plc",
+    "Ülke": "İngiltere",
+    "Faaliyet": "Savaş Uçakları, Denizaltı, Kara Araçları, Elektronik Harp",
+    "Çalışan": "~93.000",
+    "CEO": "Charles Woodburn",
+    "Tarihçe & Birleşmeler": "1999'da British Aerospace ve Marconi birleşti. ABD'li United Defense ve Armor Holdings satın alındı.",
+    "Analiz Notu": "İngiltere merkezli olmasına rağmen, ABD Savunma Bakanlığı ihalelerinden elde ettiği gelir toplam cirosunda yüksek ağırlığa sahiptir."
+  },
+  "Northrop Grumman": {
+    "Tam İsim": "Northrop Grumman Corporation",
+    "Ülke": "ABD",
+    "Faaliyet": "Stratejik Bombardıman, Otonom Sistemler, Uzay, Radarlar",
+    "Çalışan": "~101.000",
+    "CEO": "Kathy J. Warden",
+    "Tarihçe & Birleşmeler": "1994'te Northrop ve Grumman birleşti. 2018'de Orbital ATK satın alındı.",
+    "Analiz Notu": "Havacılık tasarımları, gelişmiş radar (AESA) sensörleri ve uzay sistemleri üretiminde faaliyet gösterir."
+  },
+  "General Dynamics": {
+    "Tam İsim": "General Dynamics Corporation",
+    "Ülke": "ABD",
+    "Faaliyet": "Denizaltı, Kara Araçları, Sivil Havacılık, Bilişim",
+    "Çalışan": "~100.000",
+    "CEO": "Phebe N. Novakovic",
+    "Tarihçe & Birleşmeler": "Uçak bölümünü geçmişte Lockheed'e devretmiş, kara ve deniz sistemleri ile sivil havacılığa odaklanmıştır.",
+    "Analiz Notu": "Gulfstream jetleri üretimi ile sivil havacılık sektöründe düzenli gelir akışına sahiptir."
+  },
+  "Boeing": {
+    "Tam İsim": "The Boeing Company",
+    "Ülke": "ABD",
+    "Faaliyet": "Sivil Uçaklar, Askeri Uçaklar, Uydu Sistemleri",
+    "Çalışan": "~171.000",
+    "CEO": "Kelly Ortberg",
+    "Tarihçe & Birleşmeler": "1997'de McDonnell Douglas'ı satın alarak savunma operasyonlarını genişletti.",
+    "Analiz Notu": "Sivil ticari uçak satışları ile savunma sözleşmeleri arasında dalgalı bir gelir dağılımına sahiptir."
+  },
+  "Airbus": {
+    "Tam İsim": "Airbus SE",
+    "Ülke": "Avrupa (Hollanda/Fransa/Almanya)",
+    "Faaliyet": "Sivil Havacılık, Askeri Kargo, Helikopter, Uzay",
+    "Çalışan": "~147.000",
+    "CEO": "Guillaume Faury",
+    "Tarihçe & Birleşmeler": "EADS (European Aeronautic Defence and Space) olarak kuruldu, 2014'te Airbus Group adını aldı.",
+    "Analiz Notu": "Cironun büyük çoğunluğu sivil ticari uçak satışlarından oluşur. Savunma gelirleri toplam cirosunun düşük bir yüzdesini kapsar."
+  },
+  "Thales": {
+    "Tam İsim": "Thales Group",
+    "Ülke": "Fransa",
+    "Faaliyet": "Aviyonik, Optronik Sistemler, Radarlar, Siber Güvenlik",
+    "Çalışan": "~81.000",
+    "CEO": "Patrice Caine",
+    "Tarihçe & Birleşmeler": "Eski adı Thomson-CSF'dir. 2000 yılında Thales adını aldı.",
+    "Analiz Notu": "Sensör, optik ve radar sistemleri geliştirir. Gelirinin yaklaşık yarısı sivil sektör operasyonlarından sağlanmaktadır."
+  },
+  "Leonardo": {
+    "Tam İsim": "Leonardo S.p.A.",
+    "Ülke": "İtalya",
+    "Faaliyet": "Helikopter, Elektronik, Uçak Sistemleri",
+    "Çalışan": "~53.000",
+    "CEO": "Roberto Cingolani",
+    "Tarihçe & Birleşmeler": "Eski adı Finmeccanica'dır. AgustaWestland ve Selex ES gibi şirketler tek çatı altında birleştirilmiştir.",
+    "Analiz Notu": "İtalya'nın birincil savunma yüklenicisi olup helikopter üretimi ve savunma elektroniğine odaklanmaktadır."
+  },
+  "L3Harris": {
+    "Tam İsim": "L3Harris Technologies",
+    "Ülke": "ABD",
+    "Faaliyet": "Taktik Haberleşme, Elektro-Optik, Sensör, Elektronik Harp",
+    "Çalışan": "~50.000",
+    "CEO": "Christopher E. Kubasik",
+    "Tarihçe & Birleşmeler": "2019'da L3 Technologies ve Harris Corp. birleşti. ITT Exelis'in altyapısını barındırır.",
+    "Analiz Notu": "Askeri haberleşme cihazları ve gece görüş/lazer hedefleme gibi elektro-optik sistemlerde tedarikçi konumundadır."
+  },
+  "Elbit Systems": {
+    "Tam İsim": "Elbit Systems Ltd.",
+    "Ülke": "İsrail",
+    "Faaliyet": "İHA, Elektro-Optik, Komuta Kontrol, Elektronik Harp",
+    "Çalışan": "~19.000",
+    "CEO": "Bezhalel Machlis",
+    "Tarihçe & Birleşmeler": "2000'de El-Op'u, 2007'de Tadiran'ı, 2018'de IMI Systems'i satın alarak operasyonlarını konsolide etti.",
+    "Analiz Notu": "İnsansız hava araçları ve kaska entegre aviyonik görüş sistemleri dikeyinde faaliyet gösterir."
+  },
+  "Aselsan": {
+    "Tam İsim": "ASELSAN Elektronik Sanayi ve Ticaret A.Ş.",
+    "Ülke": "Türkiye",
+    "Faaliyet": "Haberleşme, Radar, Elektronik Harp, Elektro-Optik, Komuta Kontrol",
+    "Çalışan": "~10.500",
+    "CEO": "Ahmet Akyol",
+    "Tarihçe & Birleşmeler": "1975 yılında TSKGV bünyesinde kuruldu.",
+    "Analiz Notu": "Türkiye'nin askeri elektronik, haberleşme ve elektro-optik sistemler (ör. Sivas tesisleri) alanındaki ana yüklenicisidir."
+  },
+  "TUSAŞ": {
+    "Tam İsim": "Türk Havacılık ve Uzay Sanayii A.Ş.",
+    "Ülke": "Türkiye",
+    "Faaliyet": "Hava Platformları, İHA, Uzay Sistemleri",
+    "Çalışan": "~15.000",
+    "CEO": "Mehmet Demiroğlu",
+    "Tarihçe & Birleşmeler": "TAI ve TUSAŞ'ın 2005 yılında birleşmesiyle mevcut yapısına kavuştu.",
+    "Analiz Notu": "Sabit ve döner kanatlı askeri hava araçları ile insansız hava araçları tasarım ve üretimi gerçekleştirmektedir."
+  },
+  "Roketsan": {
+    "Tam İsim": "Roketsan Roket Sanayii ve Ticaret A.Ş.",
+    "Ülke": "Türkiye",
+    "Faaliyet": "Füze Sistemleri, Roketler, Hassas Güdümlü Mühimmatlar",
+    "Çalışan": "~4.000",
+    "CEO": "Murat İkinci",
+    "Tarihçe & Birleşmeler": "1988 yılında kuruldu.",
+    "Analiz Notu": "Hava savunma füzeleri ve İHA platformlarında kullanılan güdümlü mühimmatların (MAM serisi vb.) ana üreticisidir."
+  }
+}
