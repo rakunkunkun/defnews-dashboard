@@ -7,7 +7,7 @@ import re
 import json
 import os
 
-# 1. KÖK KELİME MIKNATISI (Ayrıştırma ve Çift Yazımlar Düzenlendi)
+# 1. KÖK KELİME MIKNATISI (Varyasyonlar Çözüldü)
 ROOT_MAGNETS = {
     'lockheed': 'Lockheed Martin', 'boeing': 'Boeing', 
     'rockwell collins': 'RTX', 'rockwell': 'RTX', 'raytheon': 'RTX', 'rtx': 'RTX', 'united technologies': 'RTX',
@@ -16,66 +16,57 @@ ROOT_MAGNETS = {
     'eads': 'Airbus', 'airbus': 'Airbus', 'european aeronautic': 'Airbus', 
     'finmeccanica': 'Leonardo', 'leonardo': 'Leonardo', 'agusta': 'Leonardo',
     'thomson': 'Thales', 'thales': 'Thales', 
-    'itt': 'L3Harris', 'exelis': 'L3Harris', 'l 3': 'L3Harris', 'l3': 'L3Harris', 'harris': 'L3Harris', 'lharris': 'L3Harris',
+    'itt': 'L3Harris', 'exelis': 'L3Harris', 'l 3': 'L3Harris', 'l3': 'L3Harris', 'harris': 'L3Harris', 'lharris': 'L3Harris', 'l3harris': 'L3Harris',
     'kongsberg': 'Kongsberg', 'saab': 'Saab', 'dassault': 'Dassault', 'rheinmetall': 'Rheinmetall', 'textron': 'Textron',
-    
-    # Huntington (Gemi İnşa) ve Hunting (Bileşen) Ayrıştırıldı
     'huntington': 'Huntington Ingalls', 'hii': 'Huntington Ingalls', 'newport news': 'Huntington Ingalls', 
     'hunting ': 'Hunting', 'hunting\b': 'Hunting',
-    
     'rolls': 'Rolls-Royce',
     'el op': 'Elbit Systems', 'elbit': 'Elbit Systems', 'tadiran': 'Elbit Systems', 'elisra': 'Elbit Systems',
     'rafael': 'Rafael', 
     'israel aerospace': 'IAI', 'iai': 'IAI', 'israel aircraft': 'IAI',
     'israel military': 'IMI Systems', 'imi': 'IMI Systems', 
     'naval group': 'Naval Group', 'dcns': 'Naval Group', 'dcn': 'Naval Group', 'direction des constructions': 'Naval Group', 
-    
-    # Çin Devleri
     'casic': 'CASIC', 'china aerospace science and industry': 'CASIC', 
     'casc': 'CASC', 'china aerospace science and technology': 'CASC',
     'china north': 'NORINCO', 'norinco': 'NORINCO', 
     'china south': 'CSGC', 'csgc': 'CSGC', 
     'cssc': 'CSSC', 'china state': 'CSSC', 'csic': 'CSSC', 'china shipbuilding industry': 'CSSC',
     'aviation industry of china': 'AVIC', 
-    
     'cobham': 'Cobham', 'curtis': 'Curtiss-Wright', 'curtiss': 'Curtiss-Wright',
+    
+    # Teledyne
+    'teledyne': 'Teledyne', 'allegheny': 'Teledyne', 
+    
+    # Tactical Missiles (KTRV)
+    'tactical missile': 'Tactical Missiles Corporation', 'oboronitelniye': 'Tactical Missiles Corporation', 
     'concern radio': 'KRET', 'kret': 'KRET', 'rdaio': 'KRET', 
+    
     'denel': 'Denel', 'heico': 'HEICO', 
     'ukroboronprom': 'Ukroboronprom', 'ukrainian defense': 'Ukroboronprom', 
     'indra': 'Indra', 
-    
-    # Japon Holdingleri Ayrıştırıldı (Mitsui ve Mitsubishi farklıdır, Itochu tektir)
     'mitsubishi': 'Mitsubishi', 'misubishi': 'Mitsubishi', 
     'mitsui': 'Mitsui', 
     'itochu': 'Itochu', 
     'kawasaki': 'Kawasaki', 'komatsu': 'Komatsu', 'fuji': 'Fuji', 'hitachi': 'Hitachi', 'toshiba': 'Toshiba', 
     'nec': 'NEC', 'ishikawajima': 'IHI', 'ihi': 'IHI', 
-    
     'booz': 'Booz Allen Hamilton', 'computer science': 'CSC', 'csc': 'CSC', 'csra': 'CSC', 'drs': 'DRS Technologies',
     'almaz': 'Almaz-Antey', 'antei': 'Almaz-Antey', 'antey': 'Almaz-Antey', 
-    
-    # Rus Uçak ve Helikopter Grubu
     'sukhoi': 'Sukhoi', 'mig': 'MiG', 'irkutsk': 'Irkut', 'irkut': 'Irkut', 'salyut': 'Salyut', 'izhmash': 'Izhmash', 'sevmash': 'Sevmash', 
     'admiralteisk': 'Admiralteiskie Verfi', 'severnaya': 'Severnaya Verf', 
     'russia s helicopter': 'Russian Helicopters', 'russian helicopter': 'Russian Helicopters',
-    'tactical missile': 'Tactical Missiles Corp', 'oboronitelniye': 'Tactical Missiles Corp', 
     'united enginebuilding': 'United Engine Corp', 'united engine': 'United Engine Corp', 'ufa': 'United Engine Corp',
-    
     'alliant': 'Orbital ATK', 'orbital': 'Orbital ATK', 'atk': 'Orbital ATK',
     'smiths': 'Smiths Group', 'babcock': 'Babcock', 'backbock': 'Babcock', 'battelle': 'Battelle', 
     'bearingpoint': 'BearingPoint', 'kpmg': 'BearingPoint', 'bechtel': 'Bechtel', 'bharat': 'Bharat Electronics', 
     'cae': 'CAE', 'chemring': 'Chemring', 'cubic': 'Cubic', 
-    
-    # Çift Yazım Düzenlemeleri
     'zimmermann': 'Day & Zimmermann', 'zimmerman': 'Day & Zimmermann', 'day &': 'Day & Zimmermann',
     'diehl': 'Diehl', 'flir': 'FLIR', 'gkn': 'GKN', 'jacobs': 'Jacobs', 'qinetiq': 'QinetiQ', 
     'sagem': 'Safran', 'safran': 'Safran', 'sextant': 'Safran',
     'saic': 'SAIC', 'science application': 'SAIC', 'aerospace equipment': 'Aerospace Equipment', 'aerokosmicheskoe': 'Aerospace Equipment', 
     'advanced technical': 'Advanced Technical Products', 'advanced technology': 'Advanced Technology International', 
-    'teledyne': 'Teledyne', 'allegheny': 'Teledyne', 
     'thyssenkrupp': 'ThyssenKrupp', 'ball': 'Ball', 'caci': 'CACI', 
     
-    # Türk Savunma Sanayii
+    # Türk Firmaları
     'aselsan': 'Aselsan', 'roketsan': 'Roketsan', 'havelsan': 'Havelsan', 'hava elektronik': 'Havelsan', 
     'stm': 'STM', 'makine ve kimya': 'MKE', 'bmc': 'BMC', 'askeri fabrika': 'ASFAT', 'fnss': 'FNSS', 
     'tusaş': 'TUSAŞ', 'tusas': 'TUSAŞ', 'tai': 'TUSAŞ', 'turkish aerospace': 'TUSAŞ', 
@@ -100,14 +91,12 @@ ROOT_MAGNETS = {
 }
 SORTED_MAGNETS = sorted(ROOT_MAGNETS.keys(), key=len, reverse=True)
 
-# 2. JSON VERİTABANI OKUYUCUSU
 def load_kunye():
     if os.path.exists("kunye.json"):
         with open("kunye.json", "r", encoding="utf-8") as f:
             return json.load(f)
     return {}
 
-# 3. İSİM TEMİZLEYİCİ
 def clean_company_name(name):
     clean_str = re.sub(r'[^a-z0-9\s]', ' ', str(name).lower())
     for keyword in SORTED_MAGNETS:
@@ -126,13 +115,11 @@ def clean_company_name(name):
         
     return " ".join(clean_str.split()).title()
 
-# 4. VERİ TOPLAYICI
 @st.cache_data
-def load_and_merge_excel(file_path="DefNews100.xlsx", cache_buster="v11"):
+def load_and_merge_excel(file_path="DefNews100.xlsx", cache_buster="v12"):
     try:
         excel_data = pd.read_excel(file_path, sheet_name=None)
         all_data = []
-        
         for sheet_name, df in excel_data.items():
             year_match = re.search(r'(\d{4})', str(sheet_name))
             if not year_match: continue
@@ -180,10 +167,9 @@ def load_and_merge_excel(file_path="DefNews100.xlsx", cache_buster="v11"):
         return merged_df
     return pd.DataFrame()
 
-# 5. KONTROL PANELİ VE GÖRSELLEŞTİRME
 st.title("Top 100 Savunma Şirketleri Analizi")
 
-df = load_and_merge_excel("DefNews100.xlsx", cache_buster="v11")
+df = load_and_merge_excel("DefNews100.xlsx", cache_buster="v12")
 kunye_veritabani = load_kunye()
 
 if not df.empty:
@@ -191,7 +177,6 @@ if not df.empty:
     secilen_sirket = st.selectbox("İncelemek istediğiniz şirketi seçin:", sirketler)
     sirket_verisi = df[df["Şirket"] == secilen_sirket].copy()
     
-    # ---------------- ŞİRKET KÜNYESİ ---------------- #
     if secilen_sirket in kunye_veritabani:
         k = kunye_veritabani[secilen_sirket]
         st.info(f"**{k.get('Tam İsim', secilen_sirket)} ({k.get('Ülke', '-')})**\n\n"
@@ -202,8 +187,7 @@ if not df.empty:
                 f"🔗 **Tarihçe & Birleşmeler:** {k.get('Tarihçe & Birleşmeler', '-')}\n\n"
                 f"📊 **Analitik Not:** {k.get('Analiz Notu', '-')}")
     else:
-        st.warning(f"💡 {secilen_sirket} şirketine ait detaylı künye bilgisi kunye.json dosyasında yer almıyor. Sisteme manuel eklenebilir.")
-    # ------------------------------------------------------------- #
+        st.warning(f"💡 {secilen_sirket} şirketine ait detaylı künye bilgisi kunye.json dosyasında yer almıyor.")
 
     st.markdown("---")
     
