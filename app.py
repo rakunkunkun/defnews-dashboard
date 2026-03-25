@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 import numpy as np
 import re
 
-# 1. AKILLI ELEK (Genişletilmiş Sözlük)
+# 1. DERİN ELEK (Kapsamlı ve Öncelikli Sözlük)
 SIEVE = {
     'aselsan': 'Aselsan',
     'roketsan': 'Roketsan',
@@ -13,9 +13,12 @@ SIEVE = {
     'stm': 'STM',
     'makine ve kimya': 'MKE',
     'bmc': 'BMC',
+    'askeri fabrika': 'ASFAT',
+    'fnss': 'FNSS',
     'tai': 'TUSAŞ',
     'tusaş': 'TUSAŞ',
     'turkish aerospace': 'TUSAŞ',
+    
     'lockheed': 'Lockheed Martin',
     'boeing': 'Boeing',
     'raytheon': 'RTX',
@@ -23,51 +26,145 @@ SIEVE = {
     'united technologies': 'RTX',
     'northrop': 'Northrop Grumman',
     'general dynamics': 'General Dynamics',
+    
     'bae': 'BAE Systems',
     'british aerospace': 'BAE Systems',
+    
     'eads': 'Airbus',
     'airbus': 'Airbus',
+    
     'finmeccanica': 'Leonardo',
     'leonardo': 'Leonardo',
+    
     'thomson': 'Thales',
     'thales': 'Thales',
+    
     'l-3': 'L3Harris',
     'l3': 'L3Harris',
     'harris': 'L3Harris',
+    'l3harris': 'L3Harris',
+    
     'kongsberg': 'Kongsberg',
     'saab': 'Saab',
     'dassault': 'Dassault',
+    
     'rheinmetall': 'Rheinmetall',
     'textron': 'Textron',
     'huntington': 'Huntington Ingalls',
+    'hii': 'Huntington Ingalls',
+    
     'rolls-royce': 'Rolls-Royce',
     'rolls royce': 'Rolls-Royce',
-    'mitsubishi': 'Mitsubishi',
+    
     'elbit': 'Elbit Systems',
     'rafael': 'Rafael',
+    
     'israel aerospace': 'IAI',
     'iai': 'IAI',
+    'israel aircraft': 'IAI',
+    'israel military': 'IMI Systems',
+    'imi systems': 'IMI Systems',
+    
     'naval group': 'Naval Group',
     'dcns': 'Naval Group',
+    'direction des constructions': 'Naval Group',
+    'dcn': 'Naval Group',
+    
     'casic': 'CASIC',
-    'china aerospace': 'CASIC',
+    'china aerospace science and industry': 'CASIC',
+    
+    'casc': 'CASC',
+    'china aerospace science and technology': 'CASC',
+    
     'china north': 'NORINCO',
     'norinco': 'NORINCO',
+    
     'china south': 'CSGC',
     'csgc': 'CSGC',
+    
+    'china state': 'CSSC',
+    'cssc': 'CSSC',
+    
+    'cobham': 'Cobham',
+    
+    'concern radio': 'KRET',
+    'kret': 'KRET',
+    'concern rdaio': 'KRET',
+    
+    'curtis': 'Curtiss-Wright',
+    'curtiss': 'Curtiss-Wright',
+    
     'denel': 'Denel',
     'heico': 'HEICO',
     'ukroboronprom': 'Ukroboronprom',
-    'indra': 'Indra'
+    'indra': 'Indra',
+    
+    'mitsubishi heavy': 'Mitsubishi Heavy',
+    'mitsubishi heaby': 'Mitsubishi Heavy',
+    'mitsubishi electric': 'Mitsubishi Electric',
+    'mitsubishi': 'Mitsubishi',
+    
+    'booz allen': 'Booz Allen Hamilton',
+    'booz-allen': 'Booz Allen Hamilton',
+    
+    'caci': 'CACI',
+    'computer sciences': 'CSC',
+    'csc': 'CSC',
+    'csra': 'CSC',
+    
+    'drs': 'DRS Technologies',
+    
+    'almaz': 'Almaz-Antey',
+    'antei': 'Almaz-Antey',
+    'antey': 'Almaz-Antey',
+    
+    'sukhoi': 'Sukhoi',
+    'mig': 'MiG',
+    'irkut': 'Irkut',
+    
+    'alliant techsystems': 'Orbital ATK',
+    'orbital': 'Orbital ATK',
+    'atk': 'Orbital ATK',
+    
+    'smiths': 'Smiths Group',
+    'babcock': 'Babcock',
+    'backbock': 'Babcock',
+    
+    'battelle': 'Battelle',
+    'bearingpoint': 'BearingPoint',
+    'bechtel': 'Bechtel',
+    'bharat': 'Bharat Electronics',
+    'cae': 'CAE',
+    'chemring': 'Chemring',
+    'cubic': 'Cubic',
+    'day & zimmerman': 'Day & Zimmermann',
+    'day & zimmermann': 'Day & Zimmermann',
+    'diehl': 'Diehl',
+    'flir': 'FLIR',
+    'gkn': 'GKN',
+    'jacobs': 'Jacobs',
+    'kawasaki': 'Kawasaki',
+    'komatsu': 'Komatsu',
+    'nec': 'NEC',
+    'oshkosh': 'Oshkosh',
+    'qinetiq': 'QinetiQ',
+    'sagem': 'SAGEM',
+    'saic': 'SAIC',
+    'science applications': 'SAIC'
 }
+
+# Çakışmaları önlemek için kelimeleri karakter uzunluğuna göre büyükten küçüğe sırala
+SORTED_SIEVE_KEYS = sorted(SIEVE.keys(), key=len, reverse=True)
 
 def clean_company_name(name):
     lower_name = str(name).lower()
     
-    for keyword, standard_name in SIEVE.items():
-        if keyword in lower_name:
-            return standard_name
+    # 1. Kelime sınırlarıyla (Word Boundary) hassas arama yap
+    for keyword in SORTED_SIEVE_KEYS:
+        if re.search(r'\b' + re.escape(keyword) + r'\b', lower_name):
+            return SIEVE[keyword]
             
+    # 2. Özel eşleşme bulunamazsa genel temizlik yap
     name_clean = re.sub(r'\d+', '', lower_name)
     name_clean = re.sub(r'[^\w\s]', ' ', name_clean)
     
@@ -75,7 +172,7 @@ def clean_company_name(name):
         r'\bcorp\b', r'\bcorporation\b', r'\binc\b', r'\bltd\b', r'\bco\b', 
         r'\bplc\b', r'\ba s\b', r'\bs a\b', r'\bcompany\b', r'\bgroup\b', 
         r'\bholding\b', r'\bholdings\b', r'\bsystems\b', r'\bllc\b', r'\bspa\b',
-        r'\bindustries\b'
+        r'\bindustries\b', r'\blimited\b'
     ]
     for taki in takilar:
         name_clean = re.sub(taki, '', name_clean)
