@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 import numpy as np
 import re
 
-# 1. AKILLI ELEK (Sözlük)
+# 1. AKILLI ELEK (Genişletilmiş Sözlük)
 SIEVE = {
     'aselsan': 'Aselsan',
     'roketsan': 'Roketsan',
@@ -51,6 +51,11 @@ SIEVE = {
     'dcns': 'Naval Group',
     'casic': 'CASIC',
     'china aerospace': 'CASIC',
+    'china north': 'NORINCO',
+    'norinco': 'NORINCO',
+    'china south': 'CSGC',
+    'csgc': 'CSGC',
+    'denel': 'Denel',
     'heico': 'HEICO',
     'ukroboronprom': 'Ukroboronprom',
     'indra': 'Indra'
@@ -69,7 +74,8 @@ def clean_company_name(name):
     takilar = [
         r'\bcorp\b', r'\bcorporation\b', r'\binc\b', r'\bltd\b', r'\bco\b', 
         r'\bplc\b', r'\ba s\b', r'\bs a\b', r'\bcompany\b', r'\bgroup\b', 
-        r'\bholding\b', r'\bholdings\b', r'\bsystems\b', r'\bllc\b', r'\bspa\b'
+        r'\bholding\b', r'\bholdings\b', r'\bsystems\b', r'\bllc\b', r'\bspa\b',
+        r'\bindustries\b'
     ]
     for taki in takilar:
         name_clean = re.sub(taki, '', name_clean)
@@ -147,22 +153,18 @@ if not df.empty:
     
     st.markdown("---")
     
-    # TAHMİN (FORECASTING) - YENİ AĞIRLIKLI MOTOR
+    # TAHMİN (FORECASTING) - AĞIRLIKLI MOTOR
     tahmin_yapildi = False
     if len(sirket_verisi) > 2:
         yillar = sirket_verisi["Yıl"].values
         cirolar = sirket_verisi["Savunma Cirosu"].values
         son_yil = int(np.max(yillar))
         
-        # Son ciro verisini güvenli bir şekilde al
         son_ciro_row = sirket_verisi[sirket_verisi["Yıl"] == son_yil]
         son_ciro = son_ciro_row["Savunma Cirosu"].values[0] if not son_ciro_row.empty else cirolar[-1]
         
-        # Ağırlık Matematigi: Son yıllardaki zıplamaları yakalamak için yakın zamana daha yüksek ağırlık (puan) veriyoruz.
-        # (Yıl - Son Yıl) bölü 4 formülü, geçmişe doğru etkisini üstel (exponential) olarak azaltır.
         agirliklar = np.exp((yillar - son_yil) / 4.0)
         
-        # Yeni ağırlıklı regresyon modeli
         z = np.polyfit(yillar, cirolar, 1, w=agirliklar)
         p = np.poly1d(z)
         
