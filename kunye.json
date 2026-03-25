@@ -109,49 +109,38 @@
     "Tarihçe & Birleşmeler": "2019'da L3 Technologies ve Harris Corp. birleşti. Aerojet Rocketdyne 2023'te bünyeye katıldı.",
     "Analiz Notu": "Askeri haberleşme ağları ve elektro-optik donanım tedarikçisi olarak faaliyet gösterir."
   },
-  "Elbit Systems": {
-    "Tam İsim": "Elbit Systems Ltd.",
-    "Ülke": "İsrail",
-    "Üst Kurum / Ortaklık": "Halka Açık (TASE: ESLT)",
-    "CEO": "Bezhalel Machlis",
-    "Çalışan": "~19.000",
-    "Faaliyet": "İHA, Elektro-Optik, Komuta Kontrol, Elektronik Harp",
-    "En Bilinen Ürünler / Markalar": "Hermes İHA serisi, JHMCS (kaska entegre nişangah)",
-    "Tarihçe & Birleşmeler": "El-Op, Tadiran ve devlete ait IMI Systems satın alınarak yapıya dahil edilmiştir.",
-    "Analiz Notu": "Platform üretiminden çok aviyonik modernizasyon ve insansız sistemler alanında çalışmaktadır."
+  "Teledyne": {
+    "Tam İsim": "Teledyne Technologies Incorporated",
+    "Ülke": "ABD",
+    "Üst Kurum / Ortaklık": "Halka Açık (NYSE: TDY)",
+    "CEO": "Robert Mehrabian",
+    "Çalışan": "~14.000",
+    "Faaliyet": "Dijital Görüntüleme, Sensör, Havacılık ve Savunma Elektroniği",
+    "En Bilinen Ürünler / Markalar": "FLIR kameralar, kızılötesi sensörler",
+    "Tarihçe & Birleşmeler": "1999'da Allegheny Teledyne yapısından ayrıldı. 2021'de FLIR Systems'i satın alarak pazar payını artırdı.",
+    "Analiz Notu": "Sivil ve askeri endüstriler için temel görüntüleme (kızılötesi) bileşenlerini üreten teknoloji holdingidir."
   },
-  "Rheinmetall": {
-    "Tam İsim": "Rheinmetall AG",
-    "Ülke": "Almanya",
-    "Üst Kurum / Ortaklık": "Halka Açık (ETR: RHM)",
-    "CEO": "Armin Papperger",
-    "Çalışan": "~30.000",
-    "Faaliyet": "Zırhlı Araçlar, Mühimmat, Otomotiv Parçaları",
-    "En Bilinen Ürünler / Markalar": "Leopard 2 ana topu (L55), KF51 Panther, 155mm mühimmat",
-    "Tarihçe & Birleşmeler": "İspanyol mühimmat üreticisi Expal'i satın alarak üretim kapasitesini artırmıştır.",
-    "Analiz Notu": "Avrupa mühimmat ve zırh çeliği pazarında yüksek hacimli üretim gerçekleştirmektedir."
-  },
-  "KNDS": {
-    "Tam İsim": "KNDS (KMW+Nexter Defense Systems)",
-    "Ülke": "Almanya / Fransa",
-    "Üst Kurum / Ortaklık": "Wegmann & Co. (%50) ve GIAT Industries (%50)",
-    "CEO": "Frank Haun",
-    "Çalışan": "~9.000",
-    "Faaliyet": "Ana Muharebe Tankları, Topçu Sistemleri",
-    "En Bilinen Ürünler / Markalar": "Leopard 2 tankı, Leclerc tankı, CAESAR obüsü",
-    "Tarihçe & Birleşmeler": "2015'te Krauss-Maffei Wegmann ve Nexter şirketlerinin birleşmesiyle kuruldu.",
-    "Analiz Notu": "Avrupa ordularında kara platformu standardizasyonunu sağlamak amacıyla oluşturulmuş bir ortak girişimdir."
+  "Tactical Missiles Corporation": {
+    "Tam İsim": "JSC Tactical Missiles Corporation (KTRV)",
+    "Ülke": "Rusya",
+    "Üst Kurum / Ortaklık": "Rusya Federasyonu",
+    "CEO": "Boris Obnosov",
+    "Çalışan": "~50.000",
+    "Faaliyet": "Taktik/Stratejik Füzeler, Hava-Yer Mühimmatları",
+    "En Bilinen Ürünler / Markalar": "Kh-31, Kh-59, Yakhont, RVV-AE",
+    "Tarihçe & Birleşmeler": "2002'de devlet kararnamesiyle kuruldu. Oboronitelniye Systemy gibi birçok kurumu bünyesine kattı.",
+    "Analiz Notu": "Rusya'nın hava ve deniz tabanlı hassas güdümlü mühimmat ihtiyacının birincil üreticisidir."
   },
   "Aselsan": {
     "Tam İsim": "ASELSAN Elektronik Sanayi ve Ticaret A.Ş.",
     "Ülke": "Türkiye",
     "Üst Kurum / Ortaklık": "TSKGV (%74.20), Halka Açık (%25.80)",
     "CEO": "Ahmet Akyol",
-    "Çalışan": "~10.500",
+    "Çalışan": "~13.000",
     "Faaliyet": "Haberleşme, Radar, Elektronik Harp, Elektro-Optik, Komuta Kontrol",
     "En Bilinen Ürünler / Markalar": "KORKUT, Hisar/Siper sistemleri, ASELFLIR, ÇAFRAD",
     "Tarihçe & Birleşmeler": "1975 Kıbrıs Barış Harekatı sonrası TSKGV bünyesinde kurulmuştur.",
-    "Analiz Notu": "TSK'nın ana elektronik sistem tedarikçilerinden biridir. Sivas tesislerindeki hassas optik ve mercek üretimleri şirketin elektro-optik dikeyindeki kritik kapasiteleri arasındadır."
+    "Analiz Notu": "TSK'nın ana elektronik sistem tedarikçisi konumundadır. Mühendis ağırlıklı kadrosuyla yüksek Ar-Ge kapasitesine sahiptir."
   },
   "TUSAŞ": {
     "Tam İsim": "Türk Havacılık ve Uzay Sanayii A.Ş.",
@@ -162,7 +151,7 @@
     "Faaliyet": "Hava Platformları, İHA, Uzay Sistemleri",
     "En Bilinen Ürünler / Markalar": "KAAN, T129 ATAK, ANKA, AKSUNGUR",
     "Tarihçe & Birleşmeler": "TAI ve TUSAŞ 2005 yılında birleşerek günümüzdeki yapısını almıştır.",
-    "Analiz Notu": "Savaş uçağı, helikopter ve insansız hava aracı tasarımı ile Türkiye'nin en yüksek bütçeli havacılık projelerini yürütmektedir."
+    "Analiz Notu": "Savaş uçağı, helikopter ve insansız hava aracı tasarımı ile geniş çaplı havacılık programlarını yürütmektedir."
   },
   "Roketsan": {
     "Tam İsim": "Roketsan Roket Sanayii ve Ticaret A.Ş.",
@@ -172,8 +161,8 @@
     "Çalışan": "~4.000",
     "Faaliyet": "Füze Sistemleri, Roketler, Hassas Güdümlü Mühimmatlar",
     "En Bilinen Ürünler / Markalar": "MAM-L, HİSAR Füzeleri, TAYFUN, SOM, ATMACA",
-    "Tarihçe & Birleşmeler": "1988 yılında roket ve füze sistemleri geliştirmek amacıyla kuruldu.",
-    "Analiz Notu": "Hava savunma füzeleri ve İHA mühimmatları dahil olmak üzere Türkiye'nin güdüm sistemlerindeki ana üretim merkezidir."
+    "Tarihçe & Birleşmeler": "1988 yılında uluslararası füze programları için kuruldu.",
+    "Analiz Notu": "Hava savunma füzeleri ve İHA platformlarında kullanılan mikro mühimmatların ana üretim merkezidir."
   },
   "Havelsan": {
     "Tam İsim": "HAVELSAN A.Ş.",
@@ -194,19 +183,19 @@
     "Çalışan": "~1.500",
     "Faaliyet": "Askeri Denizcilik, Kamikaze İHA, Siber Güvenlik, Danışmanlık",
     "En Bilinen Ürünler / Markalar": "MİLGEM (Tasarım/Mühendislik), KARGU, ALPAGU",
-    "Tarihçe & Birleşmeler": "1991 yılında devlet projelerine mühendislik ve proje yönetimi desteği sağlamak üzere kuruldu.",
-    "Analiz Notu": "Askeri tersanecilik projeleri ve taktik vurucu İHA (dron) platformları ana gelir kaynaklarıdır."
+    "Tarihçe & Birleşmeler": "1991 yılında devlet projelerine mühendislik desteği sağlamak üzere kuruldu.",
+    "Analiz Notu": "Askeri tersanecilik projeleri ve taktik vurucu İHA platformları ana faaliyet kollarıdır."
   },
   "BMC": {
     "Tam İsim": "BMC Otomotiv Sanayi ve Ticaret A.Ş.",
     "Ülke": "Türkiye",
     "Üst Kurum / Ortaklık": "Tosyalı Holding (%51), Katar Silahlı Kuvvetleri (%49)",
-    "CEO": "Tosyalı Holding Yönetimi",
+    "CEO": "Mehmet Karaarslan",
     "Çalışan": "~3.000",
     "Faaliyet": "Zırhlı Kara Araçları, Ticari Araçlar, Güç Grupları",
     "En Bilinen Ürünler / Markalar": "KİRPİ, VURAN, ALTAY (Seri Üretim Aşaması)",
-    "Tarihçe & Birleşmeler": "2014'te TMSF'den Es Mali Yatırım'a devredilmiş, sonrasında Tosyalı Holding çoğunluk hissesini devralmıştır.",
-    "Analiz Notu": "Zırhlı personel taşıyıcı ve taktik tekerlekli araç üretiminin yanı sıra ana muharebe tankı projesini yürütmektedir."
+    "Tarihçe & Birleşmeler": "2014'te TMSF'den Es Mali Yatırım'a devredilmiş, ardından Tosyalı Holding çoğunluk hissesini devralmıştır.",
+    "Analiz Notu": "Zırhlı personel taşıyıcı üretiminin yanı sıra ana muharebe tankı üretim operasyonunu yürütmektedir."
   },
   "FNSS": {
     "Tam İsim": "FNSS Savunma Sistemleri A.Ş.",
@@ -216,8 +205,8 @@
     "Çalışan": "~1.000",
     "Faaliyet": "Zırhlı Muharebe Araçları, Silah Kuleleri",
     "En Bilinen Ürünler / Markalar": "PARS, KAPLAN, ZAHA, SAMUR",
-    "Tarihçe & Birleşmeler": "1989'da kurulan şirket, Türk-İngiliz (eski Amerikan United Defense) ortak girişimidir.",
-    "Analiz Notu": "Yabancı ortaklı yapısıyla tasarım ve üretim yeteneğini birleştirerek yüksek hacimli ihracat projeleri yürütmektedir."
+    "Tarihçe & Birleşmeler": "1989'da kurulan şirket, Türk-İngiliz ortak girişimidir.",
+    "Analiz Notu": "Yabancı ortaklı yapısı ile ihracat pazarlarında hacimli projeler yürütmektedir."
   },
   "MKE": {
     "Tam İsim": "Makine ve Kimya Endüstrisi A.Ş.",
@@ -228,7 +217,7 @@
     "Faaliyet": "Silah, Mühimmat, Patlayıcı, Roket",
     "En Bilinen Ürünler / Markalar": "MPT-76, BORAN Obüsü, PANTER, Topçu/Uçak Mühimmatları",
     "Tarihçe & Birleşmeler": "2021 yılında Kamu İktisadi Teşebbüsü (KİT) statüsünden A.Ş. statüsüne geçirilmiştir.",
-    "Analiz Notu": "Ordunun mühimmat ve hafif/ağır silah ihtiyacının temel sağlayıcısıdır. Anonim şirket statüsüyle ihracat operasyonları genişletilmiştir."
+    "Analiz Notu": "Ordunun mühimmat ve hafif/ağır silah ihtiyacının temel sağlayıcısıdır."
   },
   "ASFAT": {
     "Tam İsim": "Askeri Fabrika ve Tersane İşletme A.Ş.",
@@ -238,106 +227,7 @@
     "Çalışan": "~500 (Merkez Yönetim)",
     "Faaliyet": "Askeri Fabrika İşletimi, Gemi İnşa, Bakım Onarım",
     "En Bilinen Ürünler / Markalar": "PN MİLGEM, Açık Deniz Karakol Gemileri, MEMATT",
-    "Tarihçe & Birleşmeler": "2018'de askeri fabrika ve tersanelerin atıl kapasitelerini değerlendirmek için kuruldu.",
-    "Analiz Notu": "Devlete ait askeri üretim tesislerinin sivil ve uluslararası pazardaki ticari temsilcisi olarak operasyon yürütür."
-  },
-  "CASIC": {
-    "Tam İsim": "China Aerospace Science and Industry Corporation",
-    "Ülke": "Çin",
-    "Üst Kurum / Ortaklık": "SASAC (Çin Devleti)",
-    "CEO": "Yuan Jie",
-    "Çalışan": "~150.000",
-    "Faaliyet": "Füze Sistemleri, Radar, Uzay",
-    "En Bilinen Ürünler / Markalar": "Dongfeng balistik füzeleri, HQ serisi",
-    "Tarihçe & Birleşmeler": "Çin devletinin stratejik silah ve füze programlarını yönetmek üzere kurgulanmıştır.",
-    "Analiz Notu": "Balistik ve hava savunma füzeleri üretiminde Çin ordusunun ana sağlayıcısıdır."
-  },
-  "CASC": {
-    "Tam İsim": "China Aerospace Science and Technology Corporation",
-    "Ülke": "Çin",
-    "Üst Kurum / Ortaklık": "SASAC (Çin Devleti)",
-    "CEO": "Wu Yansheng",
-    "Çalışan": "~170.000",
-    "Faaliyet": "Uzay Fırlatma Sistemleri, Uydular, İHA",
-    "En Bilinen Ürünler / Markalar": "Long March roketleri, CH (Caihong) İHA serisi",
-    "Tarihçe & Birleşmeler": "Çin uzay programının sivil ve askeri araştırma/üretim operasyonlarını birleştirir.",
-    "Analiz Notu": "Özellikle silahlı insansız hava aracı ihracatında küresel pazarda aktiftir."
-  },
-  "NORINCO": {
-    "Tam İsim": "China North Industries Group Corporation",
-    "Ülke": "Çin",
-    "Üst Kurum / Ortaklık": "SASAC (Çin Devleti)",
-    "CEO": "Liu Daqun",
-    "Çalışan": "~200.000",
-    "Faaliyet": "Kara Sistemleri, Mühimmat, Zırhlı Araçlar",
-    "En Bilinen Ürünler / Markalar": "Type 99 tankları, VT serisi araçlar",
-    "Tarihçe & Birleşmeler": "Çin kara kuvvetlerinin ekipman ihtiyacını karşılamak üzere yapılandırılmıştır.",
-    "Analiz Notu": "Afrika ve Asya pazarlarına yönelik uygun maliyetli zırhlı platform ihracatı gerçekleştirir."
-  },
-  "CSGC": {
-    "Tam İsim": "China South Industries Group Corporation",
-    "Ülke": "Çin",
-    "Üst Kurum / Ortaklık": "SASAC (Çin Devleti)",
-    "CEO": "Xu Ping",
-    "Çalışan": "~180.000",
-    "Faaliyet": "Otomotiv, Hafif Silahlar, Mühimmat",
-    "En Bilinen Ürünler / Markalar": "Type 95 tüfekleri, askeri taşıtlar",
-    "Tarihçe & Birleşmeler": "Sivil otomotiv üretimi ile hafif silah askeri sanayiini bir arada yürütmektedir.",
-    "Analiz Notu": "NORINCO ile birlikte Çin kara ordusunun diğer ana tedarikçisidir."
-  },
-  "CSSC": {
-    "Tam İsim": "China State Shipbuilding Corporation",
-    "Ülke": "Çin",
-    "Üst Kurum / Ortaklık": "SASAC (Çin Devleti)",
-    "CEO": "Lei Fanpei",
-    "Çalışan": "~310.000",
-    "Faaliyet": "Gemi İnşa, Denizaltı, Uçak Gemileri",
-    "En Bilinen Ürünler / Markalar": "Type 055 destroyerler, Liaoning/Shandong uçak gemileri",
-    "Tarihçe & Birleşmeler": "2019 yılında CSIC (China Shipbuilding Industry) ile birleşerek tekelleşmiştir.",
-    "Analiz Notu": "Çin donanmasının kapasite inşasından sorumlu dünyanın en büyük gemi inşa şirketidir."
-  },
-  "Almaz-Antey": {
-    "Tam İsim": "JSC Almaz-Antey",
-    "Ülke": "Rusya",
-    "Üst Kurum / Ortaklık": "Rusya Federasyonu",
-    "CEO": "Yan Novikov",
-    "Çalışan": "~130.000",
-    "Faaliyet": "Hava Savunma Sistemleri, Radarlar",
-    "En Bilinen Ürünler / Markalar": "S-300, S-400, S-500 hava savunma sistemleri",
-    "Tarihçe & Birleşmeler": "2002 yılında Rusya'daki hava savunma şirketlerinin birleştirilmesiyle kuruldu.",
-    "Analiz Notu": "Rusya'nın çok katmanlı hava ve füze savunma sistemlerinin tek üreticisidir."
-  },
-  "Indra": {
-    "Tam İsim": "Indra Sistemas, S.A.",
-    "Ülke": "İspanya",
-    "Üst Kurum / Ortaklık": "SEPI (%28, İspanya Devleti), Halka Açık",
-    "CEO": "José Vicente de los Mozos",
-    "Çalışan": "~56.000",
-    "Faaliyet": "Bilişim, Elektronik Harp, Radarlar, Simülasyon",
-    "En Bilinen Ürünler / Markalar": "Lanza 3D radarları, Eurofighter elektronik harp suitleri",
-    "Tarihçe & Birleşmeler": "İspanyol bilişim ve savunma elektroniği şirketlerinin birleştirilmesiyle oluşturulmuştur.",
-    "Analiz Notu": "Savunma ve sivil bilgi teknolojileri (IT) sistemleri arasında dengeli bir portföye sahiptir."
-  },
-  "Hensoldt": {
-    "Tam İsim": "Hensoldt AG",
-    "Ülke": "Almanya",
-    "Üst Kurum / Ortaklık": "Almanya Devleti (%25.1), Leonardo (%25.1), Halka Açık",
-    "CEO": "Oliver Dörre",
-    "Çalışan": "~7.000",
-    "Faaliyet": "Sensörler, Radarlar, Optronik",
-    "En Bilinen Ürünler / Markalar": "TRML-4D hava savunma radarları, Spexter termal kameralar",
-    "Tarihçe & Birleşmeler": "2017'de Airbus Group'un elektronik biriminden ayrılarak kurulmuştur.",
-    "Analiz Notu": "Avrupa pazarında zırhlı araç periskopları ve taktik hava savunma radarları konusunda ana tedarikçidir."
-  },
-  "Day & Zimmermann": {
-    "Tam İsim": "Day & Zimmermann",
-    "Ülke": "ABD",
-    "Üst Kurum / Ortaklık": "Özel Şirket (Yoh Ailesi)",
-    "CEO": "Hal Yoh III",
-    "Çalışan": "~41.000",
-    "Faaliyet": "Mühimmat, Tesis Yönetimi, Mühendislik",
-    "En Bilinen Ürünler / Markalar": "Topçu ve havan mühimmatı seri üretimi",
-    "Tarihçe & Birleşmeler": "1901 yılında kurulan mühendislik firması zamanla tesis yönetim işlerine yönelmiştir.",
-    "Analiz Notu": "Kendi tasarımlarından ziyade, ABD devletine ait mühimmat üretim tesislerinin işletmeciliğini yapmaktadır."
+    "Tarihçe & Birleşmeler": "2018'de askeri fabrika ve tersanelerin kapasitelerini ihracata yöneltmek için kuruldu.",
+    "Analiz Notu": "Devlete ait askeri üretim tesislerinin sivil ve uluslararası pazardaki ticari operasyonlarını yürütür."
   }
 }
